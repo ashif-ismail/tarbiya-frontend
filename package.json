@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:tagus": "node dist/tagus/server/server.mjs"
+    "serve:ssr:tagus": "node dist/tagus/server/server.mjs",
+    "vercel-build": "npm install --force && ng build"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +26,9 @@
     "@angular/router": "18.2.7",
     "@angular/service-worker": "18.2.7",
     "@angular/ssr": "18.2.7",
-    "@fullcalendar/angular": "6.1.10",
-    "@fullcalendar/core": "6.1.10",
-    "@fullcalendar/daygrid": "6.1.10",
+    "@fullcalendar/angular": "^6.1.10",
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
     "@iplab/ngx-file-upload": "18.0.0",
     "apexcharts": "3.51.0",
     "chart.js": "4.4.3",
@@ -67,5 +68,8 @@
     "karma-jasmine": "5.1.0",
     "karma-jasmine-html-reporter": "2.1.0",
     "typescript": "5.4.2"
-  } 
+  },
+  "engines": {
+    "node": "18.x"
+  }
 }
