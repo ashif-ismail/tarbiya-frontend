@@ -1,0 +1,32 @@
+<div class="chart">
+    <apx-chart
+        [series]="chartMonths.series!"
+        [chart]="chartMonths.chart!"
+        [colors]="chartMonths.colors!"
+        [yaxis]="chartMonths.yaxis!"
+        [dataLabels]="commonOptions.dataLabels!"
+        [fill]="commonOptions.fill!"
+        [grid]="commonOptions.grid!"
+        [stroke]="commonOptions.stroke!"
+        [xaxis]="commonOptions.xaxis!"
+    ></apx-chart>
+    <div class="d-flex mb-15 align-items-center">
+        <img src="img/user/user19.jpg" class="border-radius" width="60" alt="user">
+        <div class="title ms-15">
+            <h5 class="mb-5">Jason Smith</h5>
+            <span class="d-block gray-color">Coder</span>
+        </div>
+    </div>
+    <apx-chart
+        [series]="chartYears.series!"
+        [chart]="chartYears.chart!"
+        [colors]="chartYears.colors!"
+        [legend]="chartYears.legend!"
+        [yaxis]="chartMonths.yaxis!"
+        [grid]="commonOptions.grid!"
+        [dataLabels]="commonOptions.dataLabels!"
+        [fill]="commonOptions.fill!"
+        [stroke]="commonOptions.stroke!"
+        [xaxis]="commonOptions.xaxis!"
+    ></apx-chart>
+</div>

@@ -1,0 +1,82 @@
+<mat-card
+    class="mb-25 tagus-card new-customers-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">New Customers</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="m-0 p-0">
+            <li>
+                <div class="d-sm-flex align-items-center justify-content-space-between">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="img/user/user12.jpg" alt="user">
+                        <div class="title">
+                            <h5>Jordan Stevenson</h5>
+                            <span class="muted-color">&#64;jstevenson5c</span>
+                        </div>
+                    </div>
+                    <div class="info d-flex align-items-center">
+                        <span class="gray-color">$289.50</span>
+                        <div class="badge main-color">15 orders</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-sm-flex align-items-center justify-content-space-between">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="img/user/user13.jpg" alt="user">
+                        <div class="title">
+                            <h5>Lydia Reese</h5>
+                            <span class="muted-color">&#64;lreese3b</span>
+                        </div>
+                    </div>
+                    <div class="info d-flex align-items-center">
+                        <span class="gray-color">$999.99</span>
+                        <div class="badge main-color">99 orders</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-sm-flex align-items-center justify-content-space-between">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="img/user/user14.jpg" alt="user">
+                        <div class="title">
+                            <h5>Anty Rodes</h5>
+                            <span class="muted-color">&#64;antyrodes32</span>
+                        </div>
+                    </div>
+                    <div class="info d-flex align-items-center">
+                        <span class="gray-color">$1000.00</span>
+                        <div class="badge main-color">100 orders</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="d-sm-flex align-items-center justify-content-space-between">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="img/user/user1.jpg" alt="user">
+                        <div class="title">
+                            <h5>David Warner</h5>
+                            <span class="muted-color">&#64;davidwarner321</span>
+                        </div>
+                    </div>
+                    <div class="info d-flex align-items-center">
+                        <span class="gray-color">$198.00</span>
+                        <div class="badge main-color">22 orders</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

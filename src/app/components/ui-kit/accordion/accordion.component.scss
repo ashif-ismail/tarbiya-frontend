@@ -1,0 +1,49 @@
+.example-accordion-item {
+    display: block;
+    border: solid 1px #eeeeee;
+}
+.example-accordion-item + .example-accordion-item {
+    border-top: none;
+}
+.example-accordion-item-header {
+    display: flex;
+    font-weight: 600;
+    align-content: center;
+    justify-content: space-between;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f9f9f9;
+    }
+}
+.example-accordion-item-header, .example-accordion-item-body {
+    padding: 20px;
+}
+.example-accordion-item {
+    &:first-child {
+        border: {
+            top: {
+                left-radius: 4px;
+                right-radius: 4px;
+            }
+        };
+    }
+    &:last-child {
+        border: {
+            bottom: {
+                left-radius: 4px;
+                right-radius: 4px;
+            }
+        };
+    }
+}
+.component-dark-theme {
+    .example-accordion-item {
+        border-color: #1f2226 !important;
+    }
+    .example-accordion-item-header {
+        &:hover {
+            background-color: #1d2024 !important;
+        }
+    }
+}

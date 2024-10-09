@@ -1,0 +1,288 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Menus</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Menus</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Menu with Icons</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>dialpad</mat-icon>
+                        <span>Redial</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                        <mat-icon>voicemail</mat-icon>
+                        <span>Check voice mail</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>notifications_off</mat-icon>
+                        <span>Disable alerts</span>
+                    </button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Menu with Icons</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-fab [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>dialpad</mat-icon>
+                        <span>Redial</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                        <mat-icon>voicemail</mat-icon>
+                        <span>Check voice mail</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>notifications_off</mat-icon>
+                        <span>Disable alerts</span>
+                    </button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Menu with Icons</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-fab extended color="primary" [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                    Primary
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>dialpad</mat-icon>
+                        <span>Redial</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                        <mat-icon>voicemail</mat-icon>
+                        <span>Check voice mail</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>notifications_off</mat-icon>
+                        <span>Disable alerts</span>
+                    </button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Stroked Menu</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-stroked-button class="tagus" [matMenuTriggerFor]="menu">Click here</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>dialpad</mat-icon>
+                        <span>Redial</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                        <mat-icon>voicemail</mat-icon>
+                        <span>Check voice mail</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>notifications_off</mat-icon>
+                        <span>Disable alerts</span>
+                    </button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Nested Menu</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-flat-button [matMenuTriggerFor]="animals" class="gray">Click here</button>
+                <mat-menu #animals="matMenu">
+                    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+                    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+                </mat-menu>
+                <mat-menu #vertebrates="matMenu">
+                    <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+                    <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+                    <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+                    <button mat-menu-item>Birds</button>
+                    <button mat-menu-item>Mammals</button>
+                </mat-menu>
+                <mat-menu #invertebrates="matMenu">
+                    <button mat-menu-item>Insects</button>
+                    <button mat-menu-item>Molluscs</button>
+                    <button mat-menu-item>Crustaceans</button>
+                    <button mat-menu-item>Corals</button>
+                    <button mat-menu-item>Arachnids</button>
+                    <button mat-menu-item>Velvet worms</button>
+                    <button mat-menu-item>Horseshoe crabs</button>
+                </mat-menu>
+                <mat-menu #fish="matMenu">
+                    <button mat-menu-item>Baikal oilfish</button>
+                    <button mat-menu-item>Bala shark</button>
+                    <button mat-menu-item>Ballan wrasse</button>
+                    <button mat-menu-item>Bamboo shark</button>
+                    <button mat-menu-item>Banded killifish</button>
+                </mat-menu>
+                <mat-menu #amphibians="matMenu">
+                    <button mat-menu-item>Sonoran desert toad</button>
+                    <button mat-menu-item>Western toad</button>
+                    <button mat-menu-item>Arroyo toad</button>
+                    <button mat-menu-item>Yosemite toad</button>
+                </mat-menu>
+                <mat-menu #reptiles="matMenu">
+                    <button mat-menu-item>Banded Day Gecko</button>
+                    <button mat-menu-item>Banded Gila Monster</button>
+                    <button mat-menu-item>Black Tree Monitor</button>
+                    <button mat-menu-item>Blue Spiny Lizard</button>
+                    <button mat-menu-item disabled>Velociraptor</button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Menu</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-button [matMenuTriggerFor]="menu2">Menu</button>
+                <mat-menu #menu2="matMenu">
+                    <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="mb-0">
+                <h5 class="mb-0">Dot Menu</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+                </mat-menu>
+            </mat-card-header>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="mb-0">
+                <h5 class="mb-0">Text Menu</h5>
+                <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu2">
+                    This Week
+                </button>
+                <mat-menu #monthMenu2="matMenu" class="monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none">This Month</button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none">This Year</button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+                </mat-menu>
+            </mat-card-header>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="mb-0">
+                <h5 class="mb-0">Icon Menu</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="iconMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #iconMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Menu Positioning</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
+                <mat-menu #aboveMenu="matMenu" yPosition="above">
+                    <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button>
+                </mat-menu>
+                <button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
+                <mat-menu #belowMenu="matMenu" yPosition="below">
+                    <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button>
+                </mat-menu>
+                <button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                    <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button>
+                </mat-menu>
+                <button mat-button [matMenuTriggerFor]="afterMenu">After</button>
+                <mat-menu #afterMenu="matMenu" xPosition="after">
+                    <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-8 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">All Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-flat-button [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Basic</button>
+                <button mat-flat-button class="tagus" [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Tagus</button>
+                <button mat-flat-button color="primary" [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Primary</button>
+                <button mat-flat-button color="accent" [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Accent</button>
+                <button mat-flat-button color="warn" [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Warn</button>
+                <button mat-flat-button disabled [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Disabled</button>
+                <a mat-flat-button routerLink="." [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Link</a>
+                <button mat-flat-button class="gray" [matMenuTriggerFor]="buttonsMenu"><mat-icon>more_vert</mat-icon> Gray</button>
+                <mat-menu #buttonsMenu="matMenu">
+                    <button mat-menu-item>Item 1</button>
+                    <button mat-menu-item>Item 2</button>
+                    <button mat-menu-item>Item 3</button>
+                    <button mat-menu-item>Item 4</button>
+                    <button mat-menu-item>Item 5</button>
+                </mat-menu>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

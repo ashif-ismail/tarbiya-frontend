@@ -1,0 +1,107 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Team Members</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-add-circle-line"></i> Add
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-delete-bin-6-line"></i> Delete
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-restart-line"></i> Refresh
+            </button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="team-members-table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold gray-color">Member</th>
+                        <th class="fw-semibold gray-color">Hours</th>
+                        <th class="fw-semibold gray-color">Task</th>
+                        <th class="fw-semibold gray-color">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="gray-color">
+                            <div class="user-info d-flex align-items-center">
+                                <img src="img/user/user12.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold">Jordan Steve</h5>
+                                    <span class="d-block muted-color">&#64;jstevenson5c</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">10h : 50m</td>
+                        <td class="gray-color">258</td>
+                        <td class="gray-color">
+                            48%
+                            <mat-progress-bar mode="determinate" value="48"></mat-progress-bar>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gray-color">
+                            <div class="user-info d-flex align-items-center">
+                                <img src="img/user/user13.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold">Lydia Reese</h5>
+                                    <span class="d-block muted-color">&#64;lreese3b</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">11h : 14m</td>
+                        <td class="gray-color">321</td>
+                        <td class="gray-color">
+                            76%
+                            <mat-progress-bar mode="determinate" value="76"></mat-progress-bar>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gray-color">
+                            <div class="user-info d-flex align-items-center">
+                                <img src="img/user/user14.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold">Anty Rodes</h5>
+                                    <span class="d-block muted-color">&#64;antyrodes32</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">9h : 15m</td>
+                        <td class="gray-color">123</td>
+                        <td class="gray-color">
+                            55%
+                            <mat-progress-bar mode="determinate" value="55"></mat-progress-bar>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gray-color">
+                            <div class="user-info d-flex align-items-center">
+                                <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold">Laurent Perrier</h5>
+                                    <span class="d-block muted-color">&#64;laurentperrier</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">99h : 59m</td>
+                        <td class="gray-color">99</td>
+                        <td class="gray-color">
+                            88%
+                            <mat-progress-bar mode="determinate" value="88"></mat-progress-bar>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

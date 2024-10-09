@@ -1,0 +1,10 @@
+.salesAnalyticsChart {
+    margin: {
+        top: -15px !important;
+    };
+}
+.component-rtl-enabled {
+    .salesAnalyticsChart {
+        direction: ltr;
+    }
+}

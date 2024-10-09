@@ -1,0 +1,53 @@
+iframe {
+    height: 309px;
+    width: 100%;
+    border: 0;
+}
+
+@media only screen and (max-width : 767px) {
+
+    iframe {
+        height: 140px;
+    }
+
+}
+
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    iframe {
+        height: 290px;
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    iframe {
+        height: 169px;
+    }
+
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    iframe {
+        height: 230px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    iframe {
+        height: 221px;
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    iframe {
+        height: 405px;
+    }
+
+}

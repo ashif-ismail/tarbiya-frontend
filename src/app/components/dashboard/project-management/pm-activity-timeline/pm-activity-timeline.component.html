@@ -1,0 +1,55 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Activity Timeline</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-add-circle-line"></i> Add
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-delete-bin-6-line"></i> Delete
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-restart-line"></i> Refresh
+            </button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="item position-relative">
+            <img src="img/icon/pdf.png" alt="pdf">
+            <h5 class="fw-semibold gray-color mb-0">Donald updated the status of Refund #1234 to awaiting customer</h5>
+            <span class="date d-block muted-color">54 Min ago</span>
+            <div class="border"></div>
+        </div>
+        <div class="item position-relative">
+            <img src="img/icon/avatar.png" alt="avatar">
+            <h5 class="fw-semibold gray-color mb-0">Design new UI and check sales update Meta4 Systems</h5>
+            <span class="date d-block muted-color">10 hours ago</span>
+            <div class="border"></div>
+        </div>
+        <div class="item position-relative">
+            <img src="img/icon/t-shirt.png" alt="t-shirt">
+            <h5 class="fw-semibold gray-color mb-0">James Bangs (client) meeting Tagus technologies</h5>
+            <span class="date d-block muted-color">Yesterday</span>
+            <div class="border"></div>
+        </div>
+        <div class="item position-relative">
+            <img src="img/icon/cube.png" alt="cube">
+            <h5 class="fw-semibold gray-color mb-0">Joseph Rust opened new showcase Tagus Theme</h5>
+            <span class="date d-block muted-color">14 Feb 2023</span>
+            <div class="border"></div>
+        </div>
+        <div class="item position-relative">
+            <img src="img/icon/laptop.png" alt="laptop">
+            <h5 class="fw-semibold gray-color mb-0">Brust opened new showcase some theme market demo</h5>
+            <span class="date d-block muted-color">10 Feb 2023</span>
+            <div class="border"></div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,45 @@
+<mat-card
+    class="mb-25 tagus-card activity-timeline-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Activity Timeline</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-add-circle-line"></i> Add
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-delete-bin-6-line"></i> Delete
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-restart-line"></i> Refresh
+            </button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="m-0 p-0">
+            <li class="position-relative">
+                <img src="img/icon/pdf.png" alt="pdf">
+                <h5 class="fw-semibold">8 Invoices have been paid</h5>
+                <p>Invoices have been paid to the company Tagus.</p>
+                <span class="time muted-color">02:14 PM Today</span>
+            </li>
+            <li class="position-relative">
+                <img src="img/icon/avatar.png" alt="avatar">
+                <h5 class="fw-semibold">Create a project for client</h5>
+                <p>Allow users to like products in Tagus.</p>
+                <span class="time muted-color">11:47 PM Wednesday</span>
+            </li>
+            <li class="position-relative">
+                <img src="img/icon/t-shirt.png" alt="t-shirt">
+                <h5 class="fw-semibold">Added new style collection</h5>
+                <p>Product uploaded by Tagus Technology Email.</p>
+                <span class="time muted-color">18 March 2023</span>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

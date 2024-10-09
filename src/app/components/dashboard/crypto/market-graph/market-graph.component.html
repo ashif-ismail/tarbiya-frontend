@@ -1,0 +1,50 @@
+<mat-card
+    class="mb-25 tagus-card market-graph-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Market Graph</h5>
+        <div class="buttons-list">
+            <button mat-button>Hour</button>
+            <button mat-button>Day</button>
+            <button mat-button>Week</button>
+            <button mat-button>Month</button>
+            <button mat-button>Order Book</button>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="content d-lg-flex align-items-center justify-content-space-between">
+            <div class="title d-flex align-items-center">
+                <img src="img/icon/bitcoin.png" alt="bitcoin">
+                <div class="ms-10">
+                    <span class="gray-color">Bitcoin (BTC) 3.8% <i class="ri-arrow-up-s-line"></i></span>
+                    <h5 class="fw-semibold">$32,258.89</h5>
+                </div>
+            </div>
+            <ul class="list list-unstyled mt-0 ps-0 mb-0">
+                <li class="d-inline-block">
+                    <span class="fw-semibold d-block">Market Cap:</span> 0.546218602
+                </li>
+                <li class="d-inline-block">
+                    <span class="fw-semibold d-block">Supply:</span> 0.546218602
+                </li>
+            </ul>
+        </div>
+        <div class="chart marketGraphChart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [colors]="chartOptions.colors!"
+                [yaxis]="chartOptions.yaxis!"
+                [dataLabels]="chartOptions.dataLabels!"
+                [markers]="chartOptions.markers!"
+                [stroke]="chartOptions.stroke!"
+                [grid]="chartOptions.grid!"
+                [xaxis]="chartOptions.xaxis!"
+                [tooltip]="chartOptions.tooltip!"
+                [annotations]="chartOptions.annotations!"
+            ></apx-chart>
+        </div>
+    </mat-card-content>
+</mat-card>

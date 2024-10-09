@@ -1,0 +1,43 @@
+.list {
+    list-style-type: none;
+    margin-top: 15px;
+    
+    li {
+        margin-bottom: 12px;
+
+        a {
+            padding-left: 22px;
+
+            i {
+                left: 0;
+                top: 50%;
+                line-height: 1;
+                margin-top: 1px;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+            &:hover {
+                color: var(--heraBlueColor) !important;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.component-rtl-enabled {
+    .list {
+        li {
+            a {
+                padding: {
+                    left: 0;
+                    right: 22px;
+                };
+                i {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

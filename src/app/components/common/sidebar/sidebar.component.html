@@ -1,0 +1,58 @@
+<div
+    class="sidebar-area bg-white box-shadow"
+    [ngClass]="{'active': isToggled}"
+    [class.dark-sidebar]="themeService.isSidebarDark()"
+    [class.right-sidebar]="themeService.isRightSidebar()"
+    [class.hide-sidebar]="themeService.isHideSidebar()"
+>
+    <div class="logo bg-white">
+        <a routerLink="/" class="d-flex align-items-center">
+            <img src="img/logo-icon.png" alt="logo" style="width: 40px; height: 50px;">
+            <span>تربية</span>
+        </a>
+    </div>
+    <div class="burger-menu" (click)="toggle()" [ngClass]="{'active': isToggled}">
+        <span class="top-bar"></span>
+        <span class="middle-bar"></span>
+        <span class="bottom-bar"></span>
+    </div>
+    <ng-scrollbar visibility="hover" style="height: 100vh;">
+        <div class="sidebar-inner">
+            <div class="sidebar-menu">
+                <mat-accordion>
+                    <ng-container *ngIf="isPrivilegedUser(); else regularUser">
+                        <!-- <span class="sub-title gray-color">Home</span> -->
+                        <!-- <a routerLink="/" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <i class="flaticon-visualization"></i>
+                            <span class="title">Dashboard</span>
+                        </a> -->
+                        <span class="sub-title gray-color">Manage</span>
+                        <a routerLink="/manage-members" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <i class="flaticon-user"></i>
+                            <span class="title">Members</span>
+                        </a>
+                        <a routerLink="/manage-groups" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <i class="flaticon-users-group"></i>
+                            <span class="title">Groups</span>
+                        </a>
+                        <a routerLink="/manage-tasks" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <i class="flaticon-goal"></i>
+                            <span class="title">Tasks</span>
+                        </a>
+                        <!-- <a routerLink="/manage-categories" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <i class="flaticon-bag"></i>
+                            <span class="title">Categories</span>
+                        </a> -->
+                    </ng-container>
+                    <ng-template #regularUser>
+                        <span class="sub-title gray-color">Users</span>
+                    </ng-template>
+                    <a routerLink="/task-entry" class="sidebar-menu-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <i class="flaticon-calendar-1"></i>
+                        <span class="title">Task Entry</span>
+                    </a>
+                </mat-accordion>
+            </div>
+        </div>
+    </ng-scrollbar>
+</div>

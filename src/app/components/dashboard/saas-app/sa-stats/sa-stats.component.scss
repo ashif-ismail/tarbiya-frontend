@@ -1,0 +1,233 @@
+.profile-card-box {
+    padding: {
+        top: 33px;
+        bottom: 33px;
+    };
+    .profile-box {
+        img {
+            width: 60px;
+            margin-bottom: 18px;
+            border: 4px solid var(--whiteColor);
+        }
+        h5 {
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+    .impression-box {
+        span {
+            font-size: 13px;
+            color: #2DB6F5;
+            margin: {
+                bottom: 5px;
+                top: -6px;
+            };
+        }
+        h5 {
+            font-size: 14px;
+        }
+    }
+}
+.single-stats-box {
+    .title {
+        h3 {
+            margin-bottom: 5px;
+            font: {
+                size: 24px;
+                family: var(--fontFamily) !important;
+            };
+        }
+    }
+    .icon {
+        background-color: var(--heraBlueColor);
+        color: var(--whiteColor);
+        text-align: center;
+        position: relative;
+        border-radius: 5px;
+        font-size: 25px;
+        height: 50px;
+        width: 50px;
+
+        i {
+            left: 0;
+            right: 0;
+            top: 50%;
+            line-height: 1;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+    }
+    .info {
+        margin-top: 50px;
+    }
+    .mat-mdc-progress-bar {
+        border-radius: 5px;
+    }
+}
+.stats-box {
+    .title {
+        h3 {
+            margin-top: 5px;
+            font: {
+                size: 24px;
+                family: var(--fontFamily) !important;
+            };
+        }
+    }
+    .icon {
+        line-height: 1;
+        font-size: 40px;
+        color: #A9A9C8;
+    }
+    p {
+        margin-top: 18px;
+    }
+    .badge {
+        background: rgba(0, 182, 155, 0.1);
+        padding: 3px 28px 3px 10px;
+        position: relative;
+        margin-right: 2px;
+        border-radius: 0;
+        color: #00B69B;
+        font-size: 14px;
+
+        i {
+            top: 50%;
+            right: 10px;
+            line-height: 1;
+            font-size: 15px;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+        &.down {
+            color: #EE368C;
+            background: rgba(238, 54, 140, 0.1);
+        }
+    }
+}
+.component-rtl-enabled {
+    .stats-box {
+        .badge {
+            margin: {
+                right: 0;
+                left: 2px;
+            };
+            padding: {
+                left: 28px;
+                right: 10px;
+            };
+            i {
+                right: auto;
+                left: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .profile-card-box {
+        padding: {
+            top: 15px;
+            bottom: 15px;
+        };
+        .profile-box {
+            img {
+                margin-bottom: 10px;
+            }
+            h5 {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+        .impression-box {
+            text-align: start !important;
+
+            span {
+                margin-top: 10px;
+            }
+        }
+    }
+    .single-stats-box {
+        .title {
+            h3 {
+                margin-bottom: 3px;
+                font-size: 20px;
+            }
+        }
+        .icon {
+            height: 45px;
+            width: 45px;
+        }
+        .info {
+            margin-top: 20px;
+        }
+    }
+    .stats-box {
+        .title {
+            h3 {
+                margin-top: 3px;
+                font-size: 20px;
+            }
+        }
+        .icon {
+            font-size: 30px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .profile-card-box {
+        padding: {
+            top: 20px;
+            left: 15px;
+            right: 15px;
+            bottom: 20px;
+        };
+        .profile-box {
+            img {
+                width: 60px;
+                margin-bottom: 5px;
+            }
+            h5 {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .single-stats-box {
+        .title {
+            h3 {
+                font-size: 22px;
+            }
+        }
+        .info {
+            margin-top: 38px;
+        }
+    }
+    .stats-box {
+        .title {
+            h3 {
+                font-size: 22px;
+            }
+        }
+        .icon {
+            font-size: 30px;
+        }
+        p {
+            margin-top: 12px;
+        }
+    }
+
+}

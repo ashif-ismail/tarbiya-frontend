@@ -1,0 +1,159 @@
+<mat-card
+    class="mb-25 tagus-card order-activities-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Orders Activities</h5>
+        <div class="buttons-list">
+            <button mat-button>Buy</button>
+            <button mat-button>Sell</button>
+            <button mat-button>All</button>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="order-activities-table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">Type</th>
+                        <th class="fw-semibold gray-color">Change</th>
+                        <th class="fw-semibold gray-color">Date</th>
+                        <th class="fw-semibold gray-color">Time</th>
+                        <th class="fw-semibold gray-color">USD Amount</th>
+                        <th class="fw-semibold gray-color">Supply</th>
+                        <th class="fw-semibold gray-color">Amount</th>
+                        <th class="fw-semibold gray-color">Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-semibold type-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/dollar.png" width="38" alt="dollar">
+                                <img src="img/icon/bitcoin3.png" width="38" alt="bitcoin">
+                                <span class="ms-10">Bitcoin <span class="fw-normal gray-color">(BTC)</span></span>
+                            </div>
+                        </td>
+                        <td class="up">+2.48%</td>
+                        <td class="gray-color">06 June 2023</td>
+                        <td class="gray-color">11:37 PM</td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">12,565.75</span> USD
+                        </td>
+                        <td class="gray-color text-end">
+                            <span class="d-block mb-8 fs-13">180548.00 BTC</span>
+                            <mat-progress-bar mode="determinate" class="text-start" value="80"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.2040</span> BTC
+                        </td>
+                        <td>
+                            <span class="badge text-soft-success fw-semibold fs-13">Buy</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold type-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/matic3.png" width="38" alt="dollar">
+                                <img src="img/icon/ethereum2.png" width="38" alt="ethereum">
+                                <span class="ms-10">Ethereum <span class="fw-normal gray-color">(ETH)</span></span>
+                            </div>
+                        </td>
+                        <td class="down">-1.11%</td>
+                        <td class="gray-color">05 June 2023</td>
+                        <td class="gray-color">12:00 PM</td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">11,232.22</span> USD
+                        </td>
+                        <td class="gray-color text-end">
+                            <span class="d-block mb-8 fs-13">220548.22 ETH</span>
+                            <mat-progress-bar mode="determinate" class="text-start" value="55"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.4453</span> ETH
+                        </td>
+                        <td>
+                            <span class="badge text-soft-danger fw-semibold fs-13">Transfer</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold type-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/dollar.png" width="38" alt="dollar">
+                                <img src="img/icon/dash.png" width="38" alt="dash">
+                                <span class="ms-10">Dash <span class="fw-normal gray-color">(DASH)</span></span>
+                            </div>
+                        </td>
+                        <td class="up">+0.32%</td>
+                        <td class="gray-color">04 June 2023</td>
+                        <td class="gray-color">09:33 AM</td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">32,222.23</span> USD
+                        </td>
+                        <td class="gray-color text-end">
+                            <span class="d-block mb-8 fs-13">110148.43 DASH</span>
+                            <mat-progress-bar mode="determinate" class="text-start" value="70"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.3421</span> DASH
+                        </td>
+                        <td>
+                            <span class="badge text-soft-primary fw-semibold fs-13">Sell</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold type-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/bitcoin3.png" width="38" alt="bitcoin">
+                                <img src="img/icon/litecoin2.png" width="38" alt="litecoin">
+                                <span class="ms-10">Litecoin <span class="fw-normal gray-color">(LTC)</span></span>
+                            </div>
+                        </td>
+                        <td class="down">-3.06%</td>
+                        <td class="gray-color">03 June 2023</td>
+                        <td class="gray-color">10:00 PM</td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">7,432.43</span> USD
+                        </td>
+                        <td class="gray-color text-end">
+                            <span class="d-block mb-8 fs-13">321548.01 LTC</span>
+                            <mat-progress-bar mode="determinate" class="text-start" value="60"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 1.1140</span> LTC
+                        </td>
+                        <td>
+                            <span class="badge text-soft-success fw-semibold fs-13">Buy</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold type-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/matic3.png" width="38" alt="dollar">
+                                <img src="img/icon/dollar.png" width="38" alt="dollar">
+                                <span class="ms-10">Dollar <span class="fw-normal gray-color">(USD)</span></span>
+                            </div>
+                        </td>
+                        <td class="up">+1.11%</td>
+                        <td class="gray-color">02 June 2023</td>
+                        <td class="gray-color">08:21 AM</td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">32,565.75</span> USD
+                        </td>
+                        <td class="gray-color text-end">
+                            <span class="d-block mb-8 fs-13">200548.00 BTC</span>
+                            <mat-progress-bar mode="determinate" class="text-start" value="40"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 2.2040</span> USD
+                        </td>
+                        <td>
+                            <span class="badge text-soft-primary fw-semibold fs-13">Sell</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

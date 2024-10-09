@@ -1,0 +1,148 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Settings</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <nav>
+            <ul class="ps-0 mt-0">
+                <li>
+                    <a routerLink="/account" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Account</a>
+                </li>
+                <li>
+                    <a routerLink="/security" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Security</a>
+                </li>
+                <li>
+                    <a routerLink="/connections" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Connections</a>
+                </li>
+                <li>
+                    <a routerLink="/privacy-policy" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Privacy Policy</a>
+                </li>
+                <li>
+                    <a routerLink="/terms-conditions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Terms & Conditions</a>
+                </li>
+            </ul>
+        </nav>
+        <form>
+            <h5 class="fw-semibold mb-8">Profile</h5>
+            <p>Update your photo and personal details here.</p>
+            <div class="row mt-20">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">First Name</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-user-3-line"></i>
+                            <input matInput value="Andrew">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Last Name</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-user-3-line"></i>
+                            <input matInput value="Bruns">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Email Address</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-mail-line"></i>
+                            <input matInput value="hello&#64;tagus.com">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Phone</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-phone-line"></i>
+                            <input matInput value="+(555) 555-1234">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Live in</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-home-7-line"></i>
+                            <input matInput value="Zuichi, Switzerland">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Street Address</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-home-7-line"></i>
+                            <input matInput value="2445 Crosswind Drive">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Date Of Birth</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-cake-2-line"></i>
+                            <input matInput value="20 March 1999">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Gender</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-men-line"></i>
+                            <input matInput value="Male">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <h5 class="fw-semibold mb-8 mt-5">Your Photo</h5>
+            <p>This will be displayed on your profile.</p>
+            <div class="d-flex align-items-center">
+                <img src="img/user/user15.jpg" class="rounded-circle" width="110" alt="user">
+                <div class="tagus-form-group ms-20">
+                    <label class="d-block mb-12 fw-semibold gray-color">Upload Image</label>
+                    <input type="file">
+                </div>
+            </div>
+            <h5 class="fw-semibold mb-20 mt-25">Socials Profile</h5>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Facebook</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-facebook-fill"></i>
+                            <input matInput value="https://www.facebook.com/">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Twitter</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-twitter-fill"></i>
+                            <input matInput value="https://twitter.com/">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="tagus-form-group">
+                        <label class="d-block mb-12 fw-semibold gray-color">Linkedin</label>
+                        <mat-form-field appearance="fill">
+                            <i class="ri-linkedin-fill"></i>
+                            <input matInput value="https://www.linkedin.com/">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <button mat-raised-button class="tagus fw-semibold">Update</button>
+        </form>
+    </mat-card-content>
+</mat-card>

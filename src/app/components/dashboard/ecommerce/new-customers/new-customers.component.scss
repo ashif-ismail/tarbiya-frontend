@@ -1,0 +1,194 @@
+.new-customers-box {
+    ul {
+        list-style-type: none;
+
+        li {
+            border-top: 1px solid #f7faff;
+            padding: {
+                top: 20px;
+                bottom: 20px;
+            };
+            .user-info {
+                img {
+                    width: 45px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                }
+                .title {
+                    h5 {
+                        color: var(--blackColor);
+                        margin-bottom: 0;
+                        font: {
+                            size: 15px;
+                            weight: 600;
+                        };
+                    }
+                    span {
+                        display: block;
+                        margin-top: 4px;
+                        font: {
+                            size: 14px;
+                            weight: 400;
+                            family: var(--fontFamily);
+                        };
+                    }
+                }
+            }
+            .info {
+                span {
+                    font-size: 14px;
+                }
+                .badge {
+                    margin-left: 10px;
+                    border-radius: 10px;
+                    padding: 4px 10px 5px;
+                    background: rgba(117, 127, 239, 0.1);
+                    font: {
+                        weight: 600;
+                        size: 13px;
+                    };
+                }
+            }
+            &:first-child {
+                border-top-color: transparent;
+                padding-top: 0;
+            }
+            &:last-child {
+                border-bottom: 1px solid #eef0f7;
+            }
+        }
+    }
+    &.component-dark-theme {
+        ul {
+            li {
+                border-top-color: #1f2226;
+                
+                .user-info {
+                    .title {
+                        h5 {
+                            color: var(--whiteColor);
+                        }
+                    }
+                }
+                &:last-child {
+                    border-bottom-color: #1f2226;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        ul {
+            li {
+                .user-info {
+                    img {
+                        margin: {
+                            left: 10px;
+                            right: 0;
+                        };
+                    }
+                }
+                .info {
+                    .badge {
+                        margin: {
+                            left: 0;
+                            right: 10px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .new-customers-box {
+        ul {
+            li {
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+                .user-info {
+                    margin-bottom: 12px;
+
+                    .title {
+                        h5 {
+                            font-size: 14px;
+                        }
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .new-customers-box {
+        ul {
+            li {
+                padding: {
+                    top: 17.3px;
+                    bottom: 17.3px;
+                };
+                .user-info {
+                    img {
+                        margin-right: 12px;
+                    }
+                    .title {
+                        h5 {
+                            font: {
+                                size: 16px;
+                            };
+                        }
+                        span {
+                            font: {
+                                size: 15px;
+                            };
+                        }
+                    }
+                }
+                .info {
+                    span {
+                        font-size: var(--fontSize);
+                    }
+                    .badge {
+                        margin-left: 10px;
+                        padding: 4px 12px 5px;
+                        font: {
+                            size: 14px;
+                        };
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            ul {
+                li {
+                    .user-info {
+                        img {
+                            margin: {
+                                right: 0;
+                                left: 12px;
+                            };
+                        }
+                    }
+                    .info {
+                        .badge {
+                            margin: {
+                                left: 0;
+                                right: 10px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

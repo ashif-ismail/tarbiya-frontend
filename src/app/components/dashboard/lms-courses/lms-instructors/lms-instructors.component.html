@@ -1,0 +1,105 @@
+<mat-card
+    class="mb-25 tagus-card top-instructors-box"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Top Instructors</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            Last 7 Days
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="instructors-list d-flex flex-wrap">
+            <div class="list-item">
+                <div class="instructor-box bg-gray border-radius d-flex align-items-center justify-content-space-between">
+                    <div class="d-flex align-items-center">
+                        <img src="img/user/user13.jpg" class="border-radius" alt="user">
+                        <div class="info">
+                            <h5>Melanie Grutt</h5>
+                            <span class="d-block muted-color">&#64;melgrutt</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="position-relative muted-color plus-btn bg-white p-0 border-none rounded-circle">
+                        <i class="ri-add-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="instructor-box bg-gray border-radius d-flex align-items-center justify-content-space-between">
+                    <div class="d-flex align-items-center">
+                        <img src="img/user/user9.jpg" class="border-radius" alt="user">
+                        <div class="info">
+                            <h5>Nicholas Tanner</h5>
+                            <span class="d-block muted-color">&#64;nilyeager</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="position-relative muted-color plus-btn bg-white p-0 border-none rounded-circle">
+                        <i class="ri-add-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="instructor-box bg-gray border-radius d-flex align-items-center justify-content-space-between">
+                    <div class="d-flex align-items-center">
+                        <img src="img/user/user22.jpg" class="border-radius" alt="user">
+                        <div class="info">
+                            <h5>Theron Trump</h5>
+                            <span class="d-block muted-color">&#64;therontrump</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="position-relative muted-color plus-btn bg-white p-0 border-none rounded-circle">
+                        <i class="ri-add-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="instructor-box bg-gray border-radius d-flex align-items-center justify-content-space-between">
+                    <div class="d-flex align-items-center">
+                        <img src="img/user/user8.jpg" class="border-radius" alt="user">
+                        <div class="info">
+                            <h5>Tyler Mark</h5>
+                            <span class="d-block muted-color">&#64;tylemark</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="position-relative muted-color plus-btn bg-white p-0 border-none rounded-circle">
+                        <i class="ri-add-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="instructor-box bg-gray border-radius d-flex align-items-center justify-content-space-between">
+                    <div class="d-flex align-items-center">
+                        <img src="img/user/user14.jpg" class="border-radius" alt="user">
+                        <div class="info">
+                            <h5>Johen Mark</h5>
+                            <span class="d-block muted-color">&#64;johenmark</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="position-relative muted-color plus-btn bg-white p-0 border-none rounded-circle">
+                        <i class="ri-add-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="instructor-box bg-gray border-radius d-flex align-items-center justify-content-space-between">
+                    <div class="d-flex align-items-center">
+                        <img src="img/user/user11.jpg" class="border-radius" alt="user">
+                        <div class="info">
+                            <h5>Martina Albart</h5>
+                            <span class="d-block muted-color">&#64;martina</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0);" class="position-relative muted-color plus-btn bg-white p-0 border-none rounded-circle">
+                        <i class="ri-add-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

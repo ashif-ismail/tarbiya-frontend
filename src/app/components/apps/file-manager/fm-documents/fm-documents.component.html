@@ -1,0 +1,153 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Documents</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item">File Manager</li>
+        <li class="breadcrumb-item fw-semibold">Documents</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xxl-3">
+        <app-fm-sidebar />
+    </div>
+    <div class="col-lg-8 col-xxl-9">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Documents</h5>
+                <button mat-flat-button class="default-btn tagus" (click)="openCreateDocumentDialog('300ms', '100ms')">
+                    <i class="ri-add-fill"></i> Create Document
+                </button>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="files-list d-flex flex-wrap">
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/jpg.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">sketch-design.zip</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/jpg.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Compile.png</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/pdf2.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Integrations.pdf</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/txt.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">contact&#64;32.txt</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/doc.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">app-Design.doc</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/png.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">image02.png</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/doc.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Ubold-sketch.doc</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/txt.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Annualreport.txt</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/xl4.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Wireframes.xl4</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/jpg.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">contact&#64;32.jpg</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/jpg.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">sketch-design.zip</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/jpg.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Compile.png</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/pdf2.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Integrations.pdf</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/txt.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">contact&#64;32.txt</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/doc.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">app-Design.doc</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/png.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">image02.png</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/doc.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Ubold-sketch.doc</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/txt.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Annualreport.txt</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/xl4.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">Wireframes.xl4</a></span>
+                        </div>
+                    </div>
+                    <div class="file-item">
+                        <div class="bg-gray text-center mt-15 ps-20 pe-20 pt-50 pb-50 border-radius">
+                            <img src="img/icon/jpg.png" alt="jpg">
+                            <span class="d-block fw-semibold mt-15 gray-color"><a routerLink="/file-manager/projects" class="gray-color">contact&#64;32.jpg</a></span>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

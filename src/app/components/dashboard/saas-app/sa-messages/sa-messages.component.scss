@@ -1,0 +1,208 @@
+.messages-box {
+    .messages-list {
+        .single-message {
+            border-top: 1px solid #eef0f7;
+            transition: var(--transition);
+            padding: {
+                top: 18px;
+                right: 15px;
+                bottom: 18px;
+            };
+            .content {
+                .img {
+                    img {
+                        width: 54px;
+                        height: 54px;
+                        border-radius: 8px;
+                    }
+                    .active-status {
+                        top: 3px;
+                        width: 12px;
+                        right: -6px;
+                        height: 12px;
+                        border-radius: 50%;
+                        position: absolute;
+                        background: var(--heraBlueColor);
+                        border: 2px solid var(--whiteColor);
+
+                        &.off {
+                            background: red;
+                        }
+                    }
+                }
+                .title {
+                    margin-left: 15px;
+
+                    h5 {
+                        margin-bottom: 5px;
+                        font: {
+                            size: 16px;
+                            weight: 600;
+                        };
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: initial;
+                    }
+                }
+            }
+            .info {
+                .badge {
+                    color: var(--blackColor);
+                    background: #FEF5EA;
+                    border-radius: 30px;
+                    text-align: center;
+                    padding: 2px 9px;
+                    font: {
+                        size: 13px;
+                        weight: 500;
+                    };
+                    &:nth-child(2) {
+                        padding: 0;
+                        width: 22px;
+                        height: 22px;
+                        margin-left: 10px;
+                        line-height: 22px;
+                        background: #FFCC91;
+                    }
+                }
+                .time {
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+            &::before {
+                top: 0;
+                right: 0;
+                height: 0;
+                width: 4px;
+                content: '';
+                position: absolute;
+                transition: var(--transition);
+                background: var(--heraBlueColor);
+            }
+            &:hover {
+                background-color: #fafafa;
+
+                &::before {
+                    height: 100%;
+                }
+            }
+            &:last-child {
+                border-bottom: 1px solid #eef0f7;
+            }
+        }
+    }
+    &.component-dark-theme {
+        .messages-list {
+            .single-message {
+                border-top-color: #1f2226;
+                
+                .content {
+                    .img {
+                        .active-status {
+                            border-color: #1f2226;
+                        }
+                    }
+                }
+                .info {
+                    .badge {
+                        color: var(--whiteColor);
+                        background: #1e2227;
+                        
+                        &:nth-child(2) {
+                            color: var(--blackColor);
+                            background: #FFCC91;
+                        }
+                    }
+                }
+                &:hover {
+                    background-color: #1e2227;
+                }
+                &:last-child {
+                    border-bottom-color: #1f2226;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .messages-list {
+            .single-message {
+                padding: {
+                    right: 0;
+                    left: 10px;
+                };
+                .content {
+                    .img {
+                        .active-status {
+                            right: auto;
+                            left: -6px;
+                        }
+                    }
+                    .title {
+                        margin: {
+                            left: 0;
+                            right: 14px;
+                        };
+                    }
+                }
+                .info {
+                    .badge {
+                        &:nth-child(2) {
+                            margin: {
+                                left: 0;
+                                right: 10px;
+                            };
+                        }
+                    }
+                }
+                &::before {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .messages-box {
+        .messages-list {
+            .single-message {
+                padding: {
+                    top: 15px;
+                    bottom: 15px;
+                };
+                .content {
+                    .img {
+                        display: inline-block;
+                    }
+                    .title {
+                        margin: {
+                            left: 0;
+                            top: 12px;
+                        };
+                    }
+                    &.d-flex {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .messages-list {
+                .single-message {
+                    .content {
+                        .title {
+                            margin: {
+                                right: 0;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

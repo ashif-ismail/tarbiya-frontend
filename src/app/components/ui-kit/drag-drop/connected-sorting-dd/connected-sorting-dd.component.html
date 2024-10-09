@@ -1,0 +1,32 @@
+<div class="row" [class.component-dark-theme]="themeService.isDark()">
+    <div class="col-lg-4 col-sm-6 col-md-6">
+        <div class="example-container">
+            <h5>To do</h5>
+            <div
+                cdkDropList
+                #todoList="cdkDropList"
+                [cdkDropListData]="todo"
+                [cdkDropListConnectedTo]="[doneList]"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)"
+            >
+                <div class="example-list-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-md-6">
+        <div class="example-container">
+            <h5>Done</h5>
+            <div
+                cdkDropList
+                #doneList="cdkDropList"
+                [cdkDropListData]="done"
+                [cdkDropListConnectedTo]="[todoList]"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)"
+            >
+                <div class="example-list-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+            </div>
+        </div>
+    </div>
+</div>

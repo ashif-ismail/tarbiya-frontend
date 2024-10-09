@@ -1,0 +1,61 @@
+<mat-card
+    class="mb-25 tagus-card trading-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Trading</h5>
+        <span class="fw-semibold"><span class="main-color">Wallet Balance :</span> <span>$12,426.07</span></span>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="content d-flex align-items-center">
+            <button mat-flat-button class="tagus d-block">Buy Coin</button>
+            <button mat-flat-button class="gray d-block">Sell Coin</button>
+        </div>
+        <div class="trading-form">
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="fw-semibold d-block">Currency :</label>
+                            <select>
+                                <option selected>BTC</option>
+                                <option value="1">ETH</option>
+                                <option value="2">LTC</option>
+                                <option value="3">CDR</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="fw-semibold d-block">Payment Method :</label>
+                            <input type="text" placeholder="Credit / Debit Card">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="fw-semibold d-block">Amount :</label>
+                            <input type="text" placeholder="Credit / Debit Card">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <ul>
+                            <li class="d-flex align-items-center justify-content-space-between">
+                                <span class="d-block">Estimated Rate</span>
+                                <span class="d-block">1 BTC ~ $34572.00</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-space-between">
+                                <span class="d-block">Transaction Fees (0.05%)</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-space-between">
+                                <span class="d-block">Total</span>
+                                <span class="d-block">72.00 BTC</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button mat-flat-button class="tagus d-block">Buy Coin</button>
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,74 @@
+<div
+    class="coming-soon-area position-relative"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <a routerLink="/" class="logo d-inline-block">
+        <img src="img/logo.png" alt="logo">
+    </a>
+    <a routerLink="/" class="logo d-none">
+        <img src="img/white-logo.png" alt="logo">
+    </a>
+    <ul class="ps-0 mb-0 mt-0 list-unstyled social-links">
+        <li><a href="#" target="_blank">
+            <i class="ri-facebook-fill"></i>
+        </a></li>
+        <li><a href="#" target="_blank">
+            <i class="ri-twitch-fill"></i>
+        </a></li>
+        <li><a href="#" target="_blank">
+            <i class="ri-instagram-line"></i>
+        </a></li>
+    </ul>
+    <div class="row align-items-center">
+        <div class="col-lg-5">
+            <div class="coming-soon-content">
+                <div class="wrapper">
+                    <div>
+                        <span #days></span>
+                        <p>Days</p>
+                    </div>
+                    <div>
+                        <span #hours></span>
+                        <p>Hours</p>
+                    </div>
+                    <div>
+                        <span #minutes></span>
+                        <p>Minutes</p>
+                    </div>
+                    <div>
+                        <span #seconds></span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+                <span class="sub-title fw-bold d-block">Coming Soon!</span>
+                <h1>Our Creative Agency Website On Its Way</h1>
+                <p>Find, Apply and Chat. It's That Simple!</p>
+                <form class="position-relative">
+                    <input type="email" placeholder="Enter your email..." class="d-block w-100">
+                    <button type="submit">
+                        <i class="ri-notification-3-line"></i>
+                        Notify Me
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="coming-soon-image text-center">
+                <img src="img/coming-soon.png" alt="coming-soon-image">
+            </div>
+        </div>
+    </div>
+    <div class="shape1">
+        <img src="img/shape/shape1.png" alt="shape1">
+    </div>
+    <div class="shape2">
+        <img src="img/shape/shape2.png" alt="shape2">
+    </div>
+    <div class="shape3">
+        <img src="img/shape/shape3.png" alt="shape3">
+    </div>
+    <div class="shape4">
+        <img src="img/shape/shape4.png" alt="shape4">
+    </div>
+</div>

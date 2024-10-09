@@ -1,0 +1,71 @@
+.average-time-call-box {
+    h4 {
+        margin-bottom: 0;
+        font: {
+            size: 28px;
+            family: var(--fontFamily) !important;
+        };
+        span {
+            font: {
+                size: 14px;
+                weight: 600;
+            };
+        }
+    }
+    h5 {
+        margin-bottom: 0;
+        font: {
+            size: 16px;
+            family: var(--fontFamily) !important;
+        };
+    }
+    .chart {
+        margin: {
+            top: 40px;
+            bottom: 10px;
+        };
+    }
+}
+.component-dark-theme {
+    .average-time-call-box {
+        .icon {
+            background-color: rgba(85, 112, 241, 0.12);
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .average-time-call-box {
+        h4 {
+            font-size: 22px;
+
+            span {
+                font-size: 13px;
+            }
+        }
+        h5 {
+            font-size: 14px;
+        }
+        .chart {
+            margin-top: 20px;
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .average-time-call-box {
+        h4 {
+            font-size: 25px;
+        }
+        h5 {
+            font-size: 15px;
+        }
+        .chart {
+            margin-top: 30px;
+        }
+    }
+    
+}

@@ -1,0 +1,187 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Product Details</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">eCommerce</li>
+        <li class="breadcrumb-item fw-semibold">Product Details</li>
+    </ol>
+</div>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12">
+                <div class="product-image border-radius">
+                    <owl-carousel-o [options]="imageSlides">
+                        <ng-template carouselSlide>
+                            <img src="img/recent-orders/product-details1.jpg" alt="product-details" class="border-radius">
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="img/recent-orders/product-details2.jpg" alt="product-details" class="border-radius">
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="product-content">
+                    <h4>Black T-Shirt Sleeve</h4>
+                    <p>Fendi began life in</p>
+                    <div class="rating d-flex align-items-center">
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <span class="fw-semibold">5.0</span>
+                        <span class="gray-color">(61 votes)</span>
+                    </div>
+                    <ul class="info ps-0">
+                        <li class="fw-semibold d-inline-block position-relative border-radius">
+                            <i class="ri-money-dollar-circle-line"></i>
+                            <span class="fw-semibold gray-color d-block">Price :</span>
+                            $10.99
+                        </li>
+                        <li class="fw-semibold d-inline-block position-relative border-radius">
+                            <i class="ri-hashtag"></i>
+                            <span class="fw-semibold gray-color d-block">Orders No :</span>
+                            35,890
+                        </li>
+                        <li class="fw-semibold d-inline-block position-relative border-radius">
+                            <i class="ri-bar-chart-line"></i>
+                            <span class="fw-semibold gray-color d-block">Revenue :</span>
+                            $25,890k
+                        </li>
+                    </ul>
+                    <span class="d-block fw-semibold mb-10">Description :</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adlino minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    <div class="product-size d-flex align-items-center">
+                        <span class="fw-semibold">Size :</span>
+                        <select>
+                            <option value="1">XXXS</option>
+                            <option value="2">XXS</option>
+                            <option value="3">XS</option>
+                            <option value="4">S</option>
+                            <option value="5">M</option>
+                            <option value="6">L</option>
+                            <option value="7">XL</option>
+                            <option value="8">XXL</option>
+                            <option value="9">XXXL</option>
+                        </select>
+                    </div>
+                    <ul class="list">
+                        <li>
+                            <span class="fw-semibold">Vendor :</span>
+                            Lereve
+                        </li>
+                        <li>
+                            <span class="fw-semibold">Category :</span>
+                            T-Shirt
+                        </li>
+                        <li>
+                            <span class="fw-semibold">SKU :</span>
+                            U2015
+                        </li>
+                        <li>
+                            <span class="fw-semibold">Availability :</span>
+                            In Stock 10 Items
+                        </li>
+                    </ul>
+                    <ul class="social-links d-flex align-items-center">
+                        <li>
+                            <span class="fw-semibold">Share :</span>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="flaticon-facebook-app-symbol"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="flaticon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="flaticon-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <mat-tab-group class="product-tabs" mat-stretch-tabs="false" mat-align-tabs="start" animationDuration="0ms">
+            <mat-tab label="Description">
+                <p>Lorem ipsum dolor sit amet, consectetur <strong class="fw-bold">adipiscing</strong> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adlino minim veniam, quis nostrud <u>exercitation</u> ullamco laboris nisi ut aliquip ex ea <i>commodo</i> consequat. Lorem ipsum dolor sit amet, consectetur <a routerLink="/" class="fw-medium">adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adlino minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim adlino minim veniam, quis nostrud <u>exercitation</u> ullamco laboris nisi incididunt ut aliquip ex ea <i>commodo</i> consequat. Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <a routerLink="/" class="fw-medium">adipiscing</a>.</p>
+            </mat-tab>
+            <mat-tab label="Reviews (3)">
+                <div class="row reviews">
+                    <div class="col-lg-4 col-sm-6 col-md-6">
+                        <div class="review-card mb-25">
+                            <div class="content border-radius">
+                                <div class="rating">
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                </div>
+                                <p class="fw-medium">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.</p>
+                            </div>
+                            <div class="ms-25 d-flex align-items-center">
+                                <img src="img/user/user22.jpg" class="rounded-circle me-10" width="30" alt="user">
+                                <h5 class="mb-0 fw-semibold">Alvarado Turner</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-md-6">
+                        <div class="review-card mb-25">
+                            <div class="content border-radius">
+                                <div class="rating">
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star"></i>
+                                </div>
+                                <p class="fw-medium">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.</p>
+                            </div>
+                            <div class="ms-25 d-flex align-items-center">
+                                <img src="img/user/user21.jpg" class="rounded-circle me-10" width="30" alt="user">
+                                <h5 class="mb-0 fw-semibold">Riley Dave</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-md-6">
+                        <div class="review-card mb-25">
+                            <div class="content border-radius">
+                                <div class="rating">
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-1"></i>
+                                    <i class="flaticon-star-2"></i>
+                                </div>
+                                <p class="fw-medium">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit.</p>
+                            </div>
+                            <div class="ms-25 d-flex align-items-center">
+                                <img src="img/user/user20.jpg" class="rounded-circle me-10" width="30" alt="user">
+                                <h5 class="mb-0 fw-semibold">Ivan Dan</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,74 @@
+.sales-by-locations {
+    img {
+        margin-bottom: 30px;
+        filter: drop-shadow(0px 100px 80px rgba(108, 73, 172, 0.07)) drop-shadow(0px 41.7776px 33.4221px rgba(108, 73, 172, 0.0503198)) drop-shadow(0px 22.3363px 17.869px rgba(108, 73, 172, 0.0417275)) drop-shadow(0px 12.5216px 10.0172px rgba(108, 73, 172, 0.035)) drop-shadow(0px 6.6501px 5.32008px rgba(108, 73, 172, 0.0282725)) drop-shadow(0px 2.76726px 2.21381px rgba(108, 73, 172, 0.0196802));
+    }
+    ul {
+        list-style-type: none;
+
+        li {
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                margin-bottom: 8px;
+            }
+            .mdc-linear-progress {
+                height: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .sales-by-locations {
+        img {
+            margin-bottom: 20px;
+        }
+        ul {
+            li {
+                margin-bottom: 18px;
+    
+                span {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .sales-by-locations {
+        img {
+            margin-bottom: 20px;
+        }
+        ul {
+            li {
+                margin-bottom: 20px;
+    
+                span {
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .sales-by-locations {
+        ul {
+            li {
+                margin-bottom: 19px;
+            }
+        }
+    }
+
+}

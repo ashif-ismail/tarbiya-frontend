@@ -1,0 +1,102 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Chips</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Chips</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Chips</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-chip-listbox aria-label="Fish selection">
+                    <mat-chip-option>One fish</mat-chip-option>
+                    <mat-chip-option class="tagus">Two fish</mat-chip-option>
+                    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+                    <mat-chip-option color="warn">Warn fish</mat-chip-option>
+                </mat-chip-listbox>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Chips Autocomplete</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-chips-autocomplete />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Chips Avatar</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-chip-listbox aria-label="Dog selection">
+                    <mat-chip>
+                        <img matChipAvatar src="img/user/user1.jpg" alt="User" />
+                        James Andy
+                    </mat-chip>
+                    <mat-chip color="primary">
+                        <img matChipAvatar src="img/user/user1.jpg" alt="User" />
+                        James Andy
+                    </mat-chip>
+                    <mat-chip color="accent">
+                        <img matChipAvatar src="img/user/user1.jpg" alt="User" />
+                        James Andy
+                    </mat-chip>
+                </mat-chip-listbox>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Chips Drag and Drop</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-chips-dad />
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Stacked Chips</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-stacked-chips />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Chips with Form Control</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-chips-with-fc />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Chips with Input</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-chips-with-input />
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

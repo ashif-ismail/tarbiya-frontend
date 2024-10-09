@@ -1,0 +1,149 @@
+.current-rate-box {
+    .box {
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(117, 127, 239, 0.1);
+
+        .title {
+            margin-bottom: 43px;
+
+            h4 {
+                font-size: 20px;
+            }
+            span {
+                position: relative;
+                padding-left: 30px;
+    
+                i {
+                    transform: translateY(-50%);
+                    color: var(--blackColor);
+                    position: absolute;
+                    margin-top: 2px;
+                    line-height: 1;
+                    top: 50%;
+                    left: 0;
+                    font: {
+                        size: 25px;
+                        weight: 700;
+                    };
+                }
+                &.up {
+                    color: var(--aareRiverColor);
+    
+                    i {
+                        color: var(--aareRiverColor);
+                    }
+                }
+                &.down {
+                    color: #ee368c;
+    
+                    i {
+                        color: #ee368c;
+                    }
+                }
+            }
+        }
+    }
+    .col-md-4 {
+        &:nth-child(2) {
+            .box {
+                background: rgba(247, 147, 26, 0.1);
+            }
+        }
+        &:nth-child(3) {
+            .box {
+                background: rgba(0, 182, 155, 0.1);
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .box {
+            .title {
+                span {
+                    padding: {
+                        left: 0;
+                        right: 30px;
+                    };
+                    i {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .current-rate-box {
+        .box {
+            padding: 15px;
+    
+            .title {
+                margin-bottom: 25px;
+    
+                h4 {
+                    font-size: 15px;
+                }
+                span {
+                    padding-left: 25px;
+        
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .box {
+                .title {
+                    span {
+                        padding: {
+                            left: 0;
+                            right: 25px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .current-rate-box {
+        .box {
+            padding: 15px;
+    
+            .title {
+                margin-bottom: 20px;
+    
+                h4 {
+                    font-size: 16px;
+                }
+                span {
+                    padding-left: 25px;
+        
+                    i {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .box {
+                .title {
+                    span {
+                        padding: {
+                            left: 0;
+                            right: 25px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+    
+}

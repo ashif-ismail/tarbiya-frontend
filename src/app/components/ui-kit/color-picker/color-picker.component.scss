@@ -1,0 +1,23 @@
+input {
+    border: 1px solid #eeeeee;
+    color: var(--whiteColor);
+    outline: 0 !important;
+    border-radius: 5px;
+    display: block;
+    height: 45px;
+    width: 100%;
+    padding: {
+        left: 15px;
+        right: 15px;
+    };
+}
+.component-dark-theme {
+    input {
+        border-color: #2e2e2e;
+        color: transparent;
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}

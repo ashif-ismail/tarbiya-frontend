@@ -1,0 +1,40 @@
+<mat-card
+    class="mb-25 tagus-card user-activities-box"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">User Activities</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            This Week
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="list-unstyled ps-0 mb-0">
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="d-flex align-items-center">
+                    <i class="ri-user-line gray-color"></i>
+                    <div class="ms-12">
+                        <h5>1,802</h5>
+                        <span class="d-block gray-color">Visits by Day</span>
+                    </div>
+                </div>
+                <img src="img/chart/chart1.png" alt="chart">
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="d-flex align-items-center">
+                    <i class="ri-user-add-line gray-color"></i>
+                    <div class="ms-12">
+                        <h5>1605</h5>
+                        <span class="d-block gray-color">Referral Join</span>
+                    </div>
+                </div>
+                <img src="img/chart/chart2.png" alt="chart">
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

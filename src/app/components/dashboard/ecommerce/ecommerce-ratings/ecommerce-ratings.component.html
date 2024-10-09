@@ -1,0 +1,29 @@
+<mat-card
+    class="mb-25 tagus-card ratingsBox"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="d-md-flex align-items-center justify-content-space-between">
+            <div class="content">
+                <h5>Ratings</h5>
+                <span class="year muted-color">Year of 2022</span>
+                <h3>8.14k <span class="muted-color">Review</span></h3>
+                <p><i class="flaticon-star"></i> 4.5 <span class="main-color">+15.6%</span> from previous period</p>
+            </div>
+            <div id="ratingschart" class="chart">
+                <apx-chart
+                    [series]="chartOptions.series!"
+                    [chart]="chartOptions.chart!"
+                    [labels]="chartOptions.labels!"
+                    [title]="chartOptions.title!"
+                    [theme]="chartOptions.theme!"
+                    [fill]="chartOptions.fill!"
+                    [yaxis]="chartOptions.yaxis!"
+                    [stroke]="chartOptions.stroke!"
+                    [legend]="chartOptions.legend!"
+                    [plotOptions]="chartOptions.plotOptions!"
+                ></apx-chart>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

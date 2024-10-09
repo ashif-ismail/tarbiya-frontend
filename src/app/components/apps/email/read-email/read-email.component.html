@@ -1,0 +1,97 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Read Email</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Email</li>
+        <li class="breadcrumb-item fw-semibold">Read Email</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xxl-3">
+
+        <app-email-sidebar />
+
+    </div>
+    <div class="col-lg-8 col-xxl-9">
+
+        <mat-card
+            class="mb-25 tagus-card"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-header>
+                <h5 class="mb-0">You can now use your storage in Google Drive  –  Hey Nicklas!</h5>
+                <div class="info-list">
+                    <button mat-icon-button>
+                        <i class="ri-printer-line"></i>
+                    </button>
+                    <button mat-icon-button>
+                        <i class="ri-information-line"></i>
+                    </button>
+                    <button mat-icon-button>
+                        <i class="ri-delete-bin-6-line"></i>
+                    </button>
+                    <button mat-icon-button>
+                        <i class="ri-folders-line"></i>
+                    </button>
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <i class="ri-more-2-fill"></i>
+                    </button>
+                    <mat-menu #menu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                            <i class="ri-add-circle-line"></i> Add
+                        </button>
+                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                            <i class="ri-delete-bin-6-line"></i> Delete
+                        </button>
+                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                            <i class="ri-restart-line"></i> Refresh
+                        </button>
+                    </mat-menu>
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="d-flex mb-25 align-items-center">
+                    <img src="img/user/user12.jpg" class="rounded-circle" width="45" alt="user">
+                    <div class="ms-15">
+                        <h5 class="fs-16 mb-3">Jordan Stevenson</h5>
+                        <span class="d-block muted-color fs-14">From: jonathan&#64;domain.com</span>
+                    </div>
+                </div>
+                <span class="d-block mb-10 gray-color fw-semibold">Hi Coderthemes!</span>
+                <p>Last pic over my village  –  Yeah i'd like that! Do you remember the video som..</p>
+                <p>Praesent dui ex, dapibus eget mauris ut, finibus vestibulum enim. Quisque arcu leo, facilisis in fringilla id, luctus in tortor. Nunc vestibulum est quis orci varius viverra. Curabitur dictum volutpat massa vulputate molestie. In at felis ac velit maximus convallis.</p>
+                <p>Sed elementum turpis eu lorem interdum, sed porttitor eros commodo. Nam eu venenatis tortor, id lacinia diam. Sed aliquam in dui et porta. Sed bibendum orci non tincidunt ultrices. Vivamus fringilla, mi lacinia dapibus condimentum, ipsum urna lacinia lacus, vel tincidunt mi nibh sit amet lorem.</p>
+                <h5 class="mt-25 mb-15">Checklists/Sub-tasks</h5>
+                <ol class="list">
+                    <li class="gray-color">Your design preferences (Color, style, shapes, Fonts, others)</li>
+                    <li class="gray-color">Tell me, why is your item different?</li>
+                    <li class="gray-color">Do you want to bring up a specific feature of your item? If yes, please tell me</li>
+                    <li class="gray-color">Do you have any preference or specific thing you would like to change or improve on your item page?</li>
+                    <li class="gray-color">Do you want to include your item's or your provider's logo on the page? if yes, please send it to me in vector format (Ai or EPS)</li>
+                    <li class="gray-color">Please provide me with the copy or text to display</li>
+                </ol>
+                <p>Filling in this form with the above information will ensure that they will be able to start work quickly.</p>
+                <p>You can complete your order by putting your coupon code into the Promotional code box and clicking ‘Apply Coupon’.</p>
+                <h5 class="mt-25 mb-15">Attached Files</h5>
+                <a href="javascript:void(0)" class="d-flex mb-10 fs-14 align-items-center muted-color main-hover-color">
+                    <img src="img/icon/psd.png" width="25" class="me-10" alt="icon"> tagus-design.psd
+                </a>
+                <a href="javascript:void(0)" class="d-flex fs-14 align-items-center muted-color main-hover-color">
+                    <img src="img/icon/sketch.png" width="25" class="me-10" alt="icon"> tagus-design.sketch
+                </a>
+                <div class="btn-box" align="end">
+                    <button mat-flat-button class="gray">Reply</button>
+                    <button mat-flat-button class="tagus">Forward</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

@@ -1,0 +1,273 @@
+.file-manager-box {
+    .search-box {
+        .input-search {
+            background-color: #f5F7fa;
+            padding: 0 20px 2px 20px;
+            color: var(--blackColor);
+            outline: 0 !important;
+            border-radius: 30px;
+            height: 45px;
+            width: 100%;
+            border: 0;
+            
+            &::placeholder {
+                color: #A9A9C8;
+                transition: var(--transition);
+            }
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        button {
+            top: 50%;
+            padding: 0;
+            right: 20px;
+            border: none;
+            line-height: 1;
+            cursor: pointer;
+            position: absolute;
+            font-size: 22px !important;
+            transform: translateY(-50%);
+            color: var(--heraBlueColor);
+            background-color: transparent;
+            transition: var(--transition);
+
+            &:hover {
+                color: var(--blackColor);
+            }
+        }
+    }
+    .file-manager-sidebar {
+        list-style-type: none;
+        margin-top: 30px;
+
+        li {
+            margin-bottom: 25px;
+
+            a {
+                padding: {
+                    top: 2px;
+                    left: 30px;
+                    bottom: 2px;
+                };
+                i {
+                    transition: var(--transition);
+                    transform: translateY(-50%);
+                    position: absolute;
+                    color: #818093;
+                    line-height: 1;
+                    top: 50%;
+                    left: 0;
+                    font: {
+                        size: 22px;
+                        weight: normal;
+                    };
+                }
+                &:hover, &.active {
+                    color: var(--heraBlueColor);
+
+                    i {
+                        color: var(--heraBlueColor);
+                    }
+                }
+            }
+            ul {
+                list-style-type: none;
+                padding-left: 30px;
+                margin-top: 21px;
+
+                li {
+                    padding-left: 18px;
+                    margin-bottom: 15px;
+
+                    a {
+                        padding: 0;
+                    }
+                    &::before {
+                        left: 0;
+                        top: 50%;
+                        width: 6px;
+                        content: '';
+                        height: 6px;
+                        position: absolute;
+                        border-radius: 50%;
+                        background: #818093;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .storage-status {
+        margin-top: 35px;
+
+        span {
+            &:nth-child(2) {
+                font-size: 13px;
+            }
+        }
+        .mat-mdc-progress-bar {
+            margin: {
+                top: 10px;
+                bottom: 10px;
+            };
+        }
+    }
+    &.component-dark-theme {
+        .search-box {
+            .input-search {
+                background-color: #1e2227;
+                color: var(--whiteColor);
+                
+                &::placeholder {
+                    color: #828690;
+                }
+                &:focus {
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+            button {
+                &:hover {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+        .file-manager-sidebar {
+            li {
+                ul {
+                    li {
+                        &::before {
+                            background: #5c5c5c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .search-box {
+            button {
+                right: auto;
+                left: 20px;
+            }
+        }
+        .file-manager-sidebar {
+            li {
+                a {
+                    padding: {
+                        right: 30px;
+                        left: 0;
+                    };
+                    i {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+                ul {
+                    padding: {
+                        left: 0;
+                        right: 30px;
+                    };
+                    li {
+                        padding: {
+                            right: 18px;
+                            left: 0;
+                        };
+                        &::before {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .file-manager-box {
+        .search-box {
+            .input-search {
+                padding: 0 15px 0 15px;
+            }
+            button {
+                right: 15px;
+                font-size: 20px !important;
+            }
+        }
+        .file-manager-sidebar {
+            margin-top: 20px;
+    
+            li {
+                margin-bottom: 20px;
+    
+                ul {
+                    padding-left: 30px;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .storage-status {
+            margin-top: 25px;
+        }
+        &.component-rtl-enabled {
+            .search-box {
+                button {
+                    right: auto;
+                    left: 15px;
+                }
+            }
+            .file-manager-sidebar {
+                li {
+                    ul {
+                        padding: {
+                            left: 0;
+                            right: 30px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .file-manager-box {
+        padding: {
+            left: 15px;
+            right: 15px;
+        };
+        .search-box {
+            .input-search {
+                padding: 0 15px 0 15px;
+                font-size: 14px;
+            }
+            button {
+                font-size: 19px !important;
+                right: 15px;
+            }
+        }
+        &.component-rtl-enabled {
+            .search-box {
+                button {
+                    right: auto;
+                    left: 15px;
+                }
+            }
+        }
+    }
+
+}

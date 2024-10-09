@@ -1,0 +1,558 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Templates</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item">File Manager</li>
+        <li class="breadcrumb-item fw-semibold">Templates</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xxl-3">
+        <app-fm-sidebar />
+    </div>
+    <div class="col-lg-8 col-xxl-9">
+        <mat-card
+            class="mb-25 tagus-card"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-header>
+                <h5 class="mb-0">Templates</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="recent-files-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold main-color">Name</th>
+                                <th class="fw-semibold gray-color">Owner</th>
+                                <th class="fw-semibold gray-color">File Size</th>
+                                <th class="fw-semibold gray-color">Listed Date</th>
+                                <th class="fw-semibold gray-color">File Item</th>
+                                <th class="fw-semibold gray-color">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Danielle Thompson</td>
+                                <td class="gray-color">0.7 GB</td>
+                                <td class="gray-color">Mar 08, 2023</td>
+                                <td class="gray-color">02</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">App Design & Development</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Coder Themes</td>
+                                <td class="gray-color">521 MB</td>
+                                <td class="gray-color">Feb 13, 2023</td>
+                                <td class="gray-color">06</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Ubold-sketch-design.zip</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Gary Coley</td>
+                                <td class="gray-color">64.2 MB</td>
+                                <td class="gray-color">Dec 18, 2022</td>
+                                <td class="gray-color">03</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Annualreport.pdf</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Cooper Sharwood</td>
+                                <td class="gray-color">12.5 GB</td>
+                                <td class="gray-color">Nov 29, 2022</td>
+                                <td class="gray-color">05</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Wireframes</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Jasper Rigg</td>
+                                <td class="gray-color">8.3 MB</td>
+                                <td class="gray-color">Nov 25, 2022</td>
+                                <td class="gray-color">01</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Danielle Thompson</td>
+                                <td class="gray-color">0.7 GB</td>
+                                <td class="gray-color">Mar 08, 2023</td>
+                                <td class="gray-color">02</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">App Design & Development</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Coder Themes</td>
+                                <td class="gray-color">521 MB</td>
+                                <td class="gray-color">Feb 13, 2023</td>
+                                <td class="gray-color">06</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Ubold-sketch-design.zip</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Gary Coley</td>
+                                <td class="gray-color">64.2 MB</td>
+                                <td class="gray-color">Dec 18, 2022</td>
+                                <td class="gray-color">03</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Annualreport.pdf</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Cooper Sharwood</td>
+                                <td class="gray-color">12.5 GB</td>
+                                <td class="gray-color">Nov 29, 2022</td>
+                                <td class="gray-color">05</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Wireframes</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Jasper Rigg</td>
+                                <td class="gray-color">8.3 MB</td>
+                                <td class="gray-color">Nov 25, 2022</td>
+                                <td class="gray-color">01</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Danielle Thompson</td>
+                                <td class="gray-color">0.7 GB</td>
+                                <td class="gray-color">Mar 08, 2023</td>
+                                <td class="gray-color">02</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">App Design & Development</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Coder Themes</td>
+                                <td class="gray-color">521 MB</td>
+                                <td class="gray-color">Feb 13, 2023</td>
+                                <td class="gray-color">06</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Ubold-sketch-design.zip</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Gary Coley</td>
+                                <td class="gray-color">64.2 MB</td>
+                                <td class="gray-color">Dec 18, 2022</td>
+                                <td class="gray-color">03</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Annualreport.pdf</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Cooper Sharwood</td>
+                                <td class="gray-color">12.5 GB</td>
+                                <td class="gray-color">Nov 29, 2022</td>
+                                <td class="gray-color">05</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Wireframes</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Jasper Rigg</td>
+                                <td class="gray-color">8.3 MB</td>
+                                <td class="gray-color">Nov 25, 2022</td>
+                                <td class="gray-color">01</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

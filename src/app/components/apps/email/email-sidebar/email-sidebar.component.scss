@@ -1,0 +1,82 @@
+.tagus-card {
+    .sub-title {
+        margin-top: 25px;
+    }
+    .email-sidebar {
+        margin-top: 20px;
+
+        li {
+            margin-bottom: 22px;
+            padding-left: 27px;
+
+            i {
+                transform: translateY(-50%);
+                position: absolute;
+                color: #A9A9C8;
+                font-size: 17px;
+                line-height: 1;
+                top: 50%;
+                left: 0;
+            }
+            a {
+                span {
+                    right: 0;
+                    top: 50%;
+                    position: absolute;
+                    color: var(--heraBlueColor);
+                    transform: translateY(-50%);
+
+                    &.two {
+                        color: #EE368C;
+                    }
+                    &.three {
+                        color: #2DB6F5;
+                    }
+                }
+                &.active, &:hover {
+                    color: var(--heraBlueColor);
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .email-sidebar {
+            li {
+                padding: {
+                    left: 0;
+                    right: 27px;
+                };
+                i {
+                    left: auto;
+                    right: 0;
+                }
+                a {
+                    span {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .tagus-card {
+        .sub-title {
+            margin-top: 20px;
+        }
+        .email-sidebar {
+            margin-top: 15px;
+    
+            li {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+}

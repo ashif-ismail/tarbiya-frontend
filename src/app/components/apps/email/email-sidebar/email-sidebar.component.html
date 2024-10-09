@@ -1,0 +1,98 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <a mat-flat-button class="tagus fw-semibold d-block" routerLink="/email/compose">Compose</a>
+        <span class="sub-title d-block muted-color fw-normal fs-14">MAILBOX</span>
+        <ul class="email-sidebar ps-0 list-unstyled mb-0">
+            <li class="position-relative">
+                <i class="ri-mail-line"></i>
+                <a routerLink="/email" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Inbox
+                    <span class="d-block">(20)</span>
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-time-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Snoozed
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-file-text-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Draft
+                    <span class="d-block two">(08)</span>
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-login-box-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Sent Mail
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-delete-bin-6-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Trash
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-information-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Spam
+                    <span class="d-block three">(04)</span>
+                </a>
+            </li>
+        </ul>
+        <span class="sub-title d-block muted-color fw-normal fs-14">FILTERS</span>
+        <ul class="email-sidebar ps-0 list-unstyled mb-0">
+            <li class="position-relative">
+                <i class="ri-star-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Starred
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-chrome-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Important
+                </a>
+            </li>
+        </ul>
+        <span class="sub-title d-block muted-color fw-normal fs-14">LABELS</span>
+        <ul class="email-sidebar ps-0 list-unstyled mb-0">
+            <li class="position-relative">
+                <i class="ri-price-tag-3-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Personal
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-price-tag-3-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Company
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-price-tag-3-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Wallet Balance
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-price-tag-3-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Friends
+                </a>
+            </li>
+            <li class="position-relative">
+                <i class="ri-price-tag-3-line"></i>
+                <a href="javascript:void(0)" class="fw-semibold position-relative d-block" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    Family
+                </a>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

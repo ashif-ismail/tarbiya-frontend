@@ -1,0 +1,174 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Datepicker</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Datepicker</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Datepicker</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint class="mt-5">MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Start Date</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-form-field appearance="fill" class="example-full-width">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="startDatePicker">
+                    <mat-hint class="mt-5">MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #startDatePicker startView="year" [startAt]="startDate"></mat-datepicker>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Touch UI</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="touchUIDatePicker">
+                    <mat-hint class="mt-5">MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="touchUIDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #touchUIDatePicker></mat-datepicker>
+                </mat-form-field>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Selected Value</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-datepicker-sv />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Year & Month Picker</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-datepicker-ym-picker />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-8 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Date Range Picker Comparison Ranges</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-date-range-pcr />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Date Range Picker Forms Integration</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-date-range-pfi />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Date Range Picker</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-basic-date-range />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Action Button</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-dp-action-button />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Open Method</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-dp-open-method />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-8 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Palette Colors</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-datepicker-pc />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker with Custom Icon</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-datepicker-custom-icon />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Disabled Datepicker</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-disabled-datepicker />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Datepicker Inline Calendar</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-datepicker-inline-calendar />
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

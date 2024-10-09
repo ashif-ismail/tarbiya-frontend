@@ -1,0 +1,142 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Tabs</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Tabs</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Basic Tabs</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab label="First"><br> Content 1</mat-tab>
+            <mat-tab label="Second"><br> Content 2</mat-tab>
+            <mat-tab label="Third"><br> Content 3</mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Using Tabs with Custom Label</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                    First
+                </ng-template>
+                <br>
+                Content 1
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                    Second
+                </ng-template>
+                <br>
+                Content 2
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+                    Third
+                </ng-template>
+                <br>
+                Content 3
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Tabs with Header Bottom</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group headerPosition="below">
+            <mat-tab label="First">Content 1 <div class="mb-15"></div></mat-tab>
+            <mat-tab label="Second">Content 2 <div class="mb-15"></div></mat-tab>
+            <mat-tab label="Third">Content 3 <div class="mb-15"></div></mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Tabs with Aligned Labels</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="First"><br> Content 1</mat-tab>
+            <mat-tab label="Second"><br> Content 2</mat-tab>
+            <mat-tab label="Third"><br> Content 3</mat-tab>
+        </mat-tab-group>
+
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+            <mat-tab label="First"><br> Content 1</mat-tab>
+            <mat-tab label="Second"><br> Content 2</mat-tab>
+            <mat-tab label="Third"><br> Content 3</mat-tab>
+        </mat-tab-group>
+
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="end">
+            <mat-tab label="First"><br> Content 1</mat-tab>
+            <mat-tab label="Second"><br> Content 2</mat-tab>
+            <mat-tab label="Third"><br> Content 3</mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Tabs with Animation</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group animationDuration="2000ms">
+            <mat-tab label="First"><br> Content 1</mat-tab>
+            <mat-tab label="Second"><br> Content 2</mat-tab>
+            <mat-tab label="Third"><br> Content 3</mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Tabs with Dynamic height Based on Content</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Short tab">
+                <div class="example-small-box mat-elevation-z4">
+                    Small content
+                </div>
+            </mat-tab>
+            <mat-tab label="Long tab">
+                <div class="example-large-box mat-elevation-z4">
+                    Large content
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Tabs with Paginated Tabs</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab [label]="tab" *ngFor="let tab of lotsOfTabs"><br> Content</mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

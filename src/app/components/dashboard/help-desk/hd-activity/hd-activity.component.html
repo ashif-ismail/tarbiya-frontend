@@ -1,0 +1,44 @@
+<mat-card
+    class="mb-25 tagus-card activity-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Activity</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            This Week
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="ps-0 list-unstyled mt-0 mb-0">
+            <li class="position-relative">
+                <img src="img/icon/support.png" alt="support">
+                <h5 class="fw-semibold">Drop us an email at [Insert Email Address]</h5>
+                <p>We'll get back to you as soon as possible with detailed..</p>
+                <span>10 Min ago</span>
+            </li>
+            <li class="position-relative">
+                <img src="img/icon/avatar2.png" alt="avatar">
+                <h5 class="fw-semibold">Visit our website [Insert Website URL]</h5>
+                <p>Initiate a live chat session. Our team will be there to live chat session...</p>
+                <span>11:47 PM</span>
+            </li>
+            <li class="position-relative">
+                <img src="img/icon/time.png" alt="time">
+                <h5 class="fw-semibold">Our representatives are available</h5>
+                <p>Dial our toll-free number, representative are available..</p>
+                <span>07 June</span>
+            </li>
+            <li class="position-relative">
+                <img src="img/icon/support.png" alt="support">
+                <h5 class="fw-semibold">Drop us an email at [Insert Email Address] live chat session</h5>
+                <span>05 June</span>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,47 @@
+<mat-card
+    class="mb-25 tagus-card completed-tasks-box"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Completed Tasks</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            This Week
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="chart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [dataLabels]="chartOptions.dataLabels!"
+                [plotOptions]="chartOptions.plotOptions!"
+                [responsive]="chartOptions.responsive!"
+                [xaxis]="chartOptions.xaxis!"
+                [grid]="chartOptions.grid!"
+                [yaxis]="chartOptions.yaxis!"
+                [legend]="chartOptions.legend!"
+                [colors]="chartOptions.colors!"
+                [fill]="chartOptions.fill!"
+            ></apx-chart>
+        </div>
+        <ul class="list d-flex align-items-center justify-content-space-between text-center mb-0">
+            <li class="muted-color fw-medium up">
+                <span class="d-block">Target</span>
+                <span class="gray-color d-inline-block position-relative"><i class="flaticon-right-arrow"></i> 22k</span>
+            </li>
+            <li class="muted-color fw-medium down">
+                <span class="d-block">Last Week</span>
+                <span class="gray-color d-inline-block position-relative"><i class="flaticon-right-arrow"></i> 4.01k</span>
+            </li>
+            <li class="muted-color fw-medium up">
+                <span class="d-block">Last Month</span>
+                <span class="gray-color d-inline-block position-relative"><i class="flaticon-right-arrow"></i> 18k</span>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,156 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Create Project</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Projects</li>
+        <li class="breadcrumb-item fw-semibold">Create Project</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 col-md-12">
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Create Project</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">First Name</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-edit-2-line"></i>
+                                <mat-label>EnvyTheme</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Project Start Date</label>
+                            <mat-form-field appearance="fill" class="date-input">
+                                <mat-label>MM/DD/YYYY</mat-label>
+                                <input matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Project End Date</label>
+                            <mat-form-field appearance="fill" class="date-input">
+                                <mat-label>MM/DD/YYYY</mat-label>
+                                <input matInput [matDatepicker]="picker2">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Project Description</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-information-line"></i>
+                                <mat-label>Some demo text...</mat-label>
+                                <textarea matInput rows="6"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Budget</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-briefcase-line"></i>
+                                <mat-label>Enter rate</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Invoice Time</label>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Invoice Time</mat-label>
+                                <i class="ri-calendar-2-line"></i>
+                                <mat-select>
+                                    <mat-option value="1">30 Days</mat-option>
+                                    <mat-option value="2">25 Days</mat-option>
+                                    <mat-option value="3">20 Days</mat-option>
+                                    <mat-option value="4">15 Days</mat-option>
+                                    <mat-option value="5">10 Days</mat-option>
+                                    <mat-option value="6">05 Days</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Attached Files</label>
+                            <input type="file">
+                        </div>
+                    </div>
+                    <button mat-button type="submit" class="default-btn mt-25">
+                        Create Project
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-12">
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Priority Status</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <label class="d-block mb-12 fw-semibold gray-color">Priority</label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Priority</mat-label>
+                        <i class="ri-equalizer-line"></i>
+                        <mat-select>
+                            <mat-option value="1">Low</mat-option>
+                            <mat-option value="2">Medium</mat-option>
+                            <mat-option value="3">High</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Tags</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <label class="d-block mb-12 fw-semibold gray-color">Categories</label>
+                    <mat-form-field appearance="fill">
+                        <i class="ri-price-tag-3-line"></i>
+                        <mat-label>Categories</mat-label>
+                        <mat-select [formControl]="categories" multiple>
+                            @for (category of categoriesList; track category) {
+                                <mat-option [value]="category">
+                                    {{category}}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Members</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <label class="d-block mb-12 fw-semibold gray-color">Team Lead</label>
+                    <mat-form-field appearance="fill">
+                        <i class="ri-group-line"></i>
+                        <mat-label>Select Member</mat-label>
+                        <mat-select [formControl]="members" multiple>
+                            @for (member of membersList; track member) {
+                                <mat-option [value]="member">
+                                    {{member}}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

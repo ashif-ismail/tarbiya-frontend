@@ -1,0 +1,45 @@
+<mat-card
+    class="mb-25 sessions-device-box tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Sessions Device</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="list mt-0">
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <div>
+                    <span class="gray-color d-block">Mobile</span>
+                    <span class="black-color d-block fw-semibold">36,868</span>
+                </div>
+                <span class="gray-color percentage"><i class="flaticon-bar-chart-4"></i> 60%</span>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <div>
+                    <span class="gray-color d-block">Laptop</span>
+                    <span class="black-color d-block fw-semibold">9,502</span>
+                </div>
+                <span class="gray-color percentage"><i class="flaticon-bar-chart-4"></i> 40%</span>
+            </li>
+        </ul>
+        <div class="chart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [plotOptions]="chartOptions.plotOptions!"
+                [labels]="chartOptions.labels!"
+                [colors]="chartOptions.colors!"
+            ></apx-chart>
+        </div>
+    </mat-card-content>
+</mat-card>

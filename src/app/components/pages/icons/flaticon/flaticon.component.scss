@@ -1,0 +1,66 @@
+.icon-demo {
+    code {
+        padding: 10px 12px;
+        border-radius: 3px;
+        display: inline-block;
+        color: var(--whiteColor);
+        background-color: var(--blackColor);
+
+        .red {
+            color: #EC3A3B;
+            margin-right: 5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .green {
+            color: #4AD295;
+        }
+        .yellow {
+            color: #FFEEB6;
+        }
+    }
+}
+.glyph {
+    width: 9em;
+    margin: 1em;
+    display: inline-block;
+    background: var(--whiteColor);
+
+    .flaticon {
+        padding: 10px;
+        display: block;
+        line-height: 1;
+        font-size: 50px;
+        color: #5f7d95;
+        background-color: #f9f9f9;
+    }
+    .class-name {
+        font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        color: var(--paragraphColor);
+        background-color: #E3E9ED;
+        border-radius: 4px 4px 0 0;
+        font-size: 0.70em;
+        padding: 0.5em;
+    }
+}
+.component-dark-theme {
+    .icon-demo {
+        code {
+            background-color: #1e2227;
+        }
+    }
+    .glyph {
+        background: #1e2227;
+    
+        .flaticon {
+            color: var(--whiteColor);
+            background-color: #1e2227;
+        }
+        .class-name {
+            color: #828690;
+            background-color: #2a2e35;
+        }
+    }
+}

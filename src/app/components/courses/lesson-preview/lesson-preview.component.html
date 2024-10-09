@@ -1,0 +1,69 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Lesson Preview</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Courses</li>
+        <li class="breadcrumb-item fw-semibold">Lesson Preview</li>
+    </ol>
+</div>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.card-border-radius]="themeService.isCardBorderRadius()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="course-details-header mb-25 border-radius">
+            <video controls class="border-radius">
+                <source src="img/video.mp4" class="border-radius" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="position-relative">
+                <div class="d-md-flex mb-25 align-items-center">
+                    <img src="img/lms/lms1.jpg" class="border-radius" width="100" alt="lms">
+                    <h3 class="mb-0 ms-20 text-white">Node.js for Beginners: Go From Zero to Hero with Node.js</h3>
+                </div>
+                <p class="text-white">Node.js for Beginners: Alias animi labque, deserunt distinctio eum excepturi fuga iure labore magni molestias mollitia natus, officia pofro quis sunt temporibus veritatis voluptatem voluptatum.</p>
+                <a mat-raised-button routerLink="/" class="tagus mt-10">Next Tutorial</a>
+                <span class="time text-white d-block fw-bold">50m:30s</span>
+            </div>
+        </div>
+        <div class="course-details-desc pb-0">
+            <div class="d-md-flex meta border-none justify-content-space-between align-items-center">
+                <ul class="list mb-0 d-md-flex mt-0 ps-0">
+                    <li class="gray-color fw-semibold">
+                        Course For
+                        <span class="d-block fw-semibold position-relative"><i class="ri-bar-chart-2-line"></i> Beginner</span>
+                    </li>
+                    <li class="gray-color fw-semibold">
+                        Intructor
+                        <div class="d-flex align-items-center">
+                            <img src="img/user/user2.jpg" class="rounded-circle" width="30" alt="user">
+                            <span class="d-block fw-semibold">Jonathan Andrews</span>
+                        </div>
+                    </li>
+                    <li class="gray-color fw-semibold">
+                        Course Duration
+                        <span class="d-block fw-semibold position-relative"><i class="ri-time-line"></i> 32h 50m</span>
+                    </li>
+                </ul>
+                <div class="rating-box text-end">
+                    <span class="d-block mb-10 fw-semibold gray-color">20 Ratings</span>
+                    <div class="rating">
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-2"></i>
+                        <i class="flaticon-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

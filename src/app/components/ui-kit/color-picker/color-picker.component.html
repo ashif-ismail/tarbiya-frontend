@@ -1,0 +1,125 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Color Picker</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Color Picker</li>
+    </ol>
+</div>
+
+<div class="row" [class.component-dark-theme]="themeService.isDark()">
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Picker</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [(colorPicker)]="color" [style.background]="color" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Grayscale Color Mode</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [(colorPicker)]="color2" [cpColorMode]="'grayscale'" [style.background]="color2" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Color Code Input Field</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [value]="color3" [style.background]="color3" [(colorPicker)]="color3" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">RGB Color Input Field</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [value]="color4" [style.background]="color4" [cpOutputFormat]="'rgba'" [(colorPicker)]="color4" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Changing Dialog Position</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [value]="color5" [style.background]="color5" [cpPosition]="'top-right'" [(colorPicker)]="color5" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">HTML Element</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <span [style.color]="color6" class="fw-semibold cursor-pointer" [cpPosition]="'bottom'" [cpPositionOffset]="'50%'" [cpPositionRelativeToArrow]="true" [(colorPicker)]="color6">Change me!</span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Show OK Button</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [value]="color7" [style.background]="color7" [cpOKButton]="true" [(colorPicker)]="color7" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Show Cancel Button</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [value]="color8" [style.background]="color8" [cpCancelButton]="true" [(colorPicker)]="color8" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Enable Eye Dropper</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [value]="color9" [style.background]="color9" [cpEyeDropper]="true" [cpSaveClickOutside]="false" [(colorPicker)]="color9" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">With Preset Colors</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <input [style.background]="color10" [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']" [(colorPicker)]="color10" />
+                <span class="d-block muted-color fs-14 mt-8"><i>Click in the input field.</i></span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

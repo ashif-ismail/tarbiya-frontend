@@ -1,0 +1,215 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Checkout</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Products</li>
+        <li class="breadcrumb-item fw-semibold">Checkout</li>
+    </ol>
+</div>
+
+<div
+    class="row justify-content-center"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="col-lg-5 col-xl-4 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Shopping Cart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold gray-color text-start">Product</th>
+                                <th class="fw-semibold gray-color">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-start">
+                                    <a routerLink="/" class="d-flex align-items-center product-info">
+                                        <img src="img/recent-orders/product1.jpg" class="border-radius me-12" width="50" alt="product">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Laptop Macos Pro</h5>
+                                            <span class="d-block muted-color fw-medium">
+                                                Color: <span class="gray-color">Pink</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="gray-color">$200.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-start">
+                                    <a routerLink="/" class="d-flex align-items-center product-info">
+                                        <img src="img/recent-orders/product2.jpg" class="border-radius me-12" width="50" alt="product">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Smart Camera XD6</h5>
+                                            <span class="d-block muted-color fw-medium">
+                                                Color: <span class="gray-color">Red</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="gray-color">$150.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-start">
+                                    <a routerLink="/" class="d-flex align-items-center product-info">
+                                        <img src="img/recent-orders/product3.jpg" class="border-radius me-12" width="50" alt="product">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Pixi 8 Wireless Airphone</h5>
+                                            <span class="d-block muted-color fw-medium">
+                                                Color: <span class="gray-color">White</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="gray-color">$100.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-start">
+                                    <a routerLink="/" class="d-flex align-items-center product-info">
+                                        <img src="img/recent-orders/product4.jpg" class="border-radius me-12" width="50" alt="product">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Jebble Smart Watch</h5>
+                                            <span class="d-block muted-color fw-medium">
+                                                Color: <span class="gray-color">Black</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="gray-color">$200.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="list ps-0 mb-0 mt-25">
+                    <li class="gray-color d-flex align-items-center justify-content-space-between">
+                        Sub Total :
+                        <span class="fw-semibold">$760.00</span>
+                    </li>
+                    <li class="gray-color d-flex align-items-center justify-content-space-between">
+                        Discount :
+                        <span class="fw-semibold">$60.00</span>
+                    </li>
+                    <li class="gray-color d-flex align-items-center justify-content-space-between">
+                        Shipping Charge :
+                        <span class="fw-semibold">$50.00</span>
+                    </li>
+                    <li class="gray-color d-flex align-items-center justify-content-space-between">
+                        Estimated Tax :
+                        <span class="fw-semibold">$00.00</span>
+                    </li>
+                    <li class="fw-semibold d-flex align-items-center justify-content-space-between">
+                        Total (USD) :
+                        <span class="fw-semibold">$870.00</span>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-7 col-xl-8 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Billing Information</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="note-box">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">First Name</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-user-line"></i>
+                                <mat-label>Enter Name</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Last Name</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-user-line"></i>
+                                <mat-label>Enter name</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Email</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-mail-line"></i>
+                                <mat-label>Enter email address</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Phone</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-phone-line"></i>
+                                <mat-label>Enter phone number</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Address</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-map-pin-line"></i>
+                                <mat-label>Enter your location</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Country</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-map-2-line"></i>
+                                <mat-label>Enter your country</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <label class="d-block mb-12 fw-semibold gray-color">Town/City</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-list-ordered"></i>
+                                <mat-label>Enter your town/city</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <label class="d-block mb-12 fw-semibold gray-color">State</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-font-size"></i>
+                                <mat-label>Enter your state</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <label class="d-block mb-12 fw-semibold gray-color">Zip Code</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-hashtag"></i>
+                                <mat-label>Enter zip code</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Order Notes</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-information-line"></i>
+                                <mat-label>Some demo text...</mat-label>
+                                <textarea matInput rows="6"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <button mat-button type="submit" class="default-btn">
+                        Proceed To Shipping
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

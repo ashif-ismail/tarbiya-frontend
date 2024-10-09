@@ -1,0 +1,150 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Grid</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Grid</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Large Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card7.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Mid Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card7.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Mid Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card7.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Vertical Alignment Center</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Vertical Alignment Center</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Vertical Alignment Center</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Small Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Small Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Small Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Small Grid</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/cards/card8.jpg" alt="card" class="border-radius">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-content>
+        <mat-grid-list cols="4" rowHeight="100px">
+            <mat-grid-tile
+                *ngFor="let tile of tiles"
+                [colspan]="tile.cols"
+                [rowspan]="tile.rows"
+                [style.background]="tile.color">
+                {{tile.text}}
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-content>
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>1</mat-grid-tile>
+            <mat-grid-tile>2</mat-grid-tile>
+            <mat-grid-tile>3</mat-grid-tile>
+            <mat-grid-tile>4</mat-grid-tile>
+        </mat-grid-list>
+    </mat-card-content>
+</mat-card>

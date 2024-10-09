@@ -1,0 +1,116 @@
+.item {
+    padding: 0 100px 0 38px;
+
+    img {
+        left: 0;
+        top: 4px;
+        width: 25px;
+        position: absolute;
+    }
+    h5 {
+        line-height: 1.4;
+        font: {
+            size: 14px;
+            family: var(--fontFamily) !important;
+        };
+    }
+    .date {
+        transform: translateY(-50%);
+        position: absolute;
+        font-size: 13px;
+        top: 50%;
+        right: 0;
+    }
+    .border {
+        padding-top: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #F7FAFF;
+    }
+    &:last-child {
+        .border {
+            display: none;
+        }
+    }
+}
+.component-dark-theme {
+    .item {
+        .border {
+            border-bottom-color: #1f2226;
+        }
+    }
+}
+.component-rtl-enabled {
+    .item {
+        padding: {
+            left: 100px;
+            right: 38px;
+        };
+        img {
+            left: auto;
+            right: 0;
+        }
+        .date {
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .item {
+        padding: 0 0 0 38px;
+        
+        h5 {
+            font-size: 13.5px;
+        }
+        .date {
+            transform: translateY(0);
+            position: relative;
+            margin-top: 5px;
+            top: 0;
+        }
+    }
+    .component-rtl-enabled {
+        .item {
+            padding: {
+                left: 0;
+                right: 38px;
+            };
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .item {
+        padding: 0 120px 0 40px;
+    
+        img {
+            top: 4px;
+            width: 27px;
+        }
+        h5 {
+            font: {
+                size: 15px;
+            };
+        }
+        .date {
+            font-size: 14px;
+        }
+        .border {
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+    .component-rtl-enabled {
+        .item {
+            padding: {
+                left: 120px;
+                right: 40px;
+            };
+        }
+    }
+
+}

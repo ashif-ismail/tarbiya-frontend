@@ -1,0 +1,103 @@
+<mat-card
+    class="mb-25 tagus-card my-profile-box"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">My Profile</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Edit Profile</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Settings</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="myProfileChart position-relative">
+            <div class="chart">
+                <apx-chart
+                    [series]="chartOptions.series!"
+                    [chart]="chartOptions.chart!"
+                    [labels]="chartOptions.labels!"
+                    [tooltip]="chartOptions.tooltip!"
+                    [colors]="chartOptions.colors!"
+                    [legend]="chartOptions.legend!"
+                    [plotOptions]="chartOptions.plotOptions!"
+                    [stroke]="chartOptions.stroke!"
+                    [dataLabels]="chartOptions.dataLabels!"
+                ></apx-chart>
+            </div>
+            <div class="content text-center">
+                <h5>$1025465</h5>
+                <span class="d-block gray-color">Total Value</span>
+            </div>
+        </div>
+        <ul class="ps-0 list-unstyled mb-0">
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="title d-flex align-items-center">
+                    <img src="img/icon/bitcoin2.png" alt="bitcoin">
+                    <div class="ms-12">
+                        <h5 class="fw-semibold">Bitcoin</h5>
+                        <span class="gray-color">(BTC) 3.8%</span>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <span class="gray-color d-block">BTC 0.00251068</span>
+                    <span>$13,6218602</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="title d-flex align-items-center">
+                    <img src="img/icon/ethereum.png" alt="ethereum">
+                    <div class="ms-12">
+                        <h5 class="fw-semibold">Ethereum</h5>
+                        <span class="gray-color">(ETH) 0.25%</span>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <span class="gray-color d-block">ETH 0.00251068</span>
+                    <span>$13,6218602</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="title d-flex align-items-center">
+                    <img src="img/icon/comp-bidr.png" alt="comp-bidr">
+                    <div class="ms-12">
+                        <h5 class="fw-semibold">Comp Bidr</h5>
+                        <span class="gray-color">(BDR) 3.8%</span>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <span class="gray-color d-block">BDR 0.001068</span>
+                    <span>$13,6218602</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="title d-flex align-items-center">
+                    <img src="img/icon/matic2.png" alt="matic">
+                    <div class="ms-12">
+                        <h5 class="fw-semibold">Matic</h5>
+                        <span class="gray-color">(MTC) 3.02%</span>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <span class="gray-color d-block">MTC 0.00251068</span>
+                    <span>$13,6218602</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between">
+                <div class="title d-flex align-items-center">
+                    <img src="img/icon/litecoin.png" alt="litecoin">
+                    <div class="ms-12">
+                        <h5 class="fw-semibold">Litecoin</h5>
+                        <span class="gray-color">(LTC) 1.8%</span>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <span class="gray-color d-block">LTC 0.00251068</span>
+                    <span>$13,6218602</span>
+                </div>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,141 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Advanced Form</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Advanced Form</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Select</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="tagus-form-group">
+                    <label class="d-block mb-12 fw-semibold gray-color">Default Select</label>
+                    <mat-form-field appearance="fill">
+                        <i class="ri-list-check"></i>
+                        <mat-label>Favorite food</mat-label>
+                        <mat-select>
+                            @for (food of foods; track food) {
+                                <mat-option [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tagus-form-group">
+                    <label class="d-block mb-12 fw-semibold gray-color">Multiple Select</label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Toppings</mat-label>
+                        <i class="ri-list-check"></i>
+                        <mat-select [formControl]="toppings" multiple>
+                            @for (topping of toppingList; track topping) {
+                                <mat-option [value]="topping">
+                                    {{topping}}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tagus-form-group">
+                    <label class="d-block mb-12 fw-semibold gray-color">Custom Trigger Select</label>
+                    <mat-form-field appearance="fill">
+                        <i class="ri-list-check"></i>
+                        <mat-label>Toppings</mat-label>
+                        <mat-select [formControl]="toppings" multiple>
+                            <mat-select-trigger>
+                            {{toppings.value?.[0] || ''}}
+                            <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+                                (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                            </span>
+                            </mat-select-trigger>
+                            @for (topping of toppingList; track topping) {
+                                <mat-option [value]="topping">
+                                    {{topping}}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Picker</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="tagus-form-group">
+                    <label class="d-block mb-12 fw-semibold gray-color">Date Picker</label>
+                    <mat-form-field appearance="fill" class="date-input">
+                        <mat-label>MM/DD/YYYY</mat-label>
+                        <input matInput [matDatepicker]="picker2">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tagus-form-group without-icon">
+                    <label class="d-block mb-12 fw-semibold gray-color">Time Picker 12h</label>
+                    <mat-form-field appearance="fill">
+                        <input matInput placeholder="12hr format" [ngxTimepicker]="picker">
+                        <ngx-material-timepicker #picker></ngx-material-timepicker>
+                        <i class="material-symbols-outlined mr-15" matIconSuffix>
+                            schedule
+                        </i>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tagus-form-group without-icon">
+                    <label class="d-block mb-12 fw-semibold gray-color">Time Picker 24h</label>
+                    <mat-form-field appearance="fill">
+                        <input matInput placeholder="24hr format" [format]="24" [ngxTimepicker]="fullTime">
+                        <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+                        <i class="material-symbols-outlined mr-15" matIconSuffix>
+                            schedule
+                        </i>
+                    </mat-form-field>
+                    <!-- <mat-form-field appearance="fill">
+                        <input matInput name="selected_time_B" [format]="24" [ngxMatTimepicker]="pickerB" placeholder="16:00" readonly />
+                        <mat-icon matSuffix (click)="pickerB.open()">watch_later</mat-icon>
+                    </mat-form-field>
+                    <ngx-mat-timepicker color="accent" #pickerB></ngx-mat-timepicker> -->
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Calendar</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="tagus-form-group">
+                    <mat-calendar />
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

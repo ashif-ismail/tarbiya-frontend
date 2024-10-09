@@ -1,0 +1,21 @@
+.component-rtl-enabled {
+    .col {
+        margin: {
+            right: 0 !important;
+            left: 25px !important;
+        };
+        &:last-child {
+            margin-left: 0 !important;
+
+            .col {
+                margin: {
+                    right: 0 !important;
+                    left: 25px !important;
+                };
+                &:last-child {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+}

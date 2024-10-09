@@ -1,0 +1,63 @@
+<mat-card class="mb-25 tagus-card current-courses-box">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Current Courses</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            Development
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Design</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Business</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Marketing</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Lifestyle</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="current-courses-list d-flex flex-wrap">
+            <div class="course-item">
+                <div class="box bg-gray border-radius">
+                    <div class="d-flex align-items-center justify-content-space-between">
+                        <div class="title">
+                            <h3>C++</h3>
+                            <span class="d-block main-color">IT & SOFTWARE</span>
+                        </div>
+                        <img src="img/c++.png" alt="c++">
+                    </div>
+                    <div class="info d-flex align-items-center justify-content-space-between">
+                        <span class="gray-color fw-semibold">4.5 Score</span>
+                        <span class="muted-color">37 Days Left</span>
+                    </div>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="box bg-gray border-radius">
+                    <div class="d-flex align-items-center justify-content-space-between">
+                        <div class="title">
+                            <h3>JavaScript</h3>
+                            <span class="d-block main-color">LANGUAGE</span>
+                        </div>
+                        <img src="img/js.png" alt="javascript">
+                    </div>
+                    <div class="info d-flex align-items-center justify-content-space-between">
+                        <span class="gray-color fw-semibold">3.5 Score</span>
+                        <span class="muted-color">25 Days Left</span>
+                    </div>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="box bg-gray border-radius">
+                    <div class="d-flex align-items-center justify-content-space-between">
+                        <div class="title">
+                            <h3>Haskell</h3>
+                            <span class="d-block main-color">BACKEND</span>
+                        </div>
+                        <img src="img/haskell.png" alt="haskell">
+                    </div>
+                    <div class="info d-flex align-items-center justify-content-space-between">
+                        <span class="gray-color fw-semibold">2.5 Score</span>
+                        <span class="muted-color">15 Days Left</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

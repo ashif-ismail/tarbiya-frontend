@@ -1,0 +1,52 @@
+<div class="mat-elevation-z8 tagus-mat-table">
+    <table mat-table [dataSource]="dataSource">
+
+        <!-- Course Column -->
+        <ng-container matColumnDef="course">
+            <th mat-header-cell *matHeaderCellDef>Course</th>
+            <td mat-cell *matCellDef="let element">
+                <div class="d-flex align-items-center course-info">
+                    <img [src]="element.course.image" class="border-radius" alt="course">
+                    <a routerLink="/course-details" class="main-hover-color">{{element.course.title}}</a>
+                </div>
+            </td>
+        </ng-container>
+
+        <!-- Role Column -->
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Result</th>
+            <td mat-cell *matCellDef="let element">
+                <span class="badge" *ngIf="element.status.percentage">{{element.status.percentage}}</span>
+                <span class="badge passed" *ngIf="element.status.passed">{{element.status.passed}}</span>
+                <span class="badge failed" *ngIf="element.status.failed">{{element.status.failed}}</span>
+            </td>
+        </ng-container>
+
+        <!-- Start Time Column -->
+        <ng-container matColumnDef="startTime">
+            <th mat-header-cell *matHeaderCellDef>Start Time</th>
+            <td mat-cell *matCellDef="let element">
+                <span class="d-block gray-color">{{element.startTime.date}}</span>
+                <span class="d-block gray-color">{{element.startTime.time}}</span>
+            </td>
+        </ng-container>
+
+        <!-- End Time Column -->
+        <ng-container matColumnDef="endTime">
+            <th mat-header-cell *matHeaderCellDef>End Time</th>
+            <td mat-cell *matCellDef="let element">
+                <span class="d-block gray-color">{{element.endTime.date}}</span>
+                <span class="d-block gray-color">{{element.endTime.time}}</span>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+    </table>
+    <mat-paginator
+        [pageSizeOptions]="[5, 8]"
+        showFirstLastButtons
+    >
+    </mat-paginator>
+</div>

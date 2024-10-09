@@ -1,0 +1,104 @@
+.single-stats-box {
+    .title {
+        margin-left: 18px;
+
+        h3 {
+            margin: {
+                bottom: 0;
+                top: 6px;
+            };
+            font: {
+                size: 24px;
+                family: var(--fontFamily) !important;
+            };
+        }
+    }
+    .icon {
+        background: rgba(85, 112, 241, 0.12);
+        transition: var(--transition);
+        color: var(--heraBlueColor);
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        font-size: 35px;
+        height: 60px;
+        width: 60px;
+
+        i {
+            left: 0;
+            right: 0;
+            top: 50%;
+            line-height: 1;
+            margin-top: 1px;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+    }
+    &:hover {
+        .icon {
+            color: var(--whiteColor);
+            background-color: var(--heraBlueColor);
+        }
+    }
+}
+.component-rtl-enabled {
+    .single-stats-box {
+        .title {
+            margin: {
+                left: 0;
+                right: 18px;
+            };
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .single-stats-box {
+        .icon {
+            border-radius: 5px;
+            font-size: 25px;
+            height: 50px;
+            width: 50px;
+        }
+        .title {
+            margin: {
+                left: 15px;
+                top: 5px;
+            };
+            h3 {
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+    .component-rtl-enabled {
+        .single-stats-box {
+            .title {
+                margin: {
+                    left: 0;
+                    right: 15px;
+                };
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .single-stats-box {
+        .title {
+            h3 {
+                margin-bottom: 5px;
+                font-size: 22px;
+            }
+        }
+        .icon {
+            font-size: 30px;
+            height: 55px;
+            width: 55px;
+        }
+    }
+
+}

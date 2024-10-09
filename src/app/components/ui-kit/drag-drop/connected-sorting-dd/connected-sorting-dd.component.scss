@@ -1,0 +1,40 @@
+.example-list {
+    background: var(--whiteColor);
+    border: solid 1px #eeeeee;
+    border-radius: 5px;
+    min-height: 60px;
+    overflow: hidden;
+    display: block;
+
+    .example-list-box {
+        cursor: move;
+        display: flex;
+        padding: 20px;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        color: var(--paragraphColor);
+        background: var(--whiteColor);
+        justify-content: space-between;
+        border-bottom: solid 1px #eeeeee;
+
+        &:last-child {
+            border: none;
+        }
+    }
+    &.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+.component-dark-theme {
+    .example-list {
+        background: #1d2024;
+        border-color: #2e2e2e;
+    
+        .example-list-box {
+            color: #828690;
+            background: #1d2024;
+            border-bottom-color: #2e2e2e;
+        }
+    }
+}

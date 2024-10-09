@@ -1,0 +1,123 @@
+.activity-timeline-box {
+    ul {
+        list-style-type: none;
+
+        li {
+            border-top: 1px solid #f7faff;
+            padding: {
+                left: 20px;
+                top: 15.5px;
+                bottom: 15.5px;
+            };
+            img {
+                display: block;
+                margin-bottom: 13px;
+            }
+            h5 {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            p {
+                margin-bottom: 8px;
+                font-size: 13px;
+            }
+            .time {
+                display: block;
+                font-size: 13px;
+            }
+            &::after {
+                top: 50%;
+                left: -3px;
+                width: 10px;
+                content: '';
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                box-shadow: 0px 2.98686px 13.4409px rgba(126, 172, 235, 0.25);
+                background: linear-gradient(149.1deg, #99B8F3 14.61%, #177FCB 130.18%);
+            }
+            &::before {
+                background: #f7faff;
+                border-radius: 5px;
+                position: absolute;
+                height: 100%;
+                content: '';
+                width: 3px;
+                left: 0;
+                top: 0;
+            }
+            &:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    &.component-dark-theme {
+        ul {
+            li {
+                border-top-color: #1f2226;
+                
+                &::before {
+                    background: #1f2226;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        ul {
+            li {
+                padding: {
+                    left: 0;
+                    right: 20px;
+                };
+                &::after {
+                    left: auto;
+                    right: -3px;
+                }
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .activity-timeline-box {
+        ul {
+            li {
+                padding-left: 25px;
+                padding: {
+                    top: 16.5px;
+                    bottom: 16.5px;
+                };
+                h5 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                }
+                .time {
+                    font-size: 14px;
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            ul {
+                li {
+                    padding: {
+                        left: 0;
+                        right: 25px;
+                    };
+                }
+            }
+        }
+    }
+
+}

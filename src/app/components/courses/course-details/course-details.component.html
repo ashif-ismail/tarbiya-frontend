@@ -1,0 +1,255 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Course Details</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Courses</li>
+        <li class="breadcrumb-item fw-semibold">Course Details</li>
+    </ol>
+</div>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.card-border-radius]="themeService.isCardBorderRadius()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="course-details-header mb-25 border-radius">
+            <div class="d-md-flex mb-25 align-items-center">
+                <img src="img/lms/lms1.jpg" class="border-radius" width="100" alt="lms">
+                <h3 class="mb-0 ms-20 text-white">Node.js for Beginners: Go From Zero to Hero with Node.js</h3>
+            </div>
+            <p class="text-white">Node.js for Beginners: Alias animi labque, deserunt distinctio eum excepturi fuga iure labore magni molestias mollitia natus, officia pofro quis sunt temporibus veritatis voluptatem voluptatum.</p>
+            <a mat-raised-button routerLink="/" class="tagus mt-10">Start Free Trial</a>
+        </div>
+        <div class="course-details-desc">
+            <div class="d-md-flex meta mb-25 pb-25 justify-content-space-between align-items-center">
+                <ul class="list mb-0 d-md-flex mt-0 ps-0">
+                    <li class="gray-color fw-semibold">
+                        Course For
+                        <span class="d-block fw-semibold position-relative"><i class="ri-bar-chart-2-line"></i> Beginner</span>
+                    </li>
+                    <li class="gray-color fw-semibold">
+                        Intructor
+                        <div class="d-flex align-items-center">
+                            <img src="img/user/user2.jpg" class="rounded-circle" width="30" alt="user">
+                            <span class="d-block fw-semibold">Jonathan Andrews</span>
+                        </div>
+                    </li>
+                    <li class="gray-color fw-semibold">
+                        Course Duration
+                        <span class="d-block fw-semibold position-relative"><i class="ri-time-line"></i> 32h 50m</span>
+                    </li>
+                </ul>
+                <div class="rating-box text-end">
+                    <span class="d-block mb-10 fw-semibold gray-color">20 Ratings</span>
+                    <div class="rating">
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-1"></i>
+                        <i class="flaticon-star-2"></i>
+                        <i class="flaticon-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="td-checkbox gray-color fw-semibold d-flex align-items-center">
+                        <mat-checkbox class="minus-margin"></mat-checkbox> Mark as completed
+                    </div>
+                    <h5 class="mb-25">Table Of Contents</h5>
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Course Overview
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <ul class="mb-0 mt-0 ps-0 content-list">
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-information-line"></i> Introduction</span>
+                                    <span class="d-block gray-color fw-medium">15m 20s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-play-circle-line"></i> Introduction to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">20m 15s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-checkbox-line"></i> Comparing to Angular to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">1h 20m</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-star-line"></i> Quiz: Getting Started with Node.js</span>
+                                    <span class="d-block gray-color fw-medium">25m 13s</span>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Getting Started with Node.js
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <ul class="mb-0 mt-0 ps-0 content-list">
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-information-line"></i> Introduction</span>
+                                    <span class="d-block gray-color fw-medium">15m 20s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-play-circle-line"></i> Introduction to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">20m 15s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-checkbox-line"></i> Comparing to Angular to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">1h 20m</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-star-line"></i> Quiz: Getting Started with Node.js</span>
+                                    <span class="d-block gray-color fw-medium">25m 13s</span>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Creating And Communication Between Angular Node.js
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <ul class="mb-0 mt-0 ps-0 content-list">
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-information-line"></i> Introduction</span>
+                                    <span class="d-block gray-color fw-medium">15m 20s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-play-circle-line"></i> Introduction to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">20m 15s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-checkbox-line"></i> Comparing to Angular to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">1h 20m</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-star-line"></i> Quiz: Getting Started with Node.js</span>
+                                    <span class="d-block gray-color fw-medium">25m 13s</span>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Exploring The Node.js Template Syntax
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <ul class="mb-0 mt-0 ps-0 content-list">
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-information-line"></i> Introduction</span>
+                                    <span class="d-block gray-color fw-medium">15m 20s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-play-circle-line"></i> Introduction to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">20m 15s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-checkbox-line"></i> Comparing to Angular to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">1h 20m</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-star-line"></i> Quiz: Getting Started with Node.js</span>
+                                    <span class="d-block gray-color fw-medium">25m 13s</span>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Node.js MySQL Create Database
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <ul class="mb-0 mt-0 ps-0 content-list">
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-information-line"></i> Introduction</span>
+                                    <span class="d-block gray-color fw-medium">15m 20s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-play-circle-line"></i> Introduction to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">20m 15s</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-checkbox-line"></i> Comparing to Angular to Node.js</span>
+                                    <span class="d-block gray-color fw-medium">1h 20m</span>
+                                </li>
+                                <li class="d-flex align-items-center justify-content-space-between">
+                                    <span class="d-block gray-color fw-medium position-relative"><i class="ri-star-line"></i> Quiz: Getting Started with Node.js</span>
+                                    <span class="d-block gray-color fw-medium">25m 13s</span>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="bg-light-gray border-radius text-center p-30">
+                        <h4 class="mb-10">Unlock Library</h4>
+                        <p>Get access to all videos in the library</p>
+                        <a mat-raised-button routerLink="/" class="tagus">Sign Up - Only $20.00/mo</a>
+                        <span class="d-block mt-20 gray-color">Have an Account? <a routerLink="/" class="main-color">Login</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.card-border-radius]="themeService.isCardBorderRadius()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="p-md-25">
+            <h5 class="mb-12">About The Course :</h5>
+            <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
+            <h5 class="mt-25 mb-18">What You Will Learn :</h5>
+            <span class="d-block gray-color fw-semibold mb-12">Become an expert in Statistics</span>
+            <span class="d-block gray-color fw-semibold mb-12">Gather, organize, data</span>
+            <span class="d-block gray-color fw-semibold mb-12">Present information KPIs</span>
+            <span class="d-block gray-color fw-semibold mb-12">Analyze current data</span>
+            <span class="d-block gray-color fw-semibold mb-12">Understand the fundamentals</span>
+            <span class="d-block gray-color fw-semibold mb-12">Boost your resume with skills</span>
+            <span class="d-block gray-color fw-semibold mb-0">Use data for improved</span>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.card-border-radius]="themeService.isCardBorderRadius()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="p-md-25 row align-items-center">
+            <div class="col-lg-4 col-xl-3 col-md-5 text-center">
+                <img src="img/user/user8.jpg" class="rounded-circle mb-15" width="130" alt="user">
+                <h5 class="mb-8 fw-semibold">Kristie Hall</h5>
+                <span class="d-block muted-color">&#64;kristiehall</span>
+                <div class="btn-box mt-20">
+                    <a mat-flat-button href="mailto:kristiehall&#64;tagus.com" class="tagus">Message</a>
+                    <button mat-flat-button class="gray">Courses</button>
+                </div>
+            </div>
+            <div class="col-lg-8 col-xl-9 col-md-7">
+                <div class="content">
+                    <h5 class="mb-15">About The Instructor :</h5>
+                    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
+                    <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

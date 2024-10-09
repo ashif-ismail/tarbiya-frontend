@@ -1,0 +1,81 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Listbox</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Listbox</li>
+    </ol>
+</div>
+
+<div
+    class="row"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Listbox</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="listbox-container">
+                    <label class="listbox-label fw-semibold" id="fav-color-label">
+                        Favorite color
+                    </label>
+                    <ul cdkListbox class="listbox">
+                        <li cdkOption="red" class="option">Red</li>
+                        <li cdkOption="green" class="option">Green</li>
+                        <li cdkOption="blue" class="option">Blue</li>
+                    </ul>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Listbox Custom Typeahead</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="listbox-container">
+                    <label class="listbox-label fw-semibold" id="satisfaction-label">
+                        How was your service?
+                    </label>
+                    <ul cdkListbox class="listbox">
+                        <li cdkOption="1" cdkOptionTypeaheadLabel="great" class="option">
+                            😀 Great
+                        </li>
+                        <li cdkOption="0" cdkOptionTypeaheadLabel="okay" class="option">
+                            😐 Okay
+                        </li>
+                        <li cdkOption="-1" cdkOptionTypeaheadLabel="bad" class="option">
+                            🙁 Bad
+                        </li>
+                    </ul>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Horizontal Listbox</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <label class="example-listbox-label fw-semibold" id="example-shirt-size-label">
+                    Shirt Size:
+                </label>
+                <ul cdkListbox cdkListboxOrientation="horizontal" aria-labelledby="example-shirt-size-label" class="example-listbox">
+                    <li *ngFor="let size of sizes" cdkOption="size" class="example-option gray-color fw-semibold">
+                        {{size}}
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

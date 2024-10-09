@@ -1,0 +1,152 @@
+<mat-card
+    class="mb-25 tagus-card my-currencies-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">My Currencies</h5>
+        <div class="buttons-list">
+            <button mat-button>Buy</button>
+            <button mat-button>Sell</button>
+            <button mat-button>All</button>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="my-currencies-table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">Coin Name</th>
+                        <th class="fw-semibold gray-color">Price</th>
+                        <th class="fw-semibold gray-color">24h Change</th>
+                        <th class="fw-semibold gray-color">Total Balance</th>
+                        <th class="fw-semibold gray-color">Total Coin</th>
+                        <th class="fw-semibold gray-color">Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-semibold name-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/bitcoin4.png" width="45" alt="bitcoin">
+                                <span class="ms-10">Bitcoin</span>
+                            </div>
+                        </td>
+                        <td class="gray-color">$48,568.025</td>
+                        <td class="up">
+                            <span>
+                                <i class="flaticon-trend"></i>
+                                +2.48%
+                            </span>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">12,565.75</span> USD
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.2040</span> BTC
+                        </td>
+                        <td>
+                            <button mat-button>Trade</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold name-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/ethereum3.png" width="45" alt="ethereum">
+                                <span class="ms-10">Ethereum</span>
+                            </div>
+                        </td>
+                        <td class="gray-color">$1,876.76</td>
+                        <td class="down">
+                            <span>
+                                <i class="flaticon-trend-1"></i>
+                                -3.48%
+                            </span>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">4,565.75</span> USD
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.2040</span> ETH
+                        </td>
+                        <td>
+                            <button mat-button>Trade</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold name-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/binance.png" width="45" alt="binance">
+                                <span class="ms-10">Binance</span>
+                            </div>
+                        </td>
+                        <td class="gray-color">$278.87</td>
+                        <td class="up">
+                            <span>
+                                <i class="flaticon-trend"></i>
+                                +1.08%
+                            </span>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">20,565.75</span> USD
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.2040</span> BTC
+                        </td>
+                        <td>
+                            <button mat-button>Trade</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold name-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/litecoin3.png" width="45" alt="litecoin">
+                                <span class="ms-10">Litecoin</span>
+                            </div>
+                        </td>
+                        <td class="gray-color">$89.98</td>
+                        <td class="up">
+                            <span>
+                                <i class="flaticon-trend"></i>
+                                +2.05%
+                            </span>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">7,565.75 </span> USD
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.2040</span> LTC
+                        </td>
+                        <td>
+                            <button mat-button>Trade</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-semibold name-info">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icon/cardano.png" width="45" alt="cardano">
+                                <span class="ms-10">Cardano</span>
+                            </div>
+                        </td>
+                        <td class="gray-color">$37.32</td>
+                        <td class="down">
+                            <span>
+                                <i class="flaticon-trend-1"></i>
+                                -1.01%
+                            </span>
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">1,431.75 </span> USD
+                        </td>
+                        <td class="gray-color">
+                            <span class="fw-semibold">+ 0.2341</span> CDR
+                        </td>
+                        <td>
+                            <button mat-button>Trade</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

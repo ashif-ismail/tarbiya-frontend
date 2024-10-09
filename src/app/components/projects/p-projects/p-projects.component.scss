@@ -1,0 +1,223 @@
+.all-projects-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    table, .table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                th {
+                    background-color: #f7faff;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    text-align: center;
+                    position: relative;
+                    padding: 15px 20px;
+
+                    &::after {
+                        top: 50%;
+                        right: 0;
+                        width: 1px;
+                        content: '';
+                        height: 17px;
+                        position: absolute;
+                        background-color: #e7ebf5;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &:first-child {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 18px 20px;
+                    text-align: center;
+                    white-space: nowrap;
+                    border-bottom-color: #f7faff;
+                    border-bottom: 1px solid #F7FAFF;
+
+                    .projects-name {
+                        .img {
+                            text-align: center;
+                            position: relative;
+                            width: 30px;
+                            top: 2px;
+                        }
+                        h5 {
+                            font-size: 16px;
+                            margin-left: 12px;
+                            color: var(--blackColor);
+                        }
+                    }
+                    .badge {
+                        font-size: 14px;
+                        color: #00B69B;
+                        border-radius: 4px;
+                        padding: 4px 15px 5px;
+                        background: rgba(0, 182, 155, 0.1);
+
+                        &.pending {
+                            color: #EE368C;
+                            background: rgba(238, 54, 140, 0.1);
+                        }
+                        &.completed {
+                            color: #757FEF;
+                            background: rgba(117, 127, 239, 0.1);
+                        }
+                    }
+                    &.members-list {
+                        img {
+                            width: 30px;
+                            margin: 0 -5px;
+                            transition: var(--transition);
+                            border: 3px solid var(--whiteColor);
+
+                            &:hover {
+                                transform: scale(1.3);
+                            }
+                        }
+                    }
+                    &:first-child {
+                        text-align: start;
+                    }
+                    &.progress-td {
+                        text-align: start;
+
+                        .mat-mdc-progress-bar {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:vertical {
+        width: 10px;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 2px solid var(--whiteColor);
+        background-color: rgba(0, 0, 0, .2);
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;  
+        background-color: var(--whiteColor);
+    }
+}
+.component-dark-theme {
+    .all-projects-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        background-color: #1d2024;
+    
+                        &::after {
+                            background-color: #363636;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        border-bottom-color: #1f2226;
+    
+                        .projects-name {
+                            h5 {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        &.members-list {
+                            img {
+                                border-color: #1f2226;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &::-webkit-scrollbar-thumb {
+            border-color: #1f2226;
+            background-color: rgba(255, 255, 255, .2);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #1f2226;
+        }
+    }
+}
+.component-rtl-enabled {
+    .all-projects-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        &::after {
+                            right: auto;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        .projects-name {
+                            h5 {
+                                margin: {
+                                    left: 0;
+                                    right: 12px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .all-projects-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        padding: 12px 15px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: 12px 15px;
+    
+                        .projects-name {
+                            h5 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

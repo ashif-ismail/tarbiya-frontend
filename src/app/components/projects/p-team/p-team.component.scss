@@ -1,0 +1,135 @@
+.p-team-card {
+    padding: 0;
+
+    .mat-mdc-card-header {
+        padding: 25px;
+        margin-bottom: 0;
+        border-radius: 10px;
+        background-color: #C8CCF9;
+        align-items: unset !important;
+
+        .dot-btn {
+            width: auto;
+            top: -5px !important;
+            line-height: initial;
+            height: auto !important;
+        }
+    }
+    .mat-mdc-card-content {
+        padding: 25px;
+
+        .info {
+            border-top: 1px solid #E9EFFC;
+            padding-top: 25px;
+            margin-top: 25px;
+
+            .gray {
+                box-shadow: unset !important;
+                color: var(--heraBlueColor) !important;
+                padding: 10px 35px 11px 18px !important;
+                font: {
+                    weight: 600 !important;
+                    size: 14px !important;
+                };
+                i {
+                    top: 50%;
+                    right: -18px;
+                    line-height: 1;
+                    margin-top: 1px;
+                    font-size: 15px;
+                    position: absolute;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .list {
+            .images {
+                img {
+                    margin-left: -10px;
+                    border: 2px solid var(--whiteColor);
+    
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+                div {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 14px;
+                    color: #00B69B;
+                    line-height: 40px;
+                    background: rgba(0, 182, 155, 0.1);
+                }
+            }
+        }
+    }
+}
+.component-rtl-enabled {
+    .p-team-card {
+        .list {
+            .images {
+                img {
+                    margin: {
+                        left: 0;
+                        right: -10px;
+                    };
+                    &:first-child {
+                        margin: {
+                            left: -10px;
+                            right: 0;
+                        };
+                    }
+                }
+            }
+            .gray {
+                padding: {
+                    left: 35px !important;
+                    right: 18px !important;
+                };
+                i {
+                    left: -18px;
+                    right: auto;
+                }
+            }
+        }
+    }
+}
+.component-dark-theme {
+    .p-team-card {
+        .mat-mdc-card-header {
+            background-color: var(--blackColor);
+        }
+        .mat-mdc-card-content {
+            .info {
+                border-top-color: rgba(255, 255, 255, 0.10);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .p-team-card {
+        .mat-mdc-card-header {
+            padding: 15px;
+        }
+        .mat-mdc-card-content {
+            padding: 15px;
+
+            .list {
+                .images {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .col-sm-6 {
+        width: 33.33333333%;
+    }
+
+}

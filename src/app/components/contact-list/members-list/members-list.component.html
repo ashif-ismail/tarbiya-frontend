@@ -1,0 +1,415 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Users List</h5>
+        <button mat-flat-button class="default-btn tagus" (click)="openCreateUserDialog('300ms', '100ms')">
+            <i class="ri-add-fill"></i> Create New User
+        </button>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">Name</th>
+                        <th class="fw-semibold gray-color">Email</th>
+                        <th class="fw-semibold gray-color">Tags</th>
+                        <th class="fw-semibold gray-color">Projects</th>
+                        <th class="fw-semibold gray-color">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user12.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Evangelina Mcclain</h5>
+                                    <span class="d-block muted-color">&#64;evangelinamcclain</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:evangelinamcclain&#64;tagus.com" class="gray-color">
+                                evangelinamcclain&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                <a class="fw-medium" routerLink="/members-list">CSS</a>
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">165</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user13.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Candice Munoz</h5>
+                                    <span class="d-block muted-color">&#64;candicemunoz</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:candicemunoz&#64;tagus.com" class="gray-color">
+                                candicemunoz&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">CSS</a>
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">99</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user11.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Bernard Langley</h5>
+                                    <span class="d-block muted-color">&#64;bernardlangley</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:bernardlangley&#64;tagus.com" class="gray-color">
+                                bernardlangley&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">24</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user14.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Kristie Hall</h5>
+                                    <span class="d-block muted-color">&#64;kristiehall</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:kristiehall&#64;tagus.com" class="gray-color">
+                                kristiehall&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                <a class="fw-medium" routerLink="/members-list">CSS</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">50</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user8.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Bolton Obrien</h5>
+                                    <span class="d-block muted-color">&#64;boltonobrien</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:boltonobrien&#64;tagus.com" class="gray-color">
+                                boltonobrien&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">34</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user18.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Dee Alvarado</h5>
+                                    <span class="d-block muted-color">&#64;deealvarado</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:deealvarado&#64;tagus.com" class="gray-color">
+                                deealvarado&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">CSS</a>
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">99</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user22.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Cervantes Kramer</h5>
+                                    <span class="d-block muted-color">&#64;cervanteskramer</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:cervanteskramer&#64;tagus.com" class="gray-color">
+                                cervanteskramer&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">24</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user16.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Dejesus Michael</h5>
+                                    <span class="d-block muted-color">&#64;dejesusmichael</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:dejesusmichael&#64;tagus.com" class="gray-color">
+                                dejesusmichael&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                <a class="fw-medium" routerLink="/members-list">CSS</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">50</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info d-flex align-items-center">
+                                <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                <div class="title">
+                                    <h5 class="fw-semibold mb-5">Alissa Nelson</h5>
+                                    <span class="d-block muted-color">&#64;alissanelson</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="gray-color">
+                            <a href="mailto:alissanelson&#64;tagus.com" class="gray-color">
+                                alissanelson&#64;tagus.com
+                            </a>
+                        </td>
+                        <td class="gray-color">
+                            <div class="tags-list">
+                                <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                <a class="fw-medium" routerLink="/members-list">Sass</a>
+                            </div>
+                        </td>
+                        <td class="gray-color">34</td>
+                        <td>
+                            <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                <i class="ri-more-fill"></i>
+                            </button>
+                            <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-share-line"></i> Share
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-link"></i> Get Sharable Link
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-edit-line"></i> Rename
+                                </button>
+                                <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                    <i class="ri-delete-bin-line"></i> Remove
+                                </button>
+                            </mat-menu>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

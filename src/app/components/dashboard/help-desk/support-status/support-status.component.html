@@ -1,0 +1,44 @@
+<mat-card
+    class="mb-25 tagus-card support-status-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Support Status</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            This Week
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <h4 class="gray-color fw-normal"><span class="fw-semibold">12,50846</span> Tickets</h4>
+        <div class="progress-percentage d-flex w-100">
+            <span class="resolved-tickets"></span>
+            <span class="open-tickets"></span>
+            <span class="unresolved-tickets"></span>
+        </div>
+        <div class="content d-flex align-items-center justify-content-space-between">
+            <span class="fw-semibold main-color">Status</span>
+            <span class="fw-semibold gray-color">% Change</span>
+        </div>
+        <ul class="ps-0 list-unstyled mt-0 mb-0">
+            <li class="position-relative gray-color d-flex align-items-center justify-content-space-between">
+                Resolved Tickets
+                <span>+2.48%</span>
+            </li>
+            <li class="position-relative gray-color d-flex align-items-center justify-content-space-between">
+                Open Tickets
+                <span>+1.21%</span>
+            </li>
+            <li class="position-relative gray-color d-flex align-items-center justify-content-space-between">
+                Unresolved Tickets
+                <span>-0.50%</span>
+            </li>
+        </ul>
+        <button mat-flat-button class="gray d-block">Create New Ticket</button>
+    </mat-card-content>
+</mat-card>

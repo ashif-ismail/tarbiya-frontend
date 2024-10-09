@@ -1,0 +1,13 @@
+@import "../account/account.component.scss";
+
+.mat-mdc-checkbox {
+    margin-left: -10px;
+}
+.component-rtl-enabled {
+    .mat-mdc-checkbox {
+        margin: {
+            left: 0;
+            right: -10px;
+        };
+    }
+}

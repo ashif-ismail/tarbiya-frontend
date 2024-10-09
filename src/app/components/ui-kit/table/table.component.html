@@ -1,0 +1,215 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Table</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Table</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Basic Table</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource">
+            
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="position">
+                            <th mat-header-cell *matHeaderCellDef> No. </th>
+                            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        </ng-container>
+            
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Name </th>
+                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+            
+                        <!-- Weight Column -->
+                        <ng-container matColumnDef="weight">
+                            <th mat-header-cell *matHeaderCellDef> Weight </th>
+                            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                        </ng-container>
+            
+                        <!-- Symbol Column -->
+                        <ng-container matColumnDef="symbol">
+                            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                        </ng-container>
+            
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Styling Columns Table</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-styling-columns-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Adding & Removing Using an Array-Based Datasource</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-add-remove-array-based-datasource-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Table Dynamically Changing The Columns Displayed</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-table-dynamically-columns-displayed />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Adding & Removing Using an Observable-Based Datasource</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-add-remove-observable-based-datasource-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table with Expandable Rows</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-expandable-rows-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Table with Filtering</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-filtering-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Footer Row Table</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-footer-row-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Multiple Header & Footer Rows</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-multiple-header-footer-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Data Table With Sorting, Pagination, & Filtering</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-sorting-pagination-filtering-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Pagination</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-pagination-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Selection</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-selection-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Sorting</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-sorting-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Sticky Columns</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-sticky-columns-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Sticky Header</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-sticky-header-table />
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Tables With Material Design Ripples</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-ripple-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-6 col-xl-12 col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Table With Sticky Footer</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-sticky-footer-table />
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

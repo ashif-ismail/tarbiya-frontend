@@ -1,0 +1,50 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Slide Toggle</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Slide Toggle</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Slide Toggle</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-slide-toggle>Slide me!</mat-slide-toggle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Slide Toggle with Forms</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Slide Toggle using a simple NgModel.</p>
+                <mat-slide-toggle [(ngModel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
+                <p class="mt-15">Slide Toggle inside of a Template-driven form</p>
+                <form class="example-form" #form="ngForm" (ngSubmit)="alertFormValues(form.form)">
+                    <mat-slide-toggle ngModel name="enableWifi">Enable Wifi</mat-slide-toggle>
+                    <mat-slide-toggle ngModel name="acceptTerms" required>Accept Terms of Service</mat-slide-toggle>
+                    <button class="mt-15" mat-raised-button type="submit">Save Settings</button>
+                </form>
+                <p class="mt-15">Slide Toggle inside of a Reactive form</p>
+                <form class="example-form" [formGroup]="formGroup" (ngSubmit)="alertFormValues(formGroup)" ngNativeValidate>
+                    <mat-slide-toggle formControlName="enableWifi">Enable Wifi</mat-slide-toggle>
+                    <mat-slide-toggle formControlName="acceptTerms">Accept Terms of Service</mat-slide-toggle>
+                    <p class="mt-10">Form Group Status: {{formGroup.status}}</p>
+                    <button mat-raised-button type="submit">Save Settings</button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

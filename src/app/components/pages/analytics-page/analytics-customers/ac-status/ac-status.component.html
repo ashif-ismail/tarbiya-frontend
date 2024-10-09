@@ -1,0 +1,103 @@
+<div
+    class="row justify-content-center"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <div class="status-item position-relative">
+                    <div class="d-flex align-items-center">
+                        <div class="icon position-relative">
+                            <i class="flaticon-pie-chart-3"></i>
+                        </div>
+                        <div class="title">
+                            <span class="d-block gray-color">Visits By Day</span>
+                            <h4>1,802</h4>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <apx-chart
+                            [series]="chartOptions.series!"
+                            [chart]="chartOptions.chart!"
+                            [dataLabels]="chartOptions.dataLabels!"
+                            [plotOptions]="chartOptions.plotOptions!"
+                            [yaxis]="chartOptions.yaxis!"
+                            [grid]="chartOptions.grid!"
+                            [xaxis]="chartOptions.xaxis!"
+                            [colors]="chartOptions.colors!"
+                            [legend]="chartOptions.legend!"
+                            [fill]="chartOptions.fill!"
+                            [title]="chartOptions.title!"
+                    ></apx-chart>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <div class="status-item position-relative">
+                    <div class="d-flex align-items-center">
+                        <div class="icon position-relative">
+                            <i class="flaticon-pie-chart-1"></i>
+                        </div>
+                        <div class="title">
+                            <span class="d-block gray-color">Net Income</span>
+                            <h4>$438.5K</h4>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <apx-chart
+                            [series]="chartOptions.series2!"
+                            [chart]="chartOptions.chart!"
+                            [dataLabels]="chartOptions.dataLabels!"
+                            [plotOptions]="chartOptions.plotOptions!"
+                            [yaxis]="chartOptions.yaxis!"
+                            [grid]="chartOptions.grid!"
+                            [xaxis]="chartOptions.xaxis!"
+                            [tooltip]="chartOptions.tooltip!"
+                            [colors]="chartOptions.colors!"
+                            [legend]="chartOptions.legend!"
+                            [fill]="chartOptions.fill!"
+                            [title]="chartOptions.title!"
+                    ></apx-chart>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-content>
+                <div class="status-item position-relative">
+                    <div class="d-flex align-items-center">
+                        <div class="icon position-relative">
+                            <i class="flaticon-timers"></i>
+                        </div>
+                        <div class="title">
+                            <span class="d-block gray-color">New Sessions</span>
+                            <h4>2,202</h4>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <apx-chart
+                            [series]="chartOptions.series3!"
+                            [chart]="chartOptions.chart!"
+                            [dataLabels]="chartOptions.dataLabels!"
+                            [plotOptions]="chartOptions.plotOptions!"
+                            [yaxis]="chartOptions.yaxis!"
+                            [grid]="chartOptions.grid!"
+                            [xaxis]="chartOptions.xaxis!"
+                            [colors]="chartOptions.colors!"
+                            [legend]="chartOptions.legend!"
+                            [fill]="chartOptions.fill!"
+                            [title]="chartOptions.title!"
+                    ></apx-chart>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

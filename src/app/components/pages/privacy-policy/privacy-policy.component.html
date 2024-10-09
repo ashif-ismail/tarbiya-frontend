@@ -1,0 +1,45 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Privacy Policy</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <nav>
+            <ul class="ps-0 mt-0">
+                <li>
+                    <a routerLink="/account" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Account</a>
+                </li>
+                <li>
+                    <a routerLink="/security" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Security</a>
+                </li>
+                <li>
+                    <a routerLink="/connections" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Connections</a>
+                </li>
+                <li>
+                    <a routerLink="/privacy-policy" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Privacy Policy</a>
+                </li>
+                <li>
+                    <a routerLink="/terms-conditions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Terms & Conditions</a>
+                </li>
+            </ul>
+        </nav>
+        <h5 class="fw-semibold mb-20">Security :</h5>
+        <span class="d-block fw-semibold mb-10">Two-factor Authentication</span>
+        <p>Two-factor authentication is an enhanced security meansur. Once enabled, you'll be required to give two types of identification when you log into Google Authentication and SMS are Supported.</p>
+        <span class="d-block mt-20 fw-semibold mb-10">Secondary Verification</span>
+        <p>Two-factor authentication is an enhanced security meansur. Once enabled, you'll be required to give two types of identification when you log into Google Authentication and SMS are Supported.</p>
+        <span class="d-block mt-20 fw-semibold mb-10">Backup Codes</span>
+        <p>Two-factor authentication is an enhanced security meansur. Once enabled, you'll be required to give two types of identification when you log into Google Authentication and SMS are Supported.</p>
+        <span class="d-block mt-20 fw-semibold mb-10">Desktop, email, chat, purchase notifications</span>
+        <p>Two-factor authentication is an enhanced security meansur. Once enabled, you'll be required to give two types of identification when you log into Google Authentication and SMS are Supported.</p>
+        <h5 class="fw-semibold mt-25 mb-10">Delete This Account :</h5>
+        <p>Two-factor authentication is an enhanced security meansur. Once enabled, you'll be required to give two types of identification when you log into Google Authentication and SMS are Supported.</p>
+        <div class="btn-box mt-20">
+            <button mat-raised-button color="warn">Close & Delete This Account</button>
+            <button mat-raised-button class="gray ms-15">Cancel</button>
+        </div>
+    </mat-card-content>
+</mat-card>

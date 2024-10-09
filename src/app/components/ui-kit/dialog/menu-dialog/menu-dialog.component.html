@@ -1,0 +1,4 @@
+<button mat-flat-button class="gray" [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openDialog()" class="fw-semibold">Open dialog</button>
+</mat-menu>

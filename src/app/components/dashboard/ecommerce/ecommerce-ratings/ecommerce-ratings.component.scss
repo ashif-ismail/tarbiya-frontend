@@ -1,0 +1,168 @@
+.ratingsBox {
+    .content {
+        margin-right: -30px;
+        
+        h5 {
+            margin-bottom: 12px;
+        }
+        .year {
+            display: block;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font: {
+                size: 14px;
+                weight: 600;
+            };
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+
+            span {
+                font: {
+                    size: 14px;
+                    weight: 400;
+                    family: var(--fontFamily);
+                };
+            }
+        }
+        p {
+            position: relative;
+            padding-left: 24px;
+            line-height: initial;
+            font: {
+                weight: 600;
+                size: 13px;
+            };
+            i {
+                transform: translateY(-50%);
+                position: absolute;
+                color: #fa7e00;
+                font-size: 16px;
+                line-height: 1;
+                top: 50%;
+                left: 0;
+            }
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+    #ratingschart {
+        margin: {
+            top: -25px;
+            right: -40px;
+            bottom: -30px;
+        };
+    }
+    &.component-rtl-enabled {
+        .content {
+            margin: {
+                right: 0;
+                left: -30px;
+            };
+            p {
+                padding: {
+                    left: 0;
+                    right: 24px;
+                };
+                i {
+                    left: auto;
+                    right: 0;
+                }
+                span {
+                    margin: {
+                        left: 0;
+                        right: 5px;
+                    };
+                }
+            }
+        }
+        #ratingschart {
+            margin: {
+                left: -40px;
+                right: 0;
+            };
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .ratingsBox {
+        .content {
+            margin-right: 0;
+            
+            h5 {
+                margin-bottom: 10px;
+            }
+            .year {
+                margin-bottom: 10px;
+                font-size: 13px;
+            }
+            h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+    
+                span {
+                    font-size: 13px;
+                }
+            }
+            p {
+                padding-left: 22px;
+                
+                i {
+                    font-size: 15px;
+                }
+                span {
+                    margin-left: 0;
+                }
+            }
+        }
+        #ratingschart {
+            margin: {
+                top: 0;
+                right: 0;
+                bottom: -15px;
+            };
+        }
+        &.component-rtl-enabled {
+            .content {
+                margin-left: 0;
+
+                p {
+                    padding: {
+                        left: 0;
+                        right: 22px;
+                    };
+                    span {
+                        margin-right: 0;
+                    }
+                }
+            }
+            #ratingschart {
+                margin: {
+                    left: 0;
+                };
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .ratingsBox {
+        .content {
+            margin-right: 0;
+
+            p {
+                font-size: var(--fontSize);
+            }
+        }
+        &.component-rtl-enabled {
+            margin-left: 0;
+        }
+    }
+
+}

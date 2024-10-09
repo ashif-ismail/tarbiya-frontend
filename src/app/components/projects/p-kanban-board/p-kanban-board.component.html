@@ -1,0 +1,517 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Kanban Board</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Projects</li>
+        <li class="breadcrumb-item fw-semibold">Kanban Board</li>
+    </ol>
+</div>
+
+<div class="row" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <div class="col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+        <mat-card class="mb-25 position-relative tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">New Projects</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Create Project
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Open Project
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Overview
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="single-stats-box mb-25 d-flex align-items-center">
+                    <div class="icon">
+                        <i class="flaticon-donut-chart"></i>
+                    </div>
+                    <div class="title">
+                        <h3 class="mb-0">41</h3>
+                        <span class="d-block gray-color">Added: 13 Projects this month</span>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Mobile App Development</h5>
+                    <span class="muted-color fw-medium">Mobile App</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/10</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user21.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user22.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Web Development</h5>
+                    <span class="muted-color fw-medium">Angular Material</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/20</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user12.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user13.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user14.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+5</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">eCommerce Development</h5>
+                    <span class="muted-color fw-medium">React JS</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/30</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user15.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user16.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user17.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Digital Marketing</h5>
+                    <span class="muted-color fw-medium">SEO</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/40</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user18.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user19.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user20.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">WordPress Development</h5>
+                    <span class="muted-color fw-medium">WordPress</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/50</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user21.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user22.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+2</div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+        <mat-card class="mb-25 position-relative tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">To Do List</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Create Project
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Open Project
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Overview
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="single-stats-box mb-25 d-flex align-items-center">
+                    <div class="icon">
+                        <i class="flaticon-to-do-list"></i>
+                    </div>
+                    <div class="title">
+                        <h3 class="mb-0">50</h3>
+                        <span class="d-block gray-color">Added: 10 Projects this month</span>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">eCommerce Development</h5>
+                    <span class="muted-color fw-medium">React JS</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/30</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user15.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user16.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user17.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Digital Marketing</h5>
+                    <span class="muted-color fw-medium">SEO</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/40</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user18.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user19.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user20.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">WordPress Development</h5>
+                    <span class="muted-color fw-medium">WordPress</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/50</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user21.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user22.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Mobile App Development</h5>
+                    <span class="muted-color fw-medium">Mobile App</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/10</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user21.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user22.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Web Development</h5>
+                    <span class="muted-color fw-medium">Angular Material</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/20</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user12.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user13.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user14.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+5</div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6 col-xl-4 col-xxl-4">
+        <mat-card class="mb-25 position-relative tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">In Review</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Create Project
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Open Project
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        Overview
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="single-stats-box mb-25 d-flex align-items-center">
+                    <div class="icon">
+                        <i class="flaticon-filter"></i>
+                    </div>
+                    <div class="title">
+                        <h3 class="mb-0">55</h3>
+                        <span class="d-block gray-color">Added: 05 Projects this month</span>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">WordPress Development</h5>
+                    <span class="muted-color fw-medium">WordPress</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/50</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user21.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user22.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Mobile App Development</h5>
+                    <span class="muted-color fw-medium">Mobile App</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/10</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user21.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user22.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">eCommerce Development</h5>
+                    <span class="muted-color fw-medium">React JS</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/30</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user15.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user16.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user17.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Digital Marketing</h5>
+                    <span class="muted-color fw-medium">SEO</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/40</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user18.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user19.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user20.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-item bg-gray border-radius p-20">
+                    <div class="d-flex mb-5 align-items-center justify-content-space-between">
+                        <mat-checkbox class="minus-margin"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 border-none" [matMenuTriggerFor]="editMenu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #editMenu="matMenu" class="monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                Delete
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <h5 class="mb-8 fw-semibold">Web Development</h5>
+                    <span class="muted-color fw-medium">Angular Material</span>
+                    <div class="d-flex mt-12 align-items-center justify-content-space-between">
+                        <span class="gray-color">0/20</span>
+                        <div class="images d-flex align-items-center">
+                            <img src="img/user/user12.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user13.jpg" class="rounded-circle" width="25" alt="user">
+                            <img src="img/user/user14.jpg" class="rounded-circle" width="25" alt="user">
+                            <div class="d-inline-block rounded-circle fw-semibold text-center">+5</div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

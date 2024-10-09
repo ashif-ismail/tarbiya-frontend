@@ -1,0 +1,213 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">FAQ</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">FAQ</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Accordion</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <cdk-accordion class="tagus-basic-accordion">
+                    <cdk-accordion-item
+                        *ngFor="let item of items; let index = index;"
+                        #accordionItem="cdkAccordionItem"
+                        role="button"
+                        tabindex="0"
+                        class="accordion-item"
+                        [attr.id]="'accordion-header-' + index"
+                        [attr.aria-expanded]="accordionItem.expanded"
+                        [attr.aria-controls]="'accordion-body-' + index"
+                    >
+                        <div
+                            class="accordion-item-header"
+                            (click)="accordionItem.toggle()"
+                        >
+                            {{ item.title }}
+                            <span class="accordion-item-icon {{accordionItem.expanded ? 'close' : 'open'}}">
+                                <i class="flaticon-plus"></i>
+                            </span>
+                        </div>
+                        <div
+                            role="region"
+                            class="accordion-item-body"
+                            [style.display]="accordionItem.expanded ? '' : 'none'"
+                            [attr.id]="'accordion-body-' + index"
+                            [attr.aria-labelledby]="'accordion-header-' + index"
+                        >
+                            <p>{{ item.desc }}</p>
+                        </div>
+                    </cdk-accordion-item>
+                </cdk-accordion>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Expansion</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-accordion class="tagus-basic-expansion">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Company Provides A Full Range of Services?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                How Long it Will Take For Web Development?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                What About Money Back Guarantee?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                How Long Does A Business Consulting Project Last?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Do You Offer Volume or Loyalty Discounts?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                In Which Countries Do You Provide Consulting Services?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Advance Accordion</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <cdk-accordion class="tagus-advance-accordion">
+                    <cdk-accordion-item
+                        *ngFor="let item of items; let index = index;"
+                        #accordionItem="cdkAccordionItem"
+                        role="button"
+                        tabindex="0"
+                        class="accordion-item"
+                        [attr.id]="'accordion-header-' + index"
+                        [attr.aria-expanded]="accordionItem.expanded"
+                        [attr.aria-controls]="'accordion-body-' + index"
+                    >
+                        <div
+                            class="accordion-item-header"
+                            (click)="accordionItem.toggle()"
+                        >
+                            {{ item.title }}
+                            <span class="accordion-item-icon {{accordionItem.expanded ? 'close' : 'open'}}">
+                                <i class="flaticon-chevron-2"></i>
+                            </span>
+                        </div>
+                        <div
+                            role="region"
+                            class="accordion-item-body"
+                            [style.display]="accordionItem.expanded ? '' : 'none'"
+                            [attr.id]="'accordion-body-' + index"
+                            [attr.aria-labelledby]="'accordion-header-' + index"
+                        >
+                            <p>{{ item.desc }}</p>
+                        </div>
+                    </cdk-accordion-item>
+                </cdk-accordion>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Advance Expansion</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-accordion class="tagus-advance-expansion">
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Company Provides A Full Range of Services?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                How Long it Will Take For Web Development?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                What About Money Back Guarantee?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                How Long Does A Business Consulting Project Last?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Do You Offer Volume or Loyalty Discounts?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                In Which Countries Do You Provide Consulting Services?
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem. An utinam consulatueosest facilis natum labitur eleifd.</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<mat-card
+    class="mb-25 tagus-card planning-box"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">My Planning</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-add-circle-line"></i> Add
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-delete-bin-6-line"></i> Delete
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-restart-line"></i> Refresh
+            </button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="planning-item bg-gray position-relative border-radius">
+            <img src="img/planning/planning1.jpg" alt="planning" class="border-radius">
+            <h5 class="fw-semibold">3D Animation Learn</h5>
+            <span class="d-block muted-color">March 31, 09:30 AM</span>
+        </div>
+        <div class="planning-item bg-gray position-relative border-radius">
+            <img src="img/planning/planning2.jpg" alt="planning" class="border-radius">
+            <h5 class="fw-semibold">Handle UX Research</h5>
+            <span class="d-block muted-color">March 26, 08:30 PM</span>
+        </div>
+        <div class="planning-item bg-gray position-relative border-radius">
+            <img src="img/planning/planning3.jpg" alt="planning" class="border-radius">
+            <h5 class="fw-semibold">Machine Learning</h5>
+            <span class="d-block muted-color">May 28, 10:00 PM</span>
+        </div>
+        <div class="planning-item bg-gray position-relative border-radius">
+            <img src="img/planning/planning4.jpg" alt="planning" class="border-radius">
+            <h5 class="fw-semibold">Web Development</h5>
+            <span class="d-block muted-color">May 14, 06:20 AM</span>
+        </div>
+        <div class="planning-item bg-gray position-relative border-radius">
+            <img src="img/planning/planning3.jpg" alt="planning" class="border-radius">
+            <h5 class="fw-semibold">Python Learning</h5>
+            <span class="d-block muted-color">May 10, 09:00 AM</span>
+        </div>
+    </mat-card-content>
+</mat-card>

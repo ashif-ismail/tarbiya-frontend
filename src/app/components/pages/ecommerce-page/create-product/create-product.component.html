@@ -1,0 +1,192 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Create Product</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Products</li>
+        <li class="breadcrumb-item fw-semibold">Create Product</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 col-md-12">
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Create Project</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Product Title</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-edit-2-line"></i>
+                                <mat-label>Enter product title</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Product Description</label>
+                            <div class="NgxEditor__Wrapper mb-20">
+                                <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+                                <ngx-editor [editor]="editor" name="html" [placeholder]="'Some demo text ...'"></ngx-editor>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Product Price</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-money-dollar-circle-line"></i>
+                                <mat-label>Enter price</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Publish Schedule</label>
+                            <mat-form-field appearance="fill" class="date-input">
+                                <mat-label>MM/DD/YYYY</mat-label>
+                                <input matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">SKU</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-hashtag"></i>
+                                <mat-label>Enter SKU number</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Size</label>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter size</mat-label>
+                                <i class="ri-font-size"></i>
+                                <mat-select>
+                                    <mat-option value="1">XXXS Days</mat-option>
+                                    <mat-option value="2">XXS Days</mat-option>
+                                    <mat-option value="3">XS Days</mat-option>
+                                    <mat-option value="4">M Days</mat-option>
+                                    <mat-option value="5">L Days</mat-option>
+                                    <mat-option value="6">XL Days</mat-option>
+                                    <mat-option value="6">XXL Days</mat-option>
+                                    <mat-option value="6">XXXL Days</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <label class="d-block mb-12 fw-semibold gray-color">Product in Stocks</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-checkbox-line"></i>
+                                <mat-label>Number in stock</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <label class="d-block mb-12 fw-semibold gray-color">Discount</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-percent-line"></i>
+                                <mat-label>Enter offer price</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <label class="d-block mb-12 fw-semibold gray-color">Orders</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-terminal-box-line"></i>
+                                <mat-label>Enter number</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Product Image</label>
+                            <input type="file">
+                            <img src="img/recent-orders/product1.jpg" class="border-radius mt-15" width="50" alt="product">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color mt-20">Product Gallery</label>
+                            <input type="file" multiple>
+                        </div>
+                    </div>
+                    <button mat-button type="submit" class="default-btn mt-25">
+                        Create Product
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-12">
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-content>
+                <form>
+                    <label class="d-block mb-12 fw-semibold gray-color">Manufacturer Brand</label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter manufacturer name</mat-label>
+                        <i class="ri-equalizer-line"></i>
+                        <mat-select>
+                            <mat-option value="1">EnvyTheme</mat-option>
+                            <mat-option value="2">Tagus</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-content>
+                <form>
+                    <label class="d-block mb-12 fw-semibold gray-color">Categories</label>
+                    <mat-form-field appearance="fill">
+                        <i class="ri-price-tag-3-line"></i>
+                        <mat-label>Select product category</mat-label>
+                        <mat-select [formControl]="categories" multiple>
+                            @for (category of categoriesList; track category) {
+                                <mat-option [value]="category">
+                                    {{category}}
+                                </mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 create-project-card tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Meta Data</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Meta Title</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-edit-2-line"></i>
+                                <mat-label>Enter meta title</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-6 col-sm-6">
+                            <label class="d-block mb-12 fw-semibold gray-color">Meta Keywords</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-edit-2-line"></i>
+                                <mat-label>Enter product keywords</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="d-block mb-12 fw-semibold gray-color">Meta Description</label>
+                            <mat-form-field appearance="fill">
+                                <i class="ri-information-line"></i>
+                                <mat-label>Type description ..</mat-label>
+                                <textarea matInput rows="5"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

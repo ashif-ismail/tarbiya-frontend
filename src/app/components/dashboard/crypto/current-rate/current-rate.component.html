@@ -1,0 +1,64 @@
+<mat-card
+    class="mb-25 tagus-card current-rate-box"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Current Rate</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            Latest Coin
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Old Coin</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Coin</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="title d-flex align-items-center justify-content-space-between">
+                        <div class="d-flex align-items-center">
+                            <img src="img/icon/matic.png" alt="matic">
+                            <h4 class="mb-0 ms-12">MATIC</h4>
+                        </div>
+                        <span class="up"><i class="flaticon-trend"></i> +1.3%</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-space-between">
+                        <span class="gray-color fw-semibold">0.451269</span>
+                        <span class="gray-color fw-semibold">$12,06547.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="title d-flex align-items-center justify-content-space-between">
+                        <div class="d-flex align-items-center">
+                            <img src="img/icon/btc.png" alt="btc">
+                            <h4 class="mb-0 ms-12">BTC</h4>
+                        </div>
+                        <span class="up"><i class="flaticon-trend"></i> +2.48%</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-space-between">
+                        <span class="gray-color fw-semibold">1.111211</span>
+                        <span class="gray-color fw-semibold">$14,32522.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="title d-flex align-items-center justify-content-space-between">
+                        <div class="d-flex align-items-center">
+                            <img src="img/icon/comp.png" alt="comp">
+                            <h4 class="mb-0 ms-12">COMP</h4>
+                        </div>
+                        <span class="down"><i class="flaticon-trend-1"></i> -0.5%</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-space-between">
+                        <span class="gray-color fw-semibold">0.451269</span>
+                        <span class="gray-color fw-semibold">$12,06547.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

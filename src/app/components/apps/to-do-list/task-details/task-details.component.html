@@ -1,0 +1,51 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Task Details</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item">To Do List</li>
+        <li class="breadcrumb-item fw-semibold">Task Details</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 tagus-card task-details-box" [class.component-dark-theme]="themeService.isDark()">
+    <mat-card-content>
+        <div class="td-checkbox gray-color fw-semibold d-flex align-items-center">
+            <mat-checkbox class="minus-margin"></mat-checkbox> Mark as completed
+        </div>
+        <h5 class="mb-25">Simple Admin Dashboard Template Design</h5>
+        <ul class="list mb-0 d-md-flex mt-0 ps-0">
+            <li class="gray-color fw-medium">
+                Project Name
+                <span class="d-block fw-semibold position-relative"><i class="ri-briefcase-3-line"></i> Public Beta Release</span>
+            </li>
+            <li class="gray-color fw-medium">
+                Assigned To
+                <div class="d-flex align-items-center">
+                    <img src="img/user/user2.jpg" class="rounded-circle" width="30" alt="user">
+                    <span class="d-block fw-semibold">Jonathan Andrews</span>
+                </div>
+            </li>
+            <li class="gray-color fw-medium">
+                Due Date
+                <span class="d-block fw-semibold position-relative"><i class="ri-calendar-line"></i> 14 Mar 2023</span>
+            </li>
+        </ul>
+        <h5 class="fw-semibold mt-25 mb-15">Overview:</h5>
+        <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
+        <h5 class="fw-semibold mb-15 mt-25">Checklists/Sub-tasks</h5>
+        <div class="td-checkbox gray-color fw-semibold d-flex align-items-center mb-0">
+            <mat-checkbox class="minus-margin"></mat-checkbox> Find out the old contract documents
+        </div>
+        <div class="td-checkbox gray-color fw-semibold d-flex align-items-center mb-0">
+            <mat-checkbox class="minus-margin"></mat-checkbox> Organize meeting sales associates to understand need in detail
+        </div>
+        <div class="td-checkbox gray-color fw-semibold d-flex align-items-center mb-0">
+            <mat-checkbox class="minus-margin"></mat-checkbox> Text to build on the card title and make up.
+        </div>
+    </mat-card-content>
+</mat-card>

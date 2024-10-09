@@ -1,0 +1,27 @@
+<mat-card class="mb-25 tagus-card liveVisits-box">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Live Visits on Our Site</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="chart liveVisitsChart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [labels]="chartOptions.labels!"
+                [tooltip]="chartOptions.tooltip!"
+                [colors]="chartOptions.colors!"
+                [legend]="chartOptions.legend!"
+                [stroke]="chartOptions.stroke!"
+            ></apx-chart>
+        </div>
+    </mat-card-content>
+</mat-card>

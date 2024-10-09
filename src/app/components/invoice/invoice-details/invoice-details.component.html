@@ -1,0 +1,141 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Invoice Details</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Invoice Details</li>
+    </ol>
+</div>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="align-items-center border-bottom">
+        <h5 class="mb-0">Invoice Details</h5>
+        <h5 class="mb-0">Invoice #4987</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="d-flex justify-content-space-between">
+            <div>
+                <h5 class="mb-15">Billed To :</h5>
+                <span class="fw-semibold gray-color d-block mb-8">Thomas Adison</span>
+                <span class="gray-color d-block mb-8">32104 Main</span>
+                <span class="gray-color d-block mb-8">Apt. 4c</span>
+                <span class="gray-color d-block mb-8">Springfield ST 54321</span>
+                <h5 class="mb-15 mt-25">Payment :</h5>
+                <span class="gray-color d-block mb-8">Total Due: $12,110.55</span>
+                <span class="gray-color d-block mb-8">Bank name: American Bank</span>
+                <span class="gray-color d-block mb-8">Country: United States</span>
+                <span class="gray-color d-block mb-8">IBAN: ETD95476213874685</span>
+                <span class="gray-color d-block">SWIFT code: BR91905</span>
+            </div>
+            <div class="text-end">
+                <h5 class="mb-15">Shipped To :</h5>
+                <span class="fw-semibold gray-color d-block mb-8">Thomas Adison</span>
+                <span class="gray-color d-block mb-8">32104 Main</span>
+                <span class="gray-color d-block mb-8" class="gray-color d-block mb-8">Apt. 4c</span>
+                <span class="gray-color d-block mb-8">Springfield ST 54321</span>
+                <h5 class="mb-15 mt-25">Order Date :</h5>
+                <span class="gray-color d-block">March 14, 2023</span>
+            </div>
+        </div>
+        <h4 class="mb-20 mt-25">Order Summary</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">No</th>
+                        <th class="fw-semibold gray-color text-start">Item</th>
+                        <th class="fw-semibold gray-color">Quantity</th>
+                        <th class="fw-semibold gray-color">Unit Price</th>
+                        <th class="fw-semibold gray-color text-end">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="main-color fw-semibold">01.</td>
+                        <td class="text-start fw-semibold">
+                            <a routerLink="/" class="d-flex align-items-center product-info">
+                                <img src="img/recent-orders/product1.jpg" alt="product">
+                                Laptop Macos Pro
+                            </a>
+                        </td>
+                        <td class="gray-color">6</td>
+                        <td class="gray-color">$400</td>
+                        <td class="gray-color text-end">$2400</td>
+                    </tr>
+                    <tr>
+                        <td class="main-color fw-semibold">02.</td>
+                        <td class="text-start fw-semibold">
+                            <a routerLink="/" class="d-flex align-items-center product-info">
+                                <img src="img/recent-orders/product2.jpg" alt="product">
+                                Smart Camera XD6
+                            </a>
+                        </td>
+                        <td class="gray-color">3</td>
+                        <td class="gray-color">$200</td>
+                        <td class="gray-color text-end">$600</td>
+                    </tr>
+                    <tr>
+                        <td class="main-color fw-semibold">03.</td>
+                        <td class="text-start fw-semibold">
+                            <a routerLink="/" class="d-flex align-items-center product-info">
+                                <img src="img/recent-orders/product3.jpg" alt="product">
+                                Pixi 8 Wireless Airphone
+                            </a>
+                        </td>
+                        <td class="gray-color">1</td>
+                        <td class="gray-color">$1000</td>
+                        <td class="gray-color text-end">$1000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="gray-color fw-semibold">Subtotal:</td>
+                        <td class="gray-color fw-semibold text-end">$4000.00</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="gray-color fw-semibold">Vat Rate:</td>
+                        <td class="gray-color fw-semibold text-end">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="gray-color fw-semibold">Shipping:</td>
+                        <td class="gray-color fw-semibold text-end">$0.00</td>
+                    </tr>
+                    <tr class="total">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="fw-semibold">Total:</td>
+                        <td class="fw-semibold text-end">$4000.00</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-end">
+                            <div class="btn-box">
+                                <button mat-flat-button class="gray">Print</button>
+                                <button mat-flat-button class="tagus">Download</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

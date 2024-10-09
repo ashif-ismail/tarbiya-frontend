@@ -1,0 +1,155 @@
+.pricing-box {
+    .price {
+        font-size: 32px;
+        line-height: 1;
+        margin: {
+            top: 20px;
+            bottom: 30px;
+        };
+        span {
+            bottom: 2px;
+            position: relative;
+            font: {
+                size: var(--fontSize);
+                weight: normal;
+            };
+        }
+    }
+    .features-list {
+        margin-top: 30px;
+
+        li {
+            margin-bottom: 17px;
+            padding-left: 22px;
+
+            &::before {
+                left: 0;
+                top: 50%;
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                border-radius: 3px;
+                transform: translateY(-50%);
+                border: 1px solid var(--heraBlueColor);
+            }
+            &::after {
+                top: 50%;
+                left: 3px;
+                width: 6px;
+                content: '';
+                height: 6px;
+                position: absolute;
+                border-radius: 2px;
+                transform: translateY(-50%);
+                background: var(--heraBlueColor);
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.pricing-item {
+    .title {
+        padding-bottom: 12px;
+
+        &::before {
+            left: 0;
+            bottom: 0;
+            width: 74px;
+            height: 4px;
+            content: '';
+            position: absolute;
+            border-radius: 3px;
+            background: var(--heraBlueColor);
+        }
+    }
+    .price {
+        font-size: 32px;
+        line-height: 1;
+        margin: {
+            top: 30px;
+            bottom: 30px;
+        };
+        span {
+            bottom: 2px;
+            position: relative;
+            font: {
+                size: var(--fontSize);
+                weight: normal;
+            };
+        }
+    }
+    button {
+        &.gray, &.tagus {
+            border-radius: 30px !important;
+        }
+    }
+    .features-list {
+        margin-top: 35px;
+
+        li {
+            margin-bottom: 22px;
+            padding-left: 38px;
+            
+            i {
+                left: 0;
+                top: 50%;
+                width: 28px;
+                height: 28px;
+                font-size: 13px;
+                line-height: 32px;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                color: var(--heraBlueColor);
+                background: rgba(117, 127, 239, 0.1);
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.component-rtl-enabled {
+    .pricing-box {
+        .features-list {
+            li {
+                padding: {
+                    left: 0;
+                    right: 22px;
+                };
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+                &::after {
+                    left: auto;
+                    right: 3px;
+                }
+            }
+        }
+    }
+    .pricing-item {
+        .title {
+            &::before {
+                left: auto;
+                right: 0;
+            }
+        }
+        .features-list {
+            li {
+                padding: {
+                    left: 0;
+                    right: 38px;
+                };
+                i {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

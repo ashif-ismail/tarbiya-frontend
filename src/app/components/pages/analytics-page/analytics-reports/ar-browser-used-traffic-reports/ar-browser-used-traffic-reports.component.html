@@ -1,0 +1,121 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Browser Used & Traffic Reports</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-add-circle-line"></i> Add
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-delete-bin-6-line"></i> Delete
+            </button>
+            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                <i class="ri-restart-line"></i> Refresh
+            </button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="reports-table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">Browser</th>
+                        <th class="fw-semibold gray-color">Users</th>
+                        <th class="fw-semibold gray-color">Transactions</th>
+                        <th class="fw-semibold gray-color">Bounce Rate</th>
+                        <th class="fw-semibold gray-color">Average Time</th>
+                        <th class="fw-semibold gray-color">% Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="black-color fw-semibold">Safari Browser</td>
+                        <td class="gray-color fw-semibold">
+                            <div class="d-flex align-items-center">
+                                1051
+                                <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="18"></mat-progress-bar>
+                                <span class="gray-color fw-normal fs-14">
+                                    18%
+                                </span>
+                            </div>
+                        </td>
+                        <td class="gray-color fw-semibold">43080<span class="muted-color fw-normal">(35%)</span></td>
+                        <td class="gray-color fw-semibold">4m : 32s</td>
+                        <td class="gray-color fw-semibold">11.1%</td>
+                        <td><span class="badge fw-semibold">14.80% <i class="flaticon-arrow-up"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td class="black-color fw-semibold">UC Browser</td>
+                        <td class="gray-color fw-semibold">
+                            <div class="d-flex align-items-center">
+                                8075
+                                <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="13"></mat-progress-bar>
+                                <span class="gray-color fw-normal fs-14">
+                                    13%
+                                </span>
+                            </div>
+                        </td>
+                        <td class="gray-color fw-semibold">5466<span class="muted-color fw-normal">(12%)</span></td>
+                        <td class="gray-color fw-semibold">1m : 12s</td>
+                        <td class="gray-color fw-semibold">12.2%</td>
+                        <td><span class="badge fw-semibold">11.50% <i class="flaticon-arrow-up"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td class="black-color fw-semibold">Google Chrome</td>
+                        <td class="gray-color fw-semibold">
+                            <div class="d-flex align-items-center">
+                                59802
+                                <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="38"></mat-progress-bar>
+                                <span class="gray-color fw-normal fs-14">
+                                    38%
+                                </span>
+                            </div>
+                        </td>
+                        <td class="gray-color fw-semibold">17654<span class="muted-color fw-normal">(19%)</span></td>
+                        <td class="gray-color fw-semibold">2m : 21s</td>
+                        <td class="gray-color fw-semibold">32.1%</td>
+                        <td><span class="badge fw-semibold down">8.69% <i class="flaticon-down-filled-triangular-arrow"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td class="black-color fw-semibold">Mozilla Firefox</td>
+                        <td class="gray-color fw-semibold">
+                            <div class="d-flex align-items-center">
+                                21854
+                                <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="24"></mat-progress-bar>
+                                <span class="gray-color fw-normal fs-14">
+                                    24%
+                                </span>
+                            </div>
+                        </td>
+                        <td class="gray-color fw-semibold">87759<span class="muted-color fw-normal">(52%)</span></td>
+                        <td class="gray-color fw-semibold">11m : 11s</td>
+                        <td class="gray-color fw-semibold">54.2%</td>
+                        <td><span class="badge fw-semibold">22.06% <i class="flaticon-arrow-up"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td class="black-color fw-semibold">Other Browser</td>
+                        <td class="gray-color fw-semibold">
+                            <div class="d-flex align-items-center">
+                                5907
+                                <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="7"></mat-progress-bar>
+                                <span class="gray-color fw-normal fs-14">
+                                    7%
+                                </span>
+                            </div>
+                        </td>
+                        <td class="gray-color fw-semibold">4576<span class="muted-color fw-normal">(10%)</span></td>
+                        <td class="gray-color fw-semibold">5m : 55s</td>
+                        <td class="gray-color fw-semibold">55.4%</td>
+                        <td><span class="badge fw-semibold">16.25% <i class="flaticon-arrow-up"></i></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

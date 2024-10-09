@@ -1,0 +1,80 @@
+<mat-card
+    class="mb-25 total-revenue-box tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Average Report</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="chart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [plotOptions]="chartOptions.plotOptions!"
+                [labels]="chartOptions.labels!"
+                [colors]="chartOptions.colors!"
+            ></apx-chart>
+        </div>
+        <ul class="list mb-0 ps-0">
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Avg. Session</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">972</span>
+                    <span class="gray-color"><i class="flaticon-trend"></i> 49%</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Conversion Rate</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">1026</span>
+                    <span class="gray-color down"><i class="flaticon-trend-1"></i> 18%</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Avg. Duration</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">3m</span>
+                    <span class="gray-color"><i class="flaticon-trend"></i> 42%</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Weekly Earning</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">$972</span>
+                    <span class="gray-color"><i class="flaticon-trend"></i> 28%</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Order Rate</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">1022</span>
+                    <span class="gray-color"><i class="flaticon-trend"></i> 22%</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Avg. Visitors</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">1.5k</span>
+                    <span class="gray-color"><i class="flaticon-trend"></i> 54%</span>
+                </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-space-between position-relative">
+                <span class="gray-color">Avg. Sales</span>
+                <div class="info d-flex align-items-center justify-content-center">
+                    <span class="gray-color fw-semibold">12k</span>
+                    <span class="gray-color down"><i class="flaticon-trend-1"></i> 23%</span>
+                </div>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

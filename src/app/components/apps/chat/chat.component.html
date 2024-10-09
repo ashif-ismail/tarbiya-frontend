@@ -1,0 +1,142 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Chat</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Chat</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xxl-3">
+
+        <app-chat-sidebar />
+
+    </div>
+    <div class="col-lg-8 col-xxl-9">
+
+        <mat-card
+            class="mb-25 chat-box tagus-card"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-content>
+                <div class="chat-header p-15 d-md-flex align-items-center justify-content-space-between">
+                    <div class="user d-flex align-items-center">
+                        <img src="img/user/user11.jpg" width="50" class="rounded-circle" alt="user">
+                        <div class="ms-12">
+                            <h5 class="fs-16 mb-4">Laurent Perrier</h5>
+                            <span class="d-block active position-relative muted-color fs-14">Active now</span>
+                            <!-- <span class="d-block deactive position-relative muted-color fs-14">Active now</span> -->
+                        </div>
+                    </div>
+                    <div class="info">
+                        <button mat-icon-button>
+                            <i class="ri-vidicon-line"></i>
+                        </button>
+                        <button mat-icon-button>
+                            <i class="ri-phone-line"></i>
+                        </button>
+                        <button mat-icon-button [matMenuTriggerFor]="menu">
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+                        <mat-menu #menu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-volume-mute-line"></i> Mute Chat
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-6-line"></i> Delete
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-chat-off-line"></i> Block
+                            </button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="chat-body p-15">
+                    <ul class="ps-0 list-unstyled mb-0 mt-0">
+                        <li class="position-relative">
+                            <img src="img/user/user11.jpg" width="50" class="rounded-circle user" alt="user">
+                            <div class="message">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra ligula non varius curabitur etiam malesuada. Congue eget luctus aliquet consectetur.</p>
+                                </div>
+                            </div>
+                            <span class="time d-block muted-color mt-8 fs-14">19:04</span>
+                        </li>
+                        <li class="position-relative right">
+                            <img src="img/user/user12.jpg" width="50" class="rounded-circle user" alt="user">
+                            <div class="message">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <span class="time d-block muted-color mt-8 fs-14">12:12</span>
+                        </li>
+                        <li class="position-relative">
+                            <img src="img/user/user11.jpg" width="50" class="rounded-circle user" alt="user">
+                            <div class="message">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra ligula non varius.</p>
+                                </div>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet. 🔥</p>
+                                </div>
+                            </div>
+                            <span class="time d-block muted-color mt-8 fs-14">19:04</span>
+                        </li>
+                        <li class="position-relative right">
+                            <img src="img/user/user12.jpg" width="50" class="rounded-circle user" alt="user">
+                            <div class="message">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit.</p>
+                                </div>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <span class="time d-block muted-color mt-8 fs-14">12:12</span>
+                        </li>
+                        <li class="position-relative">
+                            <img src="img/user/user11.jpg" width="50" class="rounded-circle user" alt="user">
+                            <div class="message">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra ligula non varius curabitur etiam malesuada. Congue eget luctus aliquet consectetur.</p>
+                                </div>
+                            </div>
+                            <span class="time d-block muted-color mt-8 fs-14">19:04</span>
+                        </li>
+                        <li class="position-relative right">
+                            <img src="img/user/user12.jpg" width="50" class="rounded-circle user" alt="user">
+                            <div class="message">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <span class="time d-block muted-color mt-8 fs-14">12:12</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat-footer p-15 d-md-flex align-items-center">
+                    <div class="list">
+                        <button mat-icon-button>
+                            <i class="ri-emotion-line"></i>
+                        </button>
+                        <button mat-icon-button>
+                            <i class="ri-link-m"></i>
+                        </button>
+                    </div>
+                    <form class="position-relative">
+                        <input type="text" class="input-text" placeholder="Type Something...">
+                        <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

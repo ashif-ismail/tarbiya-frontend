@@ -1,0 +1,137 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Products</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">eCommerce</li>
+        <li class="breadcrumb-item fw-semibold">Products</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-header>
+        <h5 class="mb-0">Products</h5>
+        <div class="d-flex align-items-center">
+            <form class="search-box position-relative me-15 d-none d-md-block">
+                <input type="text" class="input-search d-block" placeholder="Search here..">
+                <button type="submit"><i class="ri-search-line"></i></button>
+            </form>
+            <a mat-flat-button class="default-btn tagus small" routerLink="/ecommerce/create">
+                <i class="ri-add-fill"></i> Create New
+            </a>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="mat-elevation-z8 tagus-mat-table">
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Product Name Column -->
+                <ng-container matColumnDef="product">
+                    <th mat-header-cell *matHeaderCellDef class="text-start">Product Name</th>
+                    <td mat-cell *matCellDef="let element" class="text-start">
+                        <div class="d-flex align-items-center">
+                            <mat-checkbox class="me-5"></mat-checkbox>
+                            <a routerLink="/ecommerce-page/product-details" class="d-flex align-items-center product-info">
+                                <img [src]="element.product.productImage" alt="product">
+                                {{element.product.productName}}
+                            </a>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Category Column -->
+                <ng-container matColumnDef="category">
+                    <th mat-header-cell *matHeaderCellDef>Category</th>
+                    <td mat-cell *matCellDef="let element">{{element.category}}</td>
+                </ng-container>
+
+                <!-- Price Column -->
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef>Price</th>
+                    <td mat-cell *matCellDef="let element">{{element.price}}</td>
+                </ng-container>
+
+                <!-- Orders Column -->
+                <ng-container matColumnDef="orders">
+                    <th mat-header-cell *matHeaderCellDef>Orders</th>
+                    <td mat-cell *matCellDef="let element">{{element.orders}}</td>
+                </ng-container>
+
+                <!-- Stock Column -->
+                <ng-container matColumnDef="stock">
+                    <th mat-header-cell *matHeaderCellDef>Stock</th>
+                    <td mat-cell *matCellDef="let element">{{element.stock}}</td>
+                </ng-container>
+
+                <!-- Colors Column -->
+                <ng-container matColumnDef="colors">
+                    <th mat-header-cell *matHeaderCellDef>Avai.Colors</th>
+                    <td mat-cell *matCellDef="let element">
+                        <div class="colors">
+                            <span *ngIf="element.colors.red" class="red" matTooltip="{{element.colors.red}}">{{element.colors.red}}</span>
+                            <span *ngIf="element.colors.blue" class="blue" matTooltip="{{element.colors.blue}}">{{element.colors.blue}}</span>
+                            <span *ngIf="element.colors.green" class="green" matTooltip="{{element.colors.green}}">{{element.colors.green}}</span>
+                            <span *ngIf="element.colors.orange" class="orange" matTooltip="{{element.colors.orange}}">{{element.colors.orange}}</span>
+                            <span *ngIf="element.colors.white" matTooltip="{{element.colors.white}}">{{element.colors.white}}</span>
+                            <span *ngIf="element.colors.black" class="black" matTooltip="{{element.colors.black}}">{{element.colors.black}}</span>
+                            <span *ngIf="element.colors.yellow" class="yellow" matTooltip="{{element.colors.yellow}}">{{element.colors.yellow}}</span>
+                            <span *ngIf="element.colors.purple" class="purple" matTooltip="{{element.colors.purple}}">{{element.colors.purple}}</span>
+                            <span *ngIf="element.colors.brown" class="brown" matTooltip="{{element.colors.brown}}">{{element.colors.brown}}</span>
+                            <span *ngIf="element.colors.pink" class="pink" matTooltip="{{element.colors.pink}}">{{element.colors.pink}}</span>
+                            <span *ngIf="element.colors.maroon" class="maroon" matTooltip="{{element.colors.maroon}}">{{element.colors.maroon}}</span>
+                            <span *ngIf="element.colors.violet" class="violet" matTooltip="{{element.colors.violet}}">{{element.colors.violet}}</span>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Rating Column -->
+                <ng-container matColumnDef="rating">
+                    <th mat-header-cell *matHeaderCellDef>Rating</th>
+                    <td mat-cell *matCellDef="let element">
+                        <span>{{element.rating.star}}</span>
+                        {{element.rating.overall}}
+                    </td>
+                </ng-container>
+
+                <!-- Action Column -->
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                            <i class="{{element.action}}"></i>
+                        </button>
+                        <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Edit
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-share-line"></i> Share
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-link"></i> Get Sharable Link
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator
+                [pageSizeOptions]="[10, 15, 20]"
+                showFirstLastButtons
+            >
+            </mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>

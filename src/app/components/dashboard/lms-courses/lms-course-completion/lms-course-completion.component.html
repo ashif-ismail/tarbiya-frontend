@@ -1,0 +1,79 @@
+<mat-card
+    class="mb-25 tagus-card course-completion-box"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Course Completion</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="course-completion-item position-relative bg-gray border-radius">
+            <div id="chart">
+                <apx-chart
+                    [series]="chartOptions.series!"
+                    [chart]="chartOptions.chart!"
+                    [plotOptions]="chartOptions.plotOptions!"
+                    [colors]="chartOptions.colors!"
+                    [labels]="chartOptions.labels!"
+                    [dataLabels]="chartOptions.dataLabels!"
+                ></apx-chart>
+            </div>
+            <h5 class="fw-semibold">Data With Python</h5>
+            <span class="d-block muted-color">5 Lessons</span>
+            <a routerLink="/course-details" class="link-btn main-hover-color"><i class="flaticon-chevron"></i></a>
+        </div>
+        <div class="course-completion-item position-relative bg-gray border-radius">
+            <div id="chart">
+                <apx-chart
+                    [series]="chartOptions.series2!"
+                    [chart]="chartOptions.chart!"
+                    [plotOptions]="chartOptions.plotOptions!"
+                    [colors]="chartOptions.colors!"
+                    [labels]="chartOptions.labels!"
+                    [dataLabels]="chartOptions.dataLabels!"
+                ></apx-chart>
+            </div>
+            <h5 class="fw-semibold">Code Foundation</h5>
+            <span class="d-block muted-color">15 Lessons</span>
+            <a routerLink="/course-details" class="link-btn main-hover-color"><i class="flaticon-chevron"></i></a>
+        </div>
+        <div class="course-completion-item position-relative bg-gray border-radius">
+            <div id="chart">
+                <apx-chart
+                    [series]="chartOptions.series3!"
+                    [chart]="chartOptions.chart!"
+                    [plotOptions]="chartOptions.plotOptions!"
+                    [colors]="chartOptions.colors!"
+                    [labels]="chartOptions.labels!"
+                    [dataLabels]="chartOptions.dataLabels!"
+                ></apx-chart>
+            </div>
+            <h5 class="fw-semibold">Styling With CSS</h5>
+            <span class="d-block muted-color">13 Lessons</span>
+            <a routerLink="/course-details" class="link-btn main-hover-color"><i class="flaticon-chevron"></i></a>
+        </div>
+        <div class="course-completion-item position-relative bg-gray border-radius">
+            <div id="chart">
+                <apx-chart
+                    [series]="chartOptions.series4!"
+                    [chart]="chartOptions.chart!"
+                    [plotOptions]="chartOptions.plotOptions!"
+                    [colors]="chartOptions.colors!"
+                    [labels]="chartOptions.labels!"
+                    [dataLabels]="chartOptions.dataLabels!"
+                ></apx-chart>
+            </div>
+            <h5 class="fw-semibold">Code Foundation</h5>
+            <span class="d-block muted-color">10 Lessons</span>
+            <a routerLink="/course-details" class="link-btn main-hover-color"><i class="flaticon-chevron"></i></a>
+        </div>
+    </mat-card-content>
+</mat-card>

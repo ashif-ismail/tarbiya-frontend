@@ -1,0 +1,133 @@
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Settings</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <nav>
+            <ul class="ps-0 mt-0">
+                <li>
+                    <a routerLink="/account" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Account</a>
+                </li>
+                <li>
+                    <a routerLink="/security" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Security</a>
+                </li>
+                <li>
+                    <a routerLink="/connections" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Connections</a>
+                </li>
+                <li>
+                    <a routerLink="/privacy-policy" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Privacy Policy</a>
+                </li>
+                <li>
+                    <a routerLink="/terms-conditions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Terms & Conditions</a>
+                </li>
+            </ul>
+        </nav>
+        <h5 class="fw-semibold mb-20">Connected Accounts</h5>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/google.png" alt="google">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Google</span>
+                    <span class="d-block gray-color">Calendar and Contacts</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/slack.png" alt="slack">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Slack</span>
+                    <span class="d-block gray-color">Communications</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/github.png" alt="github">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Github</span>
+                    <span class="d-block gray-color">Manage your Git repositories</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/mailchimp.png" alt="mailchimp">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Mailchimp</span>
+                    <span class="d-block gray-color">Email marketing service</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold muted-color">Not Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/asana.png" alt="asana">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Asana</span>
+                    <span class="d-block gray-color">Communication</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <mat-divider class="mb-25"></mat-divider>
+        <h5 class="fw-semibold mb-20">Social Accounts</h5>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/facebook.png" alt="facebook">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Facebook</span>
+                    <span class="d-block gray-color">Calendar and Contacts</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/twitter.png" alt="twitter">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Twitter</span>
+                    <span class="d-block gray-color">Communications</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/instagram.png" alt="instagram">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Instagram</span>
+                    <span class="d-block gray-color">Manage your Git repositories</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+        <div class="d-flex mb-25 align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/dribbble.png" alt="dribbble">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Dribbble</span>
+                    <span class="d-block gray-color">Email marketing service</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold muted-color">Not Connected</a>
+        </div>
+        <div class="d-flex align-items-center justify-content-space-between">
+            <div class="d-flex align-items-center">
+                <img src="img/socials/behance.png" alt="behance">
+                <div class="ms-15">
+                    <span class="d-block mb-5 fw-semibold fs-16">Behance</span>
+                    <span class="d-block gray-color">Communication</span>
+                </div>
+            </div>
+            <a routerLink="." class="fw-semibold main-color">Connected</a>
+        </div>
+    </mat-card-content>
+</mat-card>

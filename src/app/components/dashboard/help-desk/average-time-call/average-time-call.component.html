@@ -1,0 +1,32 @@
+<div
+    class="row"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="col-xxl-12 col-md-6">
+        <mat-card class="mb-25 tagus-card position-relative average-time-call-box">
+            <mat-card-content>
+                <div class="d-flex justify-content-space-between align-items-center">
+                    <h5 class="fw-semibold">Average speed of answer</h5>
+                    <h4 class="gray-color">
+                        01<span>m</span> : 20<span>s</span>
+                    </h4>
+                </div>
+                <img src="img/chart/chart3.png" class="chart" alt="chart">
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-xxl-12 col-md-6">
+        <mat-card class="mb-25 tagus-card position-relative average-time-call-box">
+            <mat-card-content>
+                <div class="d-flex justify-content-space-between align-items-center">
+                    <h5 class="fw-semibold">Time to Resolve Complaint</h5>
+                    <h4 class="gray-color">
+                        03<span>m</span> : 00<span>s</span>
+                    </h4>
+                </div>
+                <img src="img/chart/chart4.png" class="chart" alt="chart">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

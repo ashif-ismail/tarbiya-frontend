@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="col-md-12 col-lg-4">
+        <mat-card class="profile-card-box tagus-card mb-25">
+            <div class="d-md-flex align-items-center justify-content-space-between">
+                <div class="profile-box">
+                    <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                    <h5 class="fw-semibold">Andrew Bruns</h5>
+                    <span class="d-block gray-color">Programmer</span>
+                </div>
+                <div class="impression-box text-center">
+                    <div class="chart">
+                        <apx-chart
+                            [series]="chartOptions.series!"
+                            [chart]="chartOptions.chart!"
+                            [plotOptions]="chartOptions.plotOptions!"
+                            [colors]="chartOptions.colors!"
+                            [labels]="chartOptions.labels!"
+                            [fill]="chartOptions.fill!"
+                        ></apx-chart>
+                    </div>
+                    <span class="d-block">Excellent</span>
+                    <h5 class="mb-0 fw-semibold gray-color">Impression Share</h5>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <mat-card class="single-stats-box tagus-card mb-25">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="icon">
+                    <i class="ri-money-dollar-circle-line"></i>
+                </div>
+                <div class="title text-end">
+                    <h3>$31,570</h3>
+                    <span class="d-block gray-color">Income Status</span>
+                </div>
+            </div>
+            <div class="mb-12 info d-flex justify-content-space-between align-items-center">
+                <span class="d-block gray-color fw-semibold">Income Target</span>
+                <span class="d-block gray-color">$180548.00</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <mat-card class="single-stats-box tagus-card mb-25">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="icon">
+                    <i class="ri-bar-chart-fill"></i>
+                </div>
+                <div class="title text-end">
+                    <h3>40,178</h3>
+                    <span class="d-block gray-color">Total Orders</span>
+                </div>
+            </div>
+            <div class="mb-12 info d-flex justify-content-space-between align-items-center">
+                <span class="d-block gray-color fw-semibold">Order Target</span>
+                <span class="d-block gray-color">30,40548.00</span>
+            </div>
+            <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </mat-card>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-xxl-3">
+        <mat-card class="stats-box tagus-card mb-25">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="title">
+                    <span class="d-block gray-color">Total Orders</span>
+                    <h3>1,452</h3>
+                </div>
+                <div class="icon">
+                    <i class="ri-stack-line"></i>
+                </div>
+            </div>
+            <p class="fs-14">
+                <span class="badge fw-semibold">4.87% <i class="ri-arrow-up-s-line"></i></span> Leads this month
+            </p>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-xxl-3">
+        <mat-card class="stats-box tagus-card mb-25">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="title">
+                    <span class="d-block gray-color">Overall Revenue</span>
+                    <h3>$28,452</h3>
+                </div>
+                <div class="icon">
+                    <i class="ri-pie-chart-line"></i>
+                </div>
+            </div>
+            <p class="fs-14">
+                <span class="badge down fw-semibold">0.50% <i class="ri-arrow-down-s-line"></i></span> Leads this month
+            </p>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-xxl-3">
+        <mat-card class="stats-box tagus-card mb-25">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="title">
+                    <span class="d-block gray-color">Average Price</span>
+                    <h3>$200.5</h3>
+                </div>
+                <div class="icon">
+                    <i class="ri-money-cny-box-line"></i>
+                </div>
+            </div>
+            <p class="fs-14">
+                <span class="badge fw-semibold">2.22% <i class="ri-arrow-up-s-line"></i></span> Leads this month
+            </p>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-xxl-3">
+        <mat-card class="stats-box tagus-card mb-25">
+            <div class="d-flex justify-content-space-between align-items-center">
+                <div class="title">
+                    <span class="d-block gray-color">Total Clients</span>
+                    <h3>7,805</h3>
+                </div>
+                <div class="icon">
+                    <i class="ri-user-follow-line"></i>
+                </div>
+            </div>
+            <p class="fs-14">
+                <span class="badge fw-semibold">1.21% <i class="ri-arrow-up-s-line"></i></span> Leads this month
+            </p>
+        </mat-card>
+    </div>
+</div>

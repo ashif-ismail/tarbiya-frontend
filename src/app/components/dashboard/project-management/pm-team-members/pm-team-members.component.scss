@@ -1,0 +1,243 @@
+.team-members-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    table, .table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                th {
+                    background-color: #f7faff;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    text-align: center;
+                    position: relative;
+                    padding: 15px 20px;
+
+                    &::after {
+                        top: 50%;
+                        right: 0;
+                        width: 1px;
+                        content: '';
+                        height: 17px;
+                        position: absolute;
+                        background-color: #e7ebf5;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &:first-child {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 18px 20px;
+                    text-align: center;
+                    white-space: nowrap;
+                    border-bottom-color: #f7faff;
+                    border-bottom: 1px solid #F7FAFF;
+
+                    .user-info {
+                        padding-right: 50px;
+                        
+                        img {
+                            width: 45px;
+                            margin-right: 10px;
+                            border-radius: 50%;
+                        }
+                        .title {
+                            h5 {
+                                color: var(--blackColor);
+                                margin-bottom: 0;
+                                font-size: 16px;
+                            }
+                            span {
+                                display: block;
+                                margin-top: 4px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        text-align: start;
+                    }
+                    &:last-child {
+                        text-align: start;
+                        font-size: 14px;
+
+                        .mat-mdc-progress-bar {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:vertical {
+        width: 10px;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 2px solid var(--whiteColor);
+        background-color: rgba(0, 0, 0, .2);
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;  
+        background-color: var(--whiteColor);
+    }
+}
+.component-dark-theme {
+    .team-members-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        background-color: #1d2024;
+    
+                        &::after {
+                            background-color: #363636;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        border-bottom-color: #1f2226;
+    
+                        .user-info {
+                            .title {
+                                h5 {
+                                    color: var(--whiteColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &::-webkit-scrollbar-thumb {
+            border-color: #1f2226;
+            background-color: rgba(255, 255, 255, .2);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #1f2226;
+        }
+    }
+}
+.component-rtl-enabled {
+    .team-members-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        &::after {
+                            right: auto;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        .user-info {
+                            padding: {
+                                right: 0;
+                                left: 50px;
+                            };
+                            img {
+                                margin: {
+                                    right: 0;
+                                    left: 10px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .team-members-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        padding: 12px 15px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: 12px 15px;
+    
+                        .user-info {
+                            .title {
+                                h5 {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .team-members-table {
+        table, .table {
+            tbody {
+                tr {
+                    td {
+                        .user-info {
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .component-rtl-enabled {
+        .team-members-table {
+            table, .table {
+                tbody {
+                    tr {
+                        td {
+                            .user-info {
+                                padding: {
+                                    left: 30px;
+                                    right: 0;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

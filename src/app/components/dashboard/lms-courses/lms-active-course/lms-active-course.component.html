@@ -1,0 +1,28 @@
+<mat-card class="mb-25 tagus-card active-courses-box">
+    <mat-card-header class="border-bottom">
+        <h5 class="mb-0">Active Courses</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="chart activeCoursesChart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [colors]="chartOptions.colors!"
+                [tooltip]="chartOptions.tooltip!"
+                [stroke]="chartOptions.stroke!"
+                [dataLabels]="chartOptions.dataLabels!"
+                [legend]="chartOptions.legend!"
+                [labels]="chartOptions.labels!"
+            ></apx-chart>
+        </div>
+    </mat-card-content>
+</mat-card>

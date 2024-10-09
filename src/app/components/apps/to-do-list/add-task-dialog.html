@@ -1,0 +1,36 @@
+<div class="create-dialog-box scrollable-dialog">
+    <div class="title d-flex align-items-center justify-content-space-between">
+        <h4 class="mb-0">{{ isEditMode ? 'Edit Member' : 'Add New Member' }}</h4>
+        <button class="close-btn bg-transparent p-0 border-none" (click)="close()"><i class="flaticon-close"></i></button>
+    </div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Username</label>
+                    <input type="text" class="input-control" placeholder="Username *" [(ngModel)]="newUser.username" name="username" required>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Phone Number</label>
+                    <input type="tel" class="input-control" placeholder="Phone Number *" [(ngModel)]="newUser.phoneNumber" name="phonenumber" required>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Role</label>
+                    <select class="input-control" [(ngModel)]="newUser.role" name="role" required>
+                        <option value="">Select Role *</option>
+                        <option value="PRIVILEGED">PRIVILEGED</option>
+                        <option value="NORMAL">NORMAL</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="text-end">
+            <button type="button" class="gray" (click)="close()"><i class="ri-close-fill"></i> Cancel</button>
+            <button type="submit" class="btn btn-primary">{{ isEditMode ? 'Update' : 'Add' }} Member</button>
+        </div>
+    </form>
+</div>

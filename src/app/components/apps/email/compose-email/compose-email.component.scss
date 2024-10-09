@@ -1,0 +1,18 @@
+.btn-box {
+    margin-top: 20px;
+    
+    button, a {
+        padding: 12px 30px !important;
+        font: {
+            weight: 600 !important;
+            size: 14px !important;
+        };
+    }
+    button {
+        margin-left: 15px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,396 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Assets</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item">File Manager</li>
+        <li class="breadcrumb-item fw-semibold">Assets</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-xxl-3">
+        <app-fm-sidebar />
+    </div>
+    <div class="col-lg-8 col-xxl-9">
+        <div class="row">
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/projects">Projects</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">387 Files</span>
+                            <span class="d-block gray-color">4.5 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/documents">Documents</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">1572 Files</span>
+                            <span class="d-block gray-color">7.5 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/media">Media</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">12341 Files</span>
+                            <span class="d-block gray-color">2.8 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/applications">Applications</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">2487 Files</span>
+                            <span class="d-block gray-color">5.0 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/projects">ET Template</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">387 Files</span>
+                            <span class="d-block gray-color">4.5 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/documents">React Template</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">1572 Files</span>
+                            <span class="d-block gray-color">7.5 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/media">Material UI</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">12341 Files</span>
+                            <span class="d-block gray-color">2.8 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/applications">WP Themes</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">2487 Files</span>
+                            <span class="d-block gray-color">5.0 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/projects">Personal Photos</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">387 Files</span>
+                            <span class="d-block gray-color">4.5 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/documents">Mobile Apps
+                            </a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">1572 Files</span>
+                            <span class="d-block gray-color">7.5 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/media">Important Files</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">12341 Files</span>
+                            <span class="d-block gray-color">2.8 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+                <mat-card class="mb-25 tagus-card card-box">
+                    <mat-card-header class="mb-0">
+                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                            <i class="ri-more-fill"></i>
+                        </button>
+                        <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-edit-line"></i> Rename
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-download-cloud-2-line"></i> Download
+                            </button>
+                            <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                <i class="ri-delete-bin-line"></i> Remove
+                            </button>
+                        </mat-menu>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="pt-50 pb-50 text-center">
+                            <img src="img/icon/folder.png" alt="folder">
+                            <span class="d-block fw-semibold mt-10"><a routerLink="/file-manager/applications">Angular Template</a></span>
+                        </div>
+                        <div class="d-flex justify-content-space-between align-items-center">
+                            <span class="d-block gray-color">2487 Files</span>
+                            <span class="d-block gray-color">5.0 GB</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

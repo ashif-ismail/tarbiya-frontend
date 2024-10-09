@@ -1,0 +1,119 @@
+.activity-box {
+    ul {
+        li {
+            border-bottom: 1px solid #f7faff;
+            padding: {
+                top: 14px;
+                left: 60px;
+                bottom: 14px;
+            };
+            h5 {
+                margin-bottom: 4px;
+                font: {
+                    size: 14px;
+                    family: var(--fontFamily) !important;
+                };
+            }
+            p {
+                margin-bottom: 9px;
+                line-height: 1.5;
+            }
+            span {
+                display: block;
+                font-size: 14px;
+                margin-top: 9px;
+                color: #A9A9C8;
+            }
+            img {
+                left: 0;
+                top: 14px;
+                position: absolute;
+            }
+            &:first-child {
+                padding-top: 0 !important;
+
+                img {
+                    top: 0 !important;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        ul {
+            li {
+                padding: {
+                    left: 0;
+                    right: 60px;
+                };
+                img {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        ul {
+            li {
+                border-bottom-color: #1f2226;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .activity-box {
+        ul {
+            li {
+                padding: {
+                    top: 12px;
+                    left: 57px;
+                    bottom: 12px;
+                };
+                h5 {
+                    font-size: 14px;
+                    margin-bottom: 6px;
+                }
+                span {
+                    font-size: 14px;
+                }
+                img {
+                    top: 12px;
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            ul {
+                li {
+                    padding: {
+                        left: 0;
+                        right: 57px;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .activity-box {
+        ul {
+            li {
+                padding: {
+                    top: 19.5px;
+                    bottom: 19.5px;
+                };
+                h5 {
+                    font-size: 16px;
+                }
+                img {
+                    top: 19.5px;
+                }
+            }
+        }
+    }
+
+}

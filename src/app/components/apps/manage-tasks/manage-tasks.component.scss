@@ -1,0 +1,53 @@
+// The CSS is Available on the Style.scss file because of Angular Material CSS didn't work in Component CSS.@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-sort-header-container {
+    align-items: center;
+  }
+
+.tbadge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center; // Center the text
+    white-space: nowrap; // Prevent text from wrapping
+    overflow: hidden; // Hide overflow
+    text-overflow: ellipsis; // Add ellipsis for overflowing text
+}
+
+.tbadge-privileged {
+    background-color: #7ad690;
+
+}
+
+.tbadge-normal {
+    background-color: #f49b52;
+}
+
+.tbadge-default {
+    color: #6c757d;
+}
+
+.myTasksTable .mat-column-role .tbadge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.no-groups {
+    color: #888;
+    font-style: italic;
+}
+
+mat-chip-listbox {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+mat-chip-option {
+    margin: 2px;
+}

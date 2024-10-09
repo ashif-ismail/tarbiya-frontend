@@ -1,0 +1,32 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Daily Tasks - {{ currentDate | date:'mediumDate' }}</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a>
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Daily Tasks</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-content>
+        <form [formGroup]="tasksForm" (ngSubmit)="onSubmit()">
+            <div *ngFor="let task of tasks" class="task-item">
+                <div class="task-details">
+                    <h4>{{ task.title }}</h4>
+                    <p>{{ task.description }}</p>
+                </div>
+                <mat-slide-toggle [formControlName]="'task_' + task.taskId">
+                </mat-slide-toggle>
+            </div>
+            <div class="button-container">
+                <button mat-raised-button color="primary" type="submit" [disabled]="!isAnyTaskEnabled()" class="submit-button">
+                    Submit Tasks
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

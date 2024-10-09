@@ -1,0 +1,54 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Snackbar</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Snackbar</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Snackbar</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-form-field appearance="fill">
+                    <mat-label>Message</mat-label>
+                <input matInput value="Disco party!" #message>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Action</mat-label>
+                    <input matInput value="Dance" #action>
+                </mat-form-field>
+                <button mat-stroked-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Snackbar with Custom Component</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-snackbar-with-cc />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Snackbar with Configurable Position</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-snackbar-with-cp />
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

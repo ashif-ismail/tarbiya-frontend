@@ -1,0 +1,267 @@
+.best-selling-products-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    table, .table {
+        border-collapse: collapse;
+        width: 100%;
+
+        tbody {
+            tr {
+                td {
+                    border-bottom: 1px solid #f7faff;
+                    vertical-align: middle;
+                    padding: 15.5px 10px;
+                    white-space: nowrap;
+                    text-align: center;
+
+                    .product-info {
+                        font-size: 14px;
+
+                        img {
+                            border-radius: 10px;
+                            width: 50px;
+                        }
+                        .title {
+                            margin-left: 12px;
+
+                            span {
+                                display: block;
+                                margin-bottom: 5px;
+                                color: var(--blackColor);
+                                transition: var(--transition);
+                                font: {
+                                    size: 15px;
+                                    weight: 600;
+                                    family: var(--headingFontFamily);
+                                };
+                            }
+                        }
+                        &:hover {
+                            .title {
+                                span {
+                                    color: var(--heraBlueColor);
+                                }
+                            }
+                        }
+                    }
+                    &.stock-number {
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                    &:first-child {
+                        text-align: start;
+                        padding: {
+                            left: 0;
+                            right: 60px;
+                        };
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+                &:first-child {
+                    td {
+                        border-top: 1px solid #eef0f7;
+                    }
+                }
+                &:last-child {
+                    td {
+                        border-bottom-color: #eef0f7;
+                    }
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:vertical {
+        width: 10px;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 2px solid var(--whiteColor);
+        background-color: rgba(0, 0, 0, .2);
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;  
+        background-color: var(--whiteColor);
+    }
+}
+.component-dark-theme {
+    .best-selling-products-table {
+        table, .table {
+            tbody {
+                tr {
+                    td {
+                        border-bottom-color: #1f2226;
+    
+                        .product-info {
+                            .title {
+                                span {
+                                    color: var(--whiteColor);
+                                }
+                            }
+                            &:hover {
+                                .title {
+                                    span {
+                                        color: var(--heraBlueColor);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:first-child {
+                        td {
+                            border-top-color: #1f2226;
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            border-bottom-color: #1f2226;
+                        }
+                    }
+                }
+            }
+        }
+        &::-webkit-scrollbar-thumb {
+            border-color: #1f2226;
+            background-color: rgba(255, 255, 255, .2);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #1f2226;
+        }
+    }
+}
+.component-rtl-enabled {
+    .best-selling-products-table {
+        table, .table {
+            tbody {
+                tr {
+                    td {
+                        .product-info {
+                            .title {
+                                margin: {
+                                    left: 0;
+                                    right: 12px;
+                                };
+                            }
+                        }
+                        &:first-child {
+                            padding: {
+                                right: 0;
+                                left: 60px;
+                            };
+                        }
+                        &:last-child {
+                            padding: {
+                                right: 10px;
+                                left: 0;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .best-selling-products-table {
+        table, .table {
+            tbody {
+                tr {
+                    td {
+                        padding: 12px 15px;
+    
+                        .product-info {
+                            font-size: 13px;
+    
+                            img {
+                                border-radius: 5px;
+                                width: 50px;
+                            }
+                            .title {
+                                margin-left: 10px;
+    
+                                span {
+                                    font-size: 13.5px;
+                                }
+                            }
+                        }
+                        &.stock-number {
+                            span {
+                                font-size: 13.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .component-rtl-enabled {
+        .best-selling-products-table {
+            table, .table {
+                tbody {
+                    tr {
+                        td {
+                            .product-info {
+                                .title {
+                                    margin: {
+                                        left: 0;
+                                        right: 10px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .best-selling-products-table {
+        table, .table {
+            tbody {
+                tr {
+                    td {
+                        padding: 16.7px 10px;
+                        
+                        &:first-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .component-rtl-enabled {
+        .best-selling-products-table {
+            table, .table {
+                tbody {
+                    tr {
+                        td {
+                            &:first-child {
+                                padding: {
+                                    left: 10px;
+                                    right: 0;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

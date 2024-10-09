@@ -1,0 +1,42 @@
+.example-first-header-row {
+    font-style: italic;
+
+    th {
+        border-bottom: none;
+    }
+}
+.example-first-footer-row {
+    font-weight: bold;
+
+    td {
+        font-style: italic;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .mat-elevation-z8 {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+        &::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+        &::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            border: 2px solid var(--whiteColor);
+            background-color: rgba(0, 0, 0, .2);
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;  
+            background-color: var(--whiteColor);
+        }
+    }
+
+}

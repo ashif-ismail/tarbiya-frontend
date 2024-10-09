@@ -1,0 +1,220 @@
+.support-status-box {
+    h4 {
+        margin-bottom: 18px;
+        font: {
+            size: 18px;
+            family: var(--fontFamily) !important;
+        };
+        span {
+            color: var(--blackColor);
+        }
+    }
+    .progress-percentage {
+        height: 10px;
+        display: flex;
+        border-radius: 3px;
+        background: #eef0f6;
+
+        .resolved-tickets {
+            background: var(--heraBlueColor);
+            border-radius: 3px;
+            margin-right: 2px;
+            display: block;
+            height: 100%;
+            width: 20%;
+        }
+        .open-tickets {
+            background: #EE368C;
+            border-radius: 3px;
+            margin-right: 2px;
+            display: block;
+            height: 100%;
+            width: 10%;
+        }
+        .unresolved-tickets {
+            background: #2DB6F5;
+            border-radius: 3px;
+            display: block;
+            height: 100%;
+            width: 20%;
+        }
+    }
+    .content {
+        padding: 18px 25px;
+        background-color: #f7faff;
+        margin: {
+            top: 15px;
+            bottom: 5px;
+        };
+    }
+    ul {
+        li {
+            border-bottom: 1px solid #f7faff;
+            padding: {
+                top: 20px;
+                left: 17px;
+                bottom: 20px;
+            };
+            &::before {
+                left: 0;
+                top: 50%;
+                width: 7px;
+                height: 7px;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                transform: translateY(-50%);
+                background: var(--heraBlueColor);
+            }
+            span {
+                background: rgba(117, 127, 239, 0.1);
+                color: var(--heraBlueColor);
+                border-radius: 4px;
+                padding: 6px 8px;
+            }
+            &:nth-child(2) {
+                &::before {
+                    background: #2DB6F5;
+                }
+                span {
+                    background: rgba(45, 182, 245, 0.1);
+                    color: #2DB6F5;
+                }
+            }
+            &:nth-child(3) {
+                &::before {
+                    background: #EE368C;
+                }
+                span {
+                    background: rgba(238, 54, 140, 0.1);
+                    color: #EE368C;
+                }
+            }
+        }
+    }
+    button {
+        &.gray {
+            background: rgba(117, 127, 239, 0.1);
+            color: var(--heraBlueColor);
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+    }
+    &.component-rtl-enabled {
+        .progress-percentage {
+            .resolved-tickets {
+                margin: {
+                    right: 0;
+                    left: 2px;
+                };
+            }
+            .open-tickets {
+                margin: {
+                    right: 0;
+                    left: 2px;
+                };
+            }
+        }
+        ul {
+            li {
+                padding: {
+                    left: 0;
+                    right: 17px;
+                };
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        h4 {
+            span {
+                color: var(--whiteColor);
+            }
+        }
+        .progress-percentage {
+            background: rgba(85, 112, 241, 0.12);
+        }
+        .content {
+            background-color: rgba(85, 112, 241, 0.12);
+        }
+        ul {
+            li {
+                border-bottom-color: #1f2226;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .support-status-box {
+        h4 {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        .progress-percentage {
+            height: 8px;
+        }
+        .content {
+            padding: 15px 20px;
+            margin: {
+                top: 15px;
+                bottom: 5px;
+            };
+        }
+        ul {
+            li {
+                padding: {
+                    top: 15px;
+                    left: 15px;
+                    bottom: 15px;
+                };
+            }
+        }
+        button {
+            &.gray {
+                margin-top: 15px;
+            }
+        }
+        &.component-rtl-enabled {
+            ul {
+                li {
+                    padding: {
+                        left: 0;
+                        right: 15px;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .support-status-box {
+        h4 {
+            margin-bottom: 15px;
+        }
+        .content {
+            padding: 15px 20px;
+        }
+        ul {
+            li {
+                padding: {
+                    top: 15px;
+                    bottom: 15px;
+                };
+            }
+        }
+        button {
+            &.gray {
+                margin-top: 15px;
+            }
+        }
+    }
+
+}

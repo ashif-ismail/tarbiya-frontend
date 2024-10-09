@@ -1,0 +1,46 @@
+<div class="create-dialog-box scrollable-dialog">
+    <div class="title d-flex align-items-center justify-content-space-between">
+        <h4 class="mb-0">{{ isEditMode ? 'Update Task' : 'Add New Task' }}</h4>
+        <button class="close-btn bg-transparent p-0 border-none" (click)="close()"><i class="flaticon-close"></i></button>
+    </div>
+    <form #taskForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Task Name</label>
+                    <input type="text" class="input-control" placeholder="Task name *" [(ngModel)]="task.taskName" name="taskName" required #taskName="ngModel">
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Description</label>
+                    <input type="text" class="input-control" placeholder="Description" [(ngModel)]="task.description" name="description" #description="ngModel">
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Category</label>
+                    <input type="text" class="input-control" 
+                           placeholder="Search category *" 
+                           [formControl]="categorySearch"
+                           [matAutocomplete]="categoryAuto"
+                           name="category" 
+                           required>
+                    <mat-autocomplete #categoryAuto="matAutocomplete" 
+                                    [displayWith]="displayCategoryName"
+                                    (optionSelected)="onCategorySelected($event)">
+                        <mat-option *ngFor="let category of filteredCategories | async" [value]="category">
+                            {{category.categoryName}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </div>
+            </div>
+        </div>
+        <div class="text-end"> 
+            <button type="button" class="gray" (click)="close()"><i class="ri-close-fill"></i> Cancel</button>
+            <button type="submit">
+                <i class="ri-add-fill"></i> {{ isEditMode ? 'Update Task' : 'Add New Task' }}
+            </button>
+        </div>
+    </form>
+</div>

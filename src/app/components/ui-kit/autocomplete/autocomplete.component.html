@@ -1,0 +1,101 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Autocomplete</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Autocomplete</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Highlight the First Aautocomplete Option</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <form>
+                    <mat-form-field class="w-100" appearance="fill">
+                        <mat-label>Number</mat-label>
+                        <input type="text"
+                            placeholder="Pick one"
+                            aria-label="Number"
+                            matInput
+                            [formControl]="myControl"
+                            [matAutocomplete]="auto">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Display Value Autocomplete</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-ds-autocomplete />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Filter Autocomplete</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-filter-autocomplete />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Option Groups Autocomplete</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-og-autocomplete />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Autocomplete Overview</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-autocomplete-overview />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Plain Input Autocomplete</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-pi-autocomplete />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Simple Autocomplete</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-simple-autocomplete />
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

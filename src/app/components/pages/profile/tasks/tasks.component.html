@@ -1,0 +1,66 @@
+<mat-card class="mb-25 tagus-card">
+    <mat-card-header>
+        <h5 class="mb-0">My Tasks</h5>
+        <button type="button" mat-button class="position-relative btn bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            This Week
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">This Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="myTasksTable mat-elevation-z8 tagus-mat-table">
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef class="text-start">Name</th>
+                    <td mat-cell *matCellDef="let element" class="text-start">
+                        <div class="d-flex align-items-center name-info">
+                            <mat-checkbox></mat-checkbox>
+                            {{element.name}}
+                        </div>
+                    </td>
+                </ng-container>
+
+                <!-- Start Date Column -->
+                <ng-container matColumnDef="startDate">
+                    <th mat-header-cell *matHeaderCellDef>Start Date</th>
+                    <td mat-cell *matCellDef="let element">{{element.startDate}}</td>
+                </ng-container>
+
+                <!-- Deadline Column -->
+                <ng-container matColumnDef="deadline">
+                    <th mat-header-cell *matHeaderCellDef>Deadline</th>
+                    <td mat-cell *matCellDef="let element">{{element.deadline}}</td>
+                </ng-container>
+
+                <!-- Status Column -->
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef>Status</th>
+                    <td mat-cell *matCellDef="let element">
+                        <span class="badge fw-medium" *ngIf="element.status.active">{{element.status.active}}</span>
+                        <span class="badge pending fw-medium" *ngIf="element.status.pending">{{element.status.pending}}</span>
+                        <span class="badge completed fw-medium" *ngIf="element.status.completed">{{element.status.completed}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Budget Column -->
+                <ng-container matColumnDef="budget">
+                    <th mat-header-cell *matHeaderCellDef>Budget</th>
+                    <td mat-cell *matCellDef="let element">{{element.budget}}</td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator
+                [pageSizeOptions]="[8, 16, 24, 32]"
+                showFirstLastButtons
+            >
+            </mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>

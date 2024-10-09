@@ -1,0 +1,92 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Radio</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Radio</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Radio Group</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="3">Other</mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Direction Radio</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Male</mat-radio-button>
+                    <mat-radio-button value="2">Female</mat-radio-button>
+                    <mat-radio-button value="3">Other</mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Color Radio</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1">Tagus</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="2" class="primary">Primary</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="3" class="secondary">Secondary</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="4" class="success">Success</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="5" class="info">Info</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="6" class="warning">Warning</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="7" class="danger">Danger</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="8" class="light">Light</mat-radio-button>
+                    <br>
+                    <mat-radio-button value="9" class="dark">Dark</mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Radios with ngModel</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <label>Pick your favorite season</label>
+                <mat-radio-group
+                    [(ngModel)]="favoriteSeason"
+                >
+                    <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                        {{season}}
+                    </mat-radio-button>
+                </mat-radio-group>
+                <div class="fw-semibold mt-10">Your favorite season is: {{favoriteSeason}}</div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

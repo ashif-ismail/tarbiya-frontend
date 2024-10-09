@@ -1,0 +1,59 @@
+<div
+    class="welcome-box border-radius bg-white box-shadow mb-25"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.card-borderd-theme]="themeService.isCardBorder()"
+    [class.card-border-radius]="themeService.isCardBorderRadius()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="top border-radius position-relative">
+        <img src="img/shape.png" alt="welcome">
+        <h4>Welcome to Tagus Dashboard !</h4>
+        <p>You have done 68% 😎 more sales today. Check your new badge in your profile.</p>
+    </div>
+</div>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-content>
+        <div class="impression-box d-flex justify-content-space-between text-center">
+            <div class="d-block">
+                <div class="chart">
+                    <apx-chart
+                        [series]="chartOptions.series!"
+                        [chart]="chartOptions.chart!"
+                        [plotOptions]="chartOptions.plotOptions!"
+                        [colors]="chartOptions.colors!"
+                        [labels]="chartOptions.labels!"
+                        [fill]="chartOptions.fill!"
+                    ></apx-chart>
+                </div>
+                <h5 class="mb-0 fw-semibold gray-color">Impression Share</h5>
+            </div>
+            <div class="d-block">
+                <div class="chart">
+                    <apx-chart
+                        [series]="chartOptions2.series!"
+                        [chart]="chartOptions2.chart!"
+                        [plotOptions]="chartOptions2.plotOptions!"
+                        [colors]="chartOptions2.colors!"
+                        [labels]="chartOptions2.labels!"
+                        [fill]="chartOptions2.fill!"
+                    ></apx-chart>
+                </div>
+                <h5 class="mb-0 fw-semibold gray-color">Goal Completions</h5>
+            </div>
+            <div class="d-block">
+                <div class="chart">
+                    <apx-chart
+                        [series]="chartOptions3.series!"
+                        [chart]="chartOptions3.chart!"
+                        [plotOptions]="chartOptions3.plotOptions!"
+                        [colors]="chartOptions3.colors!"
+                        [labels]="chartOptions3.labels!"
+                        [fill]="chartOptions3.fill!"
+                    ></apx-chart>
+                </div>
+                <h5 class="mb-0 fw-semibold gray-color">Conversions</h5>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

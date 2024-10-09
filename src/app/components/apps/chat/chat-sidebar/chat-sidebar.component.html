@@ -1,0 +1,162 @@
+<mat-card
+    class="mb-25 chat-sidebar tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Messages</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="search-box position-relative">
+            <input type="text" class="input-search d-block" placeholder="Search here..">
+            <button type="submit"><i class="ri-search-line"></i></button>
+        </form>
+        <ng-scrollbar visibility="hover">
+            <div class="sidebar-body">
+                <span class="sub-title d-block muted-color fw-normal fs-14 position-relative"><i class="flaticon-thumbtacks"></i> PINNED</span>
+                <ul class="sidebar-list ps-0 list-unstyled mb-0">
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user11.jpg" width="45" class="rounded-circle" alt="user">
+                                <span class="active-status"></span>
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Laurent Perrier</h5>
+                                <span class="d-block green-color fs-14">Typing...</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">4:30 PM</span>
+                            <span class="badge">2</span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user12.jpg" width="45" class="rounded-circle" alt="user">
+                                <span class="active-status"></span>
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Nunez Faulkner</h5>
+                                <span class="d-block gray-color fs-14">Hello everyone ...</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">9:36 AM</span>
+                            <span class="main-color lh-1"><i class="ri-check-double-line"></i></span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user24.jpg" width="45" class="rounded-circle" alt="user">
+                                <span class="active-status off"></span>
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Bernard Langley</h5>
+                                <span class="d-block muted-color fs-14">That cool, go for it...</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">7:18 PM</span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user22.jpg" width="45" class="rounded-circle" alt="user">
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Edwards Mckenz</h5>
+                                <span class="d-block muted-color fs-14">Great ! 🔥</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">08:30 PM</span>
+                        </div>
+                    </li>
+                </ul>
+                <span class="sub-title d-block muted-color fw-normal fs-14 position-relative"><i class="flaticon-comment"></i> ALL MESSAGES</span>
+                <ul class="sidebar-list ps-0 list-unstyled mb-0">
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user16.jpg" width="45" class="rounded-circle" alt="user">
+                                <span class="active-status"></span>
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Elsie Melendez</h5>
+                                <span class="d-block green-color fs-14">Typing...</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">4:30 PM</span>
+                            <span class="badge">2</span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user17.jpg" width="45" class="rounded-circle" alt="user">
+                                <span class="active-status"></span>
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Mcleod Wagner</h5>
+                                <span class="d-block gray-color fs-14">What are you...</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">9:36 AM</span>
+                            <span class="main-color lh-1"><i class="ri-check-double-line"></i></span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user13.jpg" width="45" class="rounded-circle" alt="user">
+                                <span class="active-status off"></span>
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Alina Smith</h5>
+                                <span class="d-block muted-color fs-14 with-icon"><i class="ri-mic-line"></i> Voice message</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">7:18 PM</span>
+                            <span class="muted-color lh-1"><i class="ri-check-line"></i></span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user9.jpg" width="45" class="rounded-circle" alt="user">
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Silva Foster</h5>
+                                <span class="d-block muted-color fs-14 with-icon"><i class="ri-mic-line"></i> Voice message</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">08:30 PM</span>
+                        </div>
+                    </li>
+                    <li class="position-relative d-flex align-items-center justify-content-space-between">
+                        <div class="content d-flex align-items-center">
+                            <div class="img position-relative">
+                                <img src="img/user/user8.jpg" width="45" class="rounded-circle" alt="user">
+                            </div>
+                            <div class="title ms-10">
+                                <h5 class="fs-15 mb-4">Joseph Strick</h5>
+                                <span class="d-block muted-color fs-14">Cool ! 🔥</span>
+                            </div>
+                        </div>
+                        <div class="info" align="end">
+                            <span class="time fs-13 muted-color mb-3 d-block">08:30 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </ng-scrollbar>
+    </mat-card-content>
+</mat-card>

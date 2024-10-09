@@ -1,0 +1,64 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Tarbiya Tasks</h5>
+</div>
+
+<mat-card class="mb-25 tagus-card">
+    <mat-card-header>
+        <h5 class="mb-0">Manage Tasks</h5>
+        <button mat-flat-button class="default-btn tagus" (click)="openAddTaskDialog('300ms', '100ms')">
+            <i class="ri-add-fill"></i> Add new Task
+        </button>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field appearance="outline" class="search-field mat-form-field-rounded">
+            <mat-icon matPrefix>search</mat-icon>
+            <input matInput #searchInput (keyup)="applyFilter($event)" placeholder="Search tasks">
+        </mat-form-field>
+
+        <div class="myTasksTable mat-elevation-z8 tagus-mat-table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Title </th>
+                    <td mat-cell *matCellDef="let task"> {{task.title}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Description </th>
+                    <td mat-cell *matCellDef="let task"> {{task.description}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="groupNames">
+                  <th mat-header-cell *matHeaderCellDef> Groups </th>
+                  <td mat-cell *matCellDef="let task">
+                    <ng-container *ngIf="task.groupNames && task.groupNames.length > 0; else noGroups">
+                      <mat-chip-listbox>
+                        <mat-chip-option *ngFor="let group of task.groupNames" [selectable]="false">
+                          {{group}}
+                        </mat-chip-option>
+                      </mat-chip-listbox>
+                    </ng-container>
+                    <ng-template #noGroups>
+                      <span class="no-groups">No groups assigned</span>
+                    </ng-template>
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let task">
+                        <button mat-icon-button (click)="onEditClick(task, $event)" matTooltip="Edit Task">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button (click)="onAssignGroupClick(task, $event)" matTooltip="Assign Group">
+                            <mat-icon>group_add</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClick(row)"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[10, 25, 50]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>

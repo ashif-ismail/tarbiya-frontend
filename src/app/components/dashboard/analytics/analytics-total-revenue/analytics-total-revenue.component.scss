@@ -1,0 +1,145 @@
+.total-revenue-box {
+    .chart {
+        margin: -30px 0 -20px;
+    }
+    .list {
+        list-style-type: none;
+
+        li {
+            font-size: 14px;
+            border-bottom: 1px solid #F7FAFF;
+            padding: {
+                top: 15px;
+                bottom: 15px;
+            };
+            .info {
+                span {
+                    &:nth-child(2) {
+                        padding-left: 20px;
+                        position: relative;
+                        margin-left: 10px;
+
+                        i {
+                            left: 0;
+                            top: 50%;
+                            line-height: 1;
+                            font-size: 17px;
+                            margin-top: 2px;
+                            color: #00B69B;
+                            position: absolute;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    &.down {
+                        i {
+                            color: #ee368c !important;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+    &.component-dark-theme {
+        .list {
+            li {
+                border-bottom-color: #1f2226;
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .list {
+            li {
+                .info {
+                    span {
+                        &:nth-child(2) {
+                            margin: {
+                                left: 0;
+                                right: 10px;
+                            };
+                            padding: {
+                                right: 20px;
+                                left: 0;
+                            };
+                            i {
+                                left: auto;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .total-revenue-box {
+        .list {
+            li {
+                font-size: 13px;
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                };
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .total-revenue-box {
+        .list {
+            li {
+                font-size: var(--fontSize);
+                padding: {
+                    top: 15px;
+                    bottom: 15px;
+                };
+                .info {
+                    span {
+                        &:nth-child(2) {
+                            padding-left: 23px;
+                            margin-left: 20px;
+    
+                            i {
+                                font-size: 20px;
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .list {
+                li {
+                    .info {
+                        span {
+                            &:nth-child(2) {
+                                margin: {
+                                    left: 0;
+                                    right: 20px;
+                                };
+                                padding: {
+                                    left: 0;
+                                    right: 23px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

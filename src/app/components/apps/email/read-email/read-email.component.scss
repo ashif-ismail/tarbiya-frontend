@@ -1,0 +1,136 @@
+.info-list {
+    button {
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        color: #5B5B98;
+        line-height: 33px;
+        margin-left: 10px;
+        border-radius: 4px;
+        border: 1px solid #E2E8F0;
+        background: var(--whiteColor);
+        box-shadow: 0px 1px 2px rgba(15, 23, 42, 0.04);
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+ol {
+    &.list {
+        margin: {
+            bottom: 25px;
+            top: 20px;
+        };
+        li {
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.btn-box {
+    button, a {
+        padding: 10px 22px !important;
+        font: {
+            weight: 600 !important;
+            size: 14px !important;
+        };
+    }
+    button {
+        margin-left: 15px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+.component-dark-theme {
+    .info-list {
+        button {
+            background: #1e2227;
+            color: var(--whiteColor);
+            border-color: #1f2226;
+        }
+    }
+}
+.component-rtl-enabled {
+    .info-list {
+        button {
+            margin: {
+                left: 0;
+                right: 10px;
+            };
+            &:first-child {
+                margin: {
+                    left: 10px;
+                    right: 0;
+                };
+            }
+        }
+    }
+    .btn-box {
+        button {
+            margin: {
+                left: 0;
+                right: 15px;
+            };
+            &:first-child {
+                margin: {
+                    left: 15px;
+                    right: 0;
+                };
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .tagus-card {
+        mat-card-header {
+            display: block !important;
+        }
+    }
+    .info-list {
+        margin-top: 12px;
+
+        button {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 5px;
+        }
+    }
+    .component-rtl-enabled {
+        .info-list {
+            button {
+                margin: {
+                    right: 0;
+                    left: 5px;
+                };
+                &:first-child {
+                    margin: {
+                        left: 5px;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .tagus-card {
+        mat-card-header {
+            display: block !important;
+        }
+    }
+    .info-list {
+        margin-top: 12px;
+    }
+
+}

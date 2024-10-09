@@ -1,0 +1,11 @@
+.example-badges {
+    margin-bottom: -15px;
+    
+    .badge {
+        display: inline-block;
+        margin: {
+            right: 15px;
+            bottom: 15px;
+        };
+    }
+}

@@ -1,0 +1,363 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Projects</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Projects</li>
+    </ol>
+</div>
+
+<mat-card
+    class="mb-25 tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">All Projects</h5>
+        <a mat-flat-button class="default-btn tagus" routerLink="/projects/project-create">
+            <i class="ri-add-fill"></i> Add Projects
+        </a>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="all-projects-table table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="fw-semibold main-color">Project Name</th>
+                        <th class="fw-semibold gray-color">Members</th>
+                        <th class="fw-semibold gray-color">Budget</th>
+                        <th class="fw-semibold gray-color">Status</th>
+                        <th class="fw-semibold gray-color">Completion</th>
+                        <th class="fw-semibold gray-color">Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon1.png" alt="icon1">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user17.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user16.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$12,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium">Active</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            70%
+                            <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">25 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon2.png" alt="icon2">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Public Beta Release</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user24.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user23.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$6,500</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium completed">Completed</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            100%
+                            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">14 Jan 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon3.png" alt="icon3">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Market and SEO</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user22.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user20.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$12,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium completed">Completed</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            100%
+                            <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon4.png" alt="icon4">
+                                </div>
+                                <h5 class="fw-semibold mb-0">New Office Building</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user19.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$9,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium pending">Pending</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            0%
+                            <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon5.png" alt="icon5">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Product Development</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user18.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user17.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$14,500</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium">Active</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            60%
+                            <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon6.png" alt="icon1">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user16.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user14.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$12,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium">Active</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            88%
+                            <mat-progress-bar mode="determinate" value="88"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">25 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon7.png" alt="icon2">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Public Beta Release</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user13.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user12.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$6,500</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium completed">Completed</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            95%
+                            <mat-progress-bar mode="determinate" value="95"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">14 Jan 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon8.png" alt="icon3">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Market and SEO</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user11.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$12,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium completed">Completed</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            77%
+                            <mat-progress-bar mode="determinate" value="77"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon4.png" alt="icon4">
+                                </div>
+                                <h5 class="fw-semibold mb-0">New Office Building</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user10.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user9.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$9,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium pending">Pending</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            65%
+                            <mat-progress-bar mode="determinate" value="65"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon9.png" alt="icon5">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Product Development</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user8.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$14,500</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium">Active</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            35%
+                            <mat-progress-bar mode="determinate" value="35"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon10.png" alt="icon3">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Market and SEO</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user7.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user6.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$12,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium completed">Completed</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            50%
+                            <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon11.png" alt="icon4">
+                                </div>
+                                <h5 class="fw-semibold mb-0">New Office Building</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user5.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user4.jpg" class="rounded-circle" alt="user">
+                            <img src="img/user/user3.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$9,000</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium pending">Pending</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            99%
+                            <mat-progress-bar mode="determinate" value="99"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon12.png" alt="icon5">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Product Development</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user2.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$14,500</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium">Active</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            89%
+                            <mat-progress-bar mode="determinate" value="89"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="projects-name d-flex align-items-center">
+                                <div class="img">
+                                    <img src="img/icon/icon13.png" alt="icon5">
+                                </div>
+                                <h5 class="fw-semibold mb-0">Product Development</h5>
+                            </div>
+                        </td>
+                        <td class="members-list">
+                            <img src="img/user/user1.jpg" class="rounded-circle" alt="user">
+                        </td>
+                        <td class="gray-color">$14,500</td>
+                        <td class="gray-color">
+                            <span class="badge fw-medium">Active</span>
+                        </td>
+                        <td class="gray-color progress-td">
+                            10%
+                            <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+                        </td>
+                        <td class="gray-color">20 Feb 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card-content>
+</mat-card>

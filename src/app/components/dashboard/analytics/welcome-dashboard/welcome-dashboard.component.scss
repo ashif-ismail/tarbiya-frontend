@@ -1,0 +1,128 @@
+.welcome-box {
+    .top {
+        padding: 25px 110px 25px 25px;
+        background-color: var(--heraBlueColor);
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--whiteColor);
+        }
+        img {
+            right: 15px;
+            bottom: 15px;
+            max-width: 135px;
+            position: absolute;
+        }
+        p {
+            font-size: 13.5px;
+            color: var(--whiteColor);
+        }
+    }
+    &.component-dark-theme {
+        &.card-borderd-theme {
+            box-shadow: var(--borderWhiteBoxShadow) !important;
+        }
+    }
+    &.card-borderd-theme {
+        box-shadow: var(--borderBoxShadow) !important;
+    }
+    &.card-border-radius {
+        border-radius: 0 !important;
+
+        .border-top-radius {
+            border-radius: 0 !important;
+        }
+    }
+    &.component-rtl-enabled {
+        .top {
+            padding: {
+                left: 110px;
+                right: 25px;
+            };
+            img {
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}
+.impression-box {
+    .chart {
+        margin-top: -15px;
+    }
+    h5 {
+        margin-top: 8px;
+        font: {
+            size: 13px;
+            family: var(--fontFamily) !important;
+        };
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .welcome-box {
+        .top {
+            padding: 20px;
+    
+            h4 {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+            img {
+                max-width: 100%;
+                position: relative;
+                margin-bottom: 15px;
+            }
+        }
+        &.component-rtl-enabled {
+            .top {
+                padding: {
+                    left: 20px;
+                    right: 20px;
+                };
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .welcome-box {
+        .top {
+            padding: 25px 115px 25px 25px;
+    
+            h4 {
+                font-size: 20px;
+            }
+            p {
+                font-size: var(--fontSize);
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        &.component-rtl-enabled {
+            .top {
+                padding: {
+                    left: 115px;
+                    right: 25px;
+                };
+            }
+            .bottom {
+                padding: {
+                    left: 25px;
+                    right: 25px;
+                };
+            }
+        }
+    }
+    .impression-box {
+        h5 {
+            font-size: 14px;
+        }
+    }
+
+}

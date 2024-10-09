@@ -1,0 +1,110 @@
+<div
+    class="h-100vh pt-50 pb-50"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.card-borderd-theme]="themeService.isCardBorder()"
+    [class.card-border-radius]="themeService.isCardBorderRadius()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="ms-auto custom-max-width me-auto">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="tagus-form me-15">
+                            <div class="title">
+                                <div class="d-flex mb-10 align-items-center">
+                                    <h2 class="mb-0 me-30">Sign In</h2>
+                                    <img src="img/logo-icon.png" alt="logo-icon">
+                                </div>
+                                <p>Don’t have an account? <span class="main-color fw-medium">Sign up</span></p>
+                            </div>
+                            <form>
+                                <div class="login-with-socials d-md-flex align-items-center justify-content-space-between">
+                                    <button mat-flat-button class="gray fw-semibold d-block me-5"><img src="img/icon/google.png" alt="google"> Sign in with Google</button>
+                                    <button mat-flat-button class="tagus fw-semibold d-block ms-5"><img src="img/icon/facebook.png" alt="facebook"> Sign in with Facebook</button>
+                                </div>
+                                <div class="or text-center position-relative">
+                                    <span class="fw-semibold fs-16">or</span>
+                                </div>
+                                <div class="bg-white border-radius pt-20 ps-20 pe-20">
+                                    <div class="tagus-form-group without-icon">
+                                        <label class="d-block mb-12 fw-semibold gray-color">Email Address <span>*</span></label>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter email address</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="tagus-form-group without-icon">
+                                        <label class="d-block mb-12 fw-semibold gray-color">Password <span>*</span></label>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter your password</mat-label>
+                                            <input matInput [type]="hide ? 'password' : 'text'">
+                                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </button>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="d-flex info align-items-center justify-content-space-between">
+                                    <mat-checkbox class="gray-color">Remember me</mat-checkbox>
+                                    <a routerLink="/authentication/forgot-password" class="d-inline-block main-color fw-medium">Forgot your password?</a>
+                                </div>
+                                <button mat-flat-button class="tagus d-block fw-semibold">Sign In</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="tagus-form ms-15">
+                            <div class="title">
+                                <div class="d-flex mb-10 align-items-center">
+                                    <h2 class="mb-0 me-30">Free Sign Up</h2>
+                                    <img src="img/logo-icon.png" alt="logo-icon">
+                                </div>
+                                <p>Already have an account? <span class="main-color fw-medium">Sign in</span></p>
+                            </div>
+                            <form>
+                                <div class="bg-white border-radius pt-20 ps-20 pe-20">
+                                    <div class="tagus-form-group without-icon">
+                                        <label class="d-block mb-12 fw-semibold gray-color">Name <span>*</span></label>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter name</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="tagus-form-group without-icon">
+                                        <label class="d-block mb-12 fw-semibold gray-color">Email Address <span>*</span></label>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter email address</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="tagus-form-group without-icon">
+                                        <label class="d-block mb-12 fw-semibold gray-color">Password <span>*</span></label>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter your password</mat-label>
+                                            <input matInput [type]="hide ? 'password' : 'text'">
+                                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </button>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="tagus-form-group without-icon">
+                                        <label class="d-block mb-12 fw-semibold gray-color">Confirm Password <span>*</span></label>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Enter your password</mat-label>
+                                            <input matInput [type]="hide ? 'password' : 'text'">
+                                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </button>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <button mat-flat-button class="tagus d-block fw-semibold">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

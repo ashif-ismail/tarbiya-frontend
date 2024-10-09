@@ -1,0 +1,56 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Project Management</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Project Management</li>
+    </ol>
+</div>
+
+<app-pm-stats />
+
+<div class="row">
+    <div class="col-xxl-6">
+
+        <app-task-distribution />
+
+    </div>
+    <div class="col-xxl-6">
+
+        <app-my-tasks />
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-4">
+        <app-pm-total-users />
+    </div>
+    <div class="col-xxl-4">
+        <app-completed-tasks />
+    </div>
+    <div class="col-xxl-4">
+        <app-tasks-performance />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xxl-8">
+
+        <app-issues-summary />
+
+        <app-pm-all-projects />
+
+    </div>
+    <div class="col-xxl-4">
+
+        <app-pm-team-members />
+
+        <app-pm-activity-timeline />
+
+    </div>
+</div>

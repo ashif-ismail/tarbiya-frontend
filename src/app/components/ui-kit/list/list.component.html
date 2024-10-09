@@ -1,0 +1,149 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">List</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">List</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic List</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list role="list">
+                    <mat-list-item role="listitem">Item 1</mat-list-item>
+                    <mat-list-item role="listitem">Item 2</mat-list-item>
+                    <mat-list-item role="listitem">Item 3</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">List with Sections</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <div mat-subheader class="fw-semibold">Folders</div>
+                    <mat-list-item *ngFor="let folder of folders">
+                        <mat-icon matListItemIcon>folder</mat-icon>
+                        <div matListItemTitle class="fw-semibold">{{folder.name}}</div>
+                        <div matListItemLine>{{folder.updated | date}}</div>
+                    </mat-list-item>
+                    <mat-divider class="mb-5"></mat-divider>
+                    <div mat-subheader class="fw-semibold">Notes</div>
+                    <mat-list-item *ngFor="let note of notes">
+                        <mat-icon matListItemIcon>note</mat-icon>
+                        <div matListItemTitle class="fw-semibold">{{note.name}}</div>
+                        <div matListItemLine>{{note.updated | date}}</div>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">List with Selection</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-selection-list #shoes>
+                    <mat-list-option *ngFor="let shoe of typesOfShoes">
+                        {{shoe}}
+                    </mat-list-option>
+                </mat-selection-list>
+                <p>
+                    Options selected: {{shoes.selectedOptions.selected.length}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">List with Single Selection</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-selection-list #shoes2 [multiple]="false">
+                    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                        {{shoe}}
+                    </mat-list-option>
+                </mat-selection-list>
+                <p>
+                    Option selected: {{shoes2.selectedOptions.hasValue() ? shoes2.selectedOptions.selected[0].value : 'None'}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">List Variants</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <h5 class="mb-10">Single line lists</h5>
+                <mat-list>
+                    <mat-list-item class="h-auto mb-15">
+                        <span matListItemTitle>This is the title</span>
+                    </mat-list-item>
+                    <mat-list-item class="h-auto mb-15">Also the title</mat-list-item>
+                </mat-list>
+                <h5 class="mb-0">Two line lists</h5>
+                <mat-list>
+                    <mat-list-item>
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <span matListItemLine class="mt-5">Second line</span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <span matListItemLine class="mt-5">Second line</span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <span matListItemLine class="mt-5">Third line</span>
+                    </mat-list-item>
+                </mat-list>
+                <h5 class="mb-0 mt-5">Three line lists</h5>
+                <mat-list>
+                    <mat-list-item>
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <span matListItemLine class="mt-5">Second line</span>
+                        <span matListItemLine class="mt-5">Third line</span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <span matListItemLine class="mt-5">Second line. This line will truncate.</span>
+                        <span class="mt-5">Third line</span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <span matListItemLine class="mt-5">Second line. This line will truncate.</span>
+                        Third line
+                    </mat-list-item>
+                </mat-list>
+                <h5 class="mb-0 mt-5">Three line list with secondary text wrapping</h5>
+                <mat-list>
+                    <mat-list-item lines="3">
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <p>Secondary line that will wrap because the list lines is explicitly set to 3 lines. Text
+                        inside of a `matListItemTitle` or `matListItemLine` will never wrap.</p>
+                    </mat-list-item>
+                    <mat-list-item lines="3">
+                        <span matListItemTitle class="fw-semibold">Title</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

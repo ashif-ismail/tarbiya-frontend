@@ -1,0 +1,903 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Basic Table</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Tables</li>
+        <li class="breadcrumb-item fw-semibold">Basic Table</li>
+    </ol>
+</div>
+
+<div class="row"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="col-lg-6 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Best Selling Products</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="best-selling-products-table table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="gray-color">
+                                    <a routerLink="/" class="d-flex align-items-center main-color product-info">
+                                        <img src="img/recent-orders/product8.jpg" alt="product">
+                                        <div class="title">
+                                            <span>Tagus Airpod x-Zon</span>
+                                            ID: A3652
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>$289.50</td>
+                                <td class="stock-number">450 <span class="muted-color">(550)</span></td>
+                                <td class="stock fw-semibold main-color">Stock</td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <a routerLink="/" class="d-flex align-items-center main-color product-info">
+                                        <img src="img/recent-orders/product5.jpg" alt="product">
+                                        <div class="title">
+                                            <span>Smart Watch F8 Pro</span>
+                                            ID: A3652
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>$289.50</td>
+                                <td class="stock-number">10 <span class="muted-color">(1000)</span></td>
+                                <td class="stock fw-semibold main-color">Stock</td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <a routerLink="/" class="d-flex align-items-center main-color product-info">
+                                        <img src="img/recent-orders/product16.jpg" alt="product">
+                                        <div class="title">
+                                            <span>Nord Fold ZL</span>
+                                            ID: A3658
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>$289.50</td>
+                                <td class="stock-number">543 <span class="muted-color">(600)</span></td>
+                                <td class="stock fw-semibold main-color">Stock</td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <a routerLink="/" class="d-flex align-items-center main-color product-info">
+                                        <img src="img/recent-orders/product6.jpg" alt="product">
+                                        <div class="title">
+                                            <span>Wall Clock Cimbina</span>
+                                            ID: A3659
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>$289.50</td>
+                                <td class="stock-number">99 <span class="muted-color">(199)</span></td>
+                                <td class="stock fw-semibold main-color">Stock</td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <a routerLink="/" class="d-flex align-items-center main-color product-info">
+                                        <img src="img/recent-orders/product7.jpg" alt="product">
+                                        <div class="title">
+                                            <span>Galaxo T6 Munsun</span>
+                                            ID: A3656
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>$289.50</td>
+                                <td class="stock-number">300 <span class="muted-color">(321)</span></td>
+                                <td class="stock fw-semibold main-color">Stock</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Browser Used & Traffic Reports</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="reports-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold main-color">Browser</th>
+                                <th class="fw-semibold gray-color">Users</th>
+                                <th class="fw-semibold gray-color">Transactions</th>
+                                <th class="fw-semibold gray-color">% Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="black-color fw-semibold">Safari Browser</td>
+                                <td class="gray-color fw-semibold">
+                                    <div class="d-flex align-items-center">
+                                        1051
+                                        <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="18"></mat-progress-bar>
+                                        <span class="gray-color fw-normal fs-14">
+                                            18%
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="gray-color fw-semibold">43080<span class="muted-color fw-normal">(35%)</span></td>
+                                <td><span class="badge fw-semibold">14.80% <i class="flaticon-arrow-up"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td class="black-color fw-semibold">UC Browser</td>
+                                <td class="gray-color fw-semibold">
+                                    <div class="d-flex align-items-center">
+                                        8075
+                                        <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="13"></mat-progress-bar>
+                                        <span class="gray-color fw-normal fs-14">
+                                            13%
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="gray-color fw-semibold">5466<span class="muted-color fw-normal">(12%)</span></td>
+                                <td><span class="badge fw-semibold">11.50% <i class="flaticon-arrow-up"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td class="black-color fw-semibold">Google Chrome</td>
+                                <td class="gray-color fw-semibold">
+                                    <div class="d-flex align-items-center">
+                                        59802
+                                        <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="38"></mat-progress-bar>
+                                        <span class="gray-color fw-normal fs-14">
+                                            38%
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="gray-color fw-semibold">17654<span class="muted-color fw-normal">(19%)</span></td>
+                                <td><span class="badge fw-semibold down">8.69% <i class="flaticon-down-filled-triangular-arrow"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td class="black-color fw-semibold">Mozilla Firefox</td>
+                                <td class="gray-color fw-semibold">
+                                    <div class="d-flex align-items-center">
+                                        21854
+                                        <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="24"></mat-progress-bar>
+                                        <span class="gray-color fw-normal fs-14">
+                                            24%
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="gray-color fw-semibold">87759<span class="muted-color fw-normal">(52%)</span></td>
+                                <td><span class="badge fw-semibold">22.06% <i class="flaticon-arrow-up"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td class="black-color fw-semibold">Other Browser</td>
+                                <td class="gray-color fw-semibold">
+                                    <div class="d-flex align-items-center">
+                                        5907
+                                        <mat-progress-bar class="ms-10 me-10 text-start" mode="determinate" value="7"></mat-progress-bar>
+                                        <span class="gray-color fw-normal fs-14">
+                                            7%
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="gray-color fw-semibold">4576<span class="muted-color fw-normal">(10%)</span></td>
+                                <td><span class="badge fw-semibold">16.25% <i class="flaticon-arrow-up"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Users List</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="members-list-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold main-color">Name</th>
+                                <th class="fw-semibold gray-color">Email</th>
+                                <th class="fw-semibold gray-color">Tags</th>
+                                <th class="fw-semibold gray-color">Projects</th>
+                                <th class="fw-semibold gray-color">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-info d-flex align-items-center">
+                                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                        <img src="img/user/user12.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Evangelina Mcclain</h5>
+                                            <span class="d-block muted-color">&#64;evangelinamcclain</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">
+                                    <a href="mailto:evangelinamcclain&#64;tagus.com" class="gray-color">
+                                        evangelinamcclain&#64;tagus.com
+                                    </a>
+                                </td>
+                                <td class="gray-color">
+                                    <div class="tags-list">
+                                        <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                        <a class="fw-medium" routerLink="/members-list">CSS</a>
+                                        <a class="fw-medium" routerLink="/members-list">Sass</a>
+                                    </div>
+                                </td>
+                                <td class="gray-color">165</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info d-flex align-items-center">
+                                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                        <img src="img/user/user13.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Candice Munoz</h5>
+                                            <span class="d-block muted-color">&#64;candicemunoz</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">
+                                    <a href="mailto:candicemunoz&#64;tagus.com" class="gray-color">
+                                        candicemunoz&#64;tagus.com
+                                    </a>
+                                </td>
+                                <td class="gray-color">
+                                    <div class="tags-list">
+                                        <a class="fw-medium" routerLink="/members-list">CSS</a>
+                                        <a class="fw-medium" routerLink="/members-list">Sass</a>
+                                    </div>
+                                </td>
+                                <td class="gray-color">99</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info d-flex align-items-center">
+                                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                        <img src="img/user/user11.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Bernard Langley</h5>
+                                            <span class="d-block muted-color">&#64;bernardlangley</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">
+                                    <a href="mailto:bernardlangley&#64;tagus.com" class="gray-color">
+                                        bernardlangley&#64;tagus.com
+                                    </a>
+                                </td>
+                                <td class="gray-color">
+                                    <div class="tags-list">
+                                        <a class="fw-medium" routerLink="/members-list">Sass</a>
+                                    </div>
+                                </td>
+                                <td class="gray-color">24</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info d-flex align-items-center">
+                                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                        <img src="img/user/user14.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Kristie Hall</h5>
+                                            <span class="d-block muted-color">&#64;kristiehall</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">
+                                    <a href="mailto:kristiehall&#64;tagus.com" class="gray-color">
+                                        kristiehall&#64;tagus.com
+                                    </a>
+                                </td>
+                                <td class="gray-color">
+                                    <div class="tags-list">
+                                        <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                        <a class="fw-medium" routerLink="/members-list">CSS</a>
+                                    </div>
+                                </td>
+                                <td class="gray-color">50</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-info d-flex align-items-center">
+                                        <mat-checkbox class="fm-checkbox"></mat-checkbox>
+                                        <img src="img/user/user8.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold mb-5">Bolton Obrien</h5>
+                                            <span class="d-block muted-color">&#64;boltonobrien</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">
+                                    <a href="mailto:boltonobrien&#64;tagus.com" class="gray-color">
+                                        boltonobrien&#64;tagus.com
+                                    </a>
+                                </td>
+                                <td class="gray-color">
+                                    <div class="tags-list">
+                                        <a class="fw-medium" routerLink="/members-list">HTML</a>
+                                        <a class="fw-medium" routerLink="/members-list">Sass</a>
+                                    </div>
+                                </td>
+                                <td class="gray-color">34</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Team Members</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="team-members-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold gray-color">Member</th>
+                                <th class="fw-semibold gray-color">Hours</th>
+                                <th class="fw-semibold gray-color">Task</th>
+                                <th class="fw-semibold gray-color">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="gray-color">
+                                    <div class="user-info d-flex align-items-center">
+                                        <img src="img/user/user12.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold">Jordan Steve</h5>
+                                            <span class="d-block muted-color">&#64;jstevenson5c</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">10h : 50m</td>
+                                <td class="gray-color">258</td>
+                                <td class="gray-color">
+                                    48%
+                                    <mat-progress-bar mode="determinate" value="48"></mat-progress-bar>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <div class="user-info d-flex align-items-center">
+                                        <img src="img/user/user13.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold">Lydia Reese</h5>
+                                            <span class="d-block muted-color">&#64;lreese3b</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">11h : 14m</td>
+                                <td class="gray-color">321</td>
+                                <td class="gray-color">
+                                    76%
+                                    <mat-progress-bar mode="determinate" value="76"></mat-progress-bar>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <div class="user-info d-flex align-items-center">
+                                        <img src="img/user/user14.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold">Anty Rodes</h5>
+                                            <span class="d-block muted-color">&#64;antyrodes32</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">9h : 15m</td>
+                                <td class="gray-color">123</td>
+                                <td class="gray-color">
+                                    55%
+                                    <mat-progress-bar mode="determinate" value="55"></mat-progress-bar>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="gray-color">
+                                    <div class="user-info d-flex align-items-center">
+                                        <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                        <div class="title">
+                                            <h5 class="fw-semibold">Laurent Perrier</h5>
+                                            <span class="d-block muted-color">&#64;laurentperrier</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="gray-color">99h : 59m</td>
+                                <td class="gray-color">99</td>
+                                <td class="gray-color">
+                                    88%
+                                    <mat-progress-bar mode="determinate" value="88"></mat-progress-bar>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">All Projects</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="all-projects-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold main-color">Project Name</th>
+                                <th class="fw-semibold gray-color">Members</th>
+                                <th class="fw-semibold gray-color">Budget</th>
+                                <th class="fw-semibold gray-color">Status</th>
+                                <th class="fw-semibold gray-color">Completion</th>
+                                <th class="fw-semibold gray-color">Due Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="projects-name d-flex align-items-center">
+                                        <div class="img">
+                                            <img src="img/icon/icon1.png" alt="icon1">
+                                        </div>
+                                        <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                                    </div>
+                                </td>
+                                <td class="members-list">
+                                    <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                    <img src="img/user/user17.jpg" class="rounded-circle" alt="user">
+                                    <img src="img/user/user16.jpg" class="rounded-circle" alt="user">
+                                </td>
+                                <td class="gray-color">$12,000</td>
+                                <td class="gray-color">
+                                    <span class="badge fw-medium">Active</span>
+                                </td>
+                                <td class="gray-color progress-td">
+                                    50%
+                                    <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+                                </td>
+                                <td class="gray-color">25 Feb 2023</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="projects-name d-flex align-items-center">
+                                        <div class="img">
+                                            <img src="img/icon/icon2.png" alt="icon2">
+                                        </div>
+                                        <h5 class="fw-semibold mb-0">Public Beta Release</h5>
+                                    </div>
+                                </td>
+                                <td class="members-list">
+                                    <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                    <img src="img/user/user17.jpg" class="rounded-circle" alt="user">
+                                </td>
+                                <td class="gray-color">$6,500</td>
+                                <td class="gray-color">
+                                    <span class="badge fw-medium completed">Completed</span>
+                                </td>
+                                <td class="gray-color progress-td">
+                                    67%
+                                    <mat-progress-bar mode="determinate" value="67"></mat-progress-bar>
+                                </td>
+                                <td class="gray-color">14 Jan 2023</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="projects-name d-flex align-items-center">
+                                        <div class="img">
+                                            <img src="img/icon/icon3.png" alt="icon3">
+                                        </div>
+                                        <h5 class="fw-semibold mb-0">Market and SEO</h5>
+                                    </div>
+                                </td>
+                                <td class="members-list">
+                                    <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                    <img src="img/user/user17.jpg" class="rounded-circle" alt="user">
+                                </td>
+                                <td class="gray-color">$12,000</td>
+                                <td class="gray-color">
+                                    <span class="badge fw-medium completed">Completed</span>
+                                </td>
+                                <td class="gray-color progress-td">
+                                    77%
+                                    <mat-progress-bar mode="determinate" value="77"></mat-progress-bar>
+                                </td>
+                                <td class="gray-color">20 Feb 2023</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="projects-name d-flex align-items-center">
+                                        <div class="img">
+                                            <img src="img/icon/icon4.png" alt="icon4">
+                                        </div>
+                                        <h5 class="fw-semibold mb-0">New Office Building</h5>
+                                    </div>
+                                </td>
+                                <td class="members-list">
+                                    <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                    <img src="img/user/user17.jpg" class="rounded-circle" alt="user">
+                                    <img src="img/user/user16.jpg" class="rounded-circle" alt="user">
+                                </td>
+                                <td class="gray-color">$9,000</td>
+                                <td class="gray-color">
+                                    <span class="badge fw-medium pending">Pending</span>
+                                </td>
+                                <td class="gray-color progress-td">
+                                    55%
+                                    <mat-progress-bar mode="determinate" value="55"></mat-progress-bar>
+                                </td>
+                                <td class="gray-color">20 Feb 2023</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="projects-name d-flex align-items-center">
+                                        <div class="img">
+                                            <img src="img/icon/icon5.png" alt="icon5">
+                                        </div>
+                                        <h5 class="fw-semibold mb-0">Product Development</h5>
+                                    </div>
+                                </td>
+                                <td class="members-list">
+                                    <img src="img/user/user15.jpg" class="rounded-circle" alt="user">
+                                </td>
+                                <td class="gray-color">$14,500</td>
+                                <td class="gray-color">
+                                    <span class="badge fw-medium">Active</span>
+                                </td>
+                                <td class="gray-color progress-td">
+                                    75%
+                                    <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+                                </td>
+                                <td class="gray-color">20 Feb 2023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header>
+                <h5 class="mb-0">Recent Files</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="recent-files-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="fw-semibold main-color">Name</th>
+                                <th class="fw-semibold gray-color">Owner</th>
+                                <th class="fw-semibold gray-color">File Size</th>
+                                <th class="fw-semibold gray-color">Listed Date</th>
+                                <th class="fw-semibold gray-color">File Item</th>
+                                <th class="fw-semibold gray-color">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Danielle Thompson</td>
+                                <td class="gray-color">0.7 GB</td>
+                                <td class="gray-color">Mar 08, 2023</td>
+                                <td class="gray-color">02</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">App Design & Development</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Coder Themes</td>
+                                <td class="gray-color">521 MB</td>
+                                <td class="gray-color">Feb 13, 2023</td>
+                                <td class="gray-color">06</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Ubold-sketch-design.zip</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Gary Coley</td>
+                                <td class="gray-color">64.2 MB</td>
+                                <td class="gray-color">Dec 18, 2022</td>
+                                <td class="gray-color">03</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Annualreport.pdf</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Cooper Sharwood</td>
+                                <td class="gray-color">12.5 GB</td>
+                                <td class="gray-color">Nov 29, 2022</td>
+                                <td class="gray-color">05</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Wireframes</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Jasper Rigg</td>
+                                <td class="gray-color">8.3 MB</td>
+                                <td class="gray-color">Nov 25, 2022</td>
+                                <td class="gray-color">01</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="name-info d-flex align-items-center">
+                                        <img src="img/icon/folder.png" alt="folder">
+                                        <h5 class="fw-semibold mb-0">Product UI/UX Design</h5>
+                                    </div>
+                                </td>
+                                <td class="gray-color">Danielle Thompson</td>
+                                <td class="gray-color">0.7 GB</td>
+                                <td class="gray-color">Mar 08, 2023</td>
+                                <td class="gray-color">02</td>
+                                <td>
+                                    <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="actionMenu">
+                                        <i class="ri-more-fill"></i>
+                                    </button>
+                                    <mat-menu #actionMenu="matMenu" class="dotMenu two monthMenu" xPosition="before">
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-share-line"></i> Share
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-link"></i> Get Sharable Link
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-edit-line"></i> Rename
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-download-cloud-line"></i> Download
+                                        </button>
+                                        <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                                            <i class="ri-delete-bin-line"></i> Remove
+                                        </button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

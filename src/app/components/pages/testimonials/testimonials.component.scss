@@ -1,0 +1,30 @@
+.testimonial-box {
+    padding: 25px;
+}
+.rating {
+    i {
+        line-height: 1;
+        color: #ffc744;
+        margin: {
+            left: 3px;
+            right: 3px;
+        };
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.testimonials-list {
+    margin-bottom: -25px !important;
+}
+
+@media only screen and (max-width : 767px) {
+
+    .testimonial-box {
+        padding: 20px;
+    }
+
+}

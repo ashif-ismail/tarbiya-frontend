@@ -1,0 +1,25 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Courses</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Courses</li>
+    </ol>
+</div>
+
+<mat-card class="mb-25 enrolled-created-box tagus-card">
+    <mat-card-content>
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" animationDuration="0ms">
+            <mat-tab label="Enrolled">
+                <app-enrolled-courses />
+            </mat-tab>
+            <mat-tab label="Created">
+                <app-created-courses />
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

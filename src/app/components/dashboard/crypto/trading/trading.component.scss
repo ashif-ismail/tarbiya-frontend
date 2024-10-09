@@ -1,0 +1,276 @@
+.trading-box {
+    .buttons-list {
+        button {
+            margin-right: 25px;
+            padding: 0 !important;
+            color: var(--paragraphColor);
+            font: {
+                size: 14px !important;
+                weight: normal !important;
+            };
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .content {
+        background-color: #f7faff;
+        margin-bottom: 20px;
+        padding: 12px;
+
+        button {
+            margin: {
+                left: 3px;
+                right: 3px;
+            };
+        }
+    }
+    .trading-form {
+        .form-group {
+            margin-bottom: 20px;
+
+            label {
+                color: var(--paragraphColor);
+                margin-bottom: 10px;
+            }
+            input {
+                border: 1px solid #b1b5c3;
+                color: var(--blackColor);
+                outline: 0 !important;
+                border-radius: 10px;
+                display: block;
+                height: 50px;
+                width: 100%;
+                padding: {
+                    left: 15px;
+                    right: 15px;
+                };
+                &::placeholder {
+                    color: #a9a9c8;
+                    transition: var(--transition);
+                }
+                &:focus {
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+            select {
+                border: 1px solid #b1b5c3;
+                outline: 0 !important;
+                border-radius: 10px;
+                color: #a9a9c8;
+                cursor: pointer;
+                display: block;
+                height: 50px;
+                width: 100%;
+                padding: {
+                    left: 15px;
+                    right: 15px;
+                };
+            }
+        }
+        .input-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: stretch;
+
+            .input-group-text {
+                display: flex;
+                align-items: center;
+                background: #f1f2fd;
+                border: 1px solid #b1b5c3;
+                border-radius: 10px 0 0 10px;
+                padding: {
+                    left: 20px;
+                    right: 20px;
+                };
+            }
+            input {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                border-left-width: 0;
+                position: relative;
+                flex: 1 1 auto;
+                min-width: 0;
+                width: 1%;
+            }
+            &.two {
+                input {
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                    border-right-width: 0;
+                }
+                .input-group-text {
+                    &:last-child {
+                        border-radius: 0 10px 10px 0;
+                    }
+                }
+            }
+        }
+        ul {
+            padding-left: 0;
+            margin: {
+                top: 0;
+                bottom: 20px;
+            };
+            li {
+                margin-bottom: 15px;
+
+                span {
+                    color: #5B5B98;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .buttons-list {
+            button {
+                margin: {
+                    right: 0;
+                    left: 25px;
+                };
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .trading-form {
+            .input-group {
+                .input-group-text {
+                    border-radius: 0 10px 10px 0;
+                }
+                input {
+                    border: {
+                        bottom-left-radius: 10px;
+                        bottom-right-radius: 0;
+                        top-left-radius: 10px;
+                        top-right-radius: 0;
+                        left-width: 1px;
+                        right-width: 0;
+                    };
+                }
+                &.two {
+                    input {
+                        border: {
+                            bottom-right-radius: 0;
+                            bottom-left-radius: 0;
+                            top-right-radius: 0;
+                            top-left-radius: 0;
+                            left-width: 0;
+                        };
+                    }
+                    .input-group-text {
+                        &:last-child {
+                            border-radius: 10px 0 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.component-dark-theme {
+        .buttons-list {
+            button {
+                color: #828690;
+            }
+        }
+        .content {
+            background-color: #1d2024;
+    
+            span {
+                span {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+        .trading-form {
+            .form-group {
+                label {
+                    color: #828690;
+                }
+                input {
+                    border-color: #1f2226;
+                    color: var(--whiteColor);
+                    
+                    &::placeholder {
+                        color: #828690;
+                    }
+                    &:focus {
+                        &::placeholder {
+                            color: transparent;
+                        }
+                    }
+                }
+                select {
+                    border-color: #1f2226;
+                    color: var(--whiteColor);
+                    background-color: transparent;
+                }
+            }
+            .input-group {
+                .input-group-text {
+                    background: #26292f;
+                    border-color: #1f2226;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .trading-box {
+        .buttons-list {
+            button {
+                margin-right: 15px;
+                font-size: 13px;
+            }
+        }
+        .content {
+            margin-bottom: 15px;
+            padding: 15px;
+
+            span {
+                font-size: 13.5px;
+            }
+        }
+        .trading-form {
+            .form-group {
+                margin-bottom: 15px;
+    
+                label {
+                    margin-bottom: 9px;
+                }
+                input {
+                    height: 43px;
+                    padding: {
+                        left: 13px;
+                        right: 13px;
+                    };
+                }
+                select {
+                    height: 43px;
+                    padding: {
+                        left: 13px;
+                        right: 13px;
+                    };
+                }
+            }
+            .input-group {
+                .input-group-text {
+                    padding: {
+                        left: 15px;
+                        right: 15px;
+                    };
+                }
+            }
+            button {
+                margin-top: 15px;
+            }
+        }
+    }
+
+}

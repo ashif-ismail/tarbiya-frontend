@@ -1,0 +1,29 @@
+<div class="create-dialog-box scrollable-dialog">
+    <div class="title d-flex align-items-center justify-content-space-between">
+        <h4 class="mb-0">User Task Reports</h4>
+    </div>
+    <mat-card class="mb-25 tagus-card">
+        <mat-card-content>
+            <mat-accordion>
+                <mat-expansion-panel *ngFor="let dateGroup of groupedTasks | keyvalue">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> 
+                            {{ dateGroup.key | date:'fullDate' }}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div *ngFor="let task of dateGroup.value" class="task-item">
+                        <div class="task-details"> 
+                            <h4>{{ task.title }}</h4>
+                            <p>{{ task.description }}</p>
+                        </div>
+                        <span class="badge" [ngClass]="{'badge-success': task.taskStatus === 'DONE', 'badge-warning': task.taskStatus !== 'DONE'}">
+                            {{ task.taskStatus === 'DONE' ? 'Done' : 'Missed' }}
+                        </span>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+    </mat-card>
+        <div class="text-end">
+        </div>
+</div>

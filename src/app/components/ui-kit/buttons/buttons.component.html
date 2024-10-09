@@ -1,0 +1,243 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Buttons</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">UI Kit</li>
+        <li class="breadcrumb-item fw-semibold">Buttons</li>
+    </ol>
+</div>
+
+<div class="row" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Basic Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-button>Basic</button>
+                <button mat-button class="tagus">Tagus</button>
+                <button mat-button color="primary">Primary</button>
+                <button mat-button color="accent">Accent</button>
+                <button mat-button color="warn">Warn</button>
+                <button mat-button disabled>Disabled</button>
+                <a mat-button routerLink=".">Link</a>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Raised Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-raised-button>Basic</button>
+                <button mat-raised-button class="tagus">Tagus</button>
+                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="accent">Accent</button>
+                <button mat-raised-button color="warn">Warn</button>
+                <button mat-raised-button disabled>Disabled</button>
+                <a mat-raised-button routerLink=".">Link</a>
+                <button mat-raised-button class="gray">Gray</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Stroked Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-stroked-button>Basic</button>
+                <button mat-stroked-button class="tagus">Tagus</button>
+                <button mat-stroked-button color="primary">Primary</button>
+                <button mat-stroked-button color="accent">Accent</button>
+                <button mat-stroked-button color="warn">Warn</button>
+                <button mat-stroked-button disabled>Disabled</button>
+                <a mat-stroked-button routerLink=".">Link</a>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Flat Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-flat-button>Basic</button>
+                <button mat-flat-button class="tagus">Tagus</button>
+                <button mat-flat-button color="primary">Primary</button>
+                <button mat-flat-button color="accent">Accent</button>
+                <button mat-flat-button color="warn">Warn</button>
+                <button mat-flat-button disabled>Disabled</button>
+                <a mat-flat-button routerLink=".">Link</a>
+                <button mat-flat-button class="gray">Gray</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Icon Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-icon-button>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button class="tagus">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button color="primary">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button color="accent">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button disabled>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <a mat-icon-button routerLink=".">
+                    <mat-icon>favorite</mat-icon>
+                </a>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">FAB Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-fab class="tagus">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-fab color="primary">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-fab color="accent">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-fab color="warn">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-fab disabled>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <a mat-fab routerLink="." class="white">
+                    <mat-icon>favorite</mat-icon>
+                </a>
+                <button mat-fab class="gray">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Mini Fab Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-mini-fab class="tagus">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-mini-fab color="primary">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-mini-fab color="accent">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-mini-fab color="warn">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-mini-fab disabled>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <a mat-mini-fab routerLink="." class="tagus">
+                    <mat-icon>favorite</mat-icon>
+                </a>
+                <button mat-mini-fab class="gray">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Extended Fab Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-fab extended class="tagus">
+                    <mat-icon>favorite</mat-icon>
+                    Primary
+                </button>
+                <button mat-fab extended color="primary">
+                    <mat-icon>favorite</mat-icon>
+                    Primary
+                </button>
+                <button mat-fab extended color="accent">
+                    <mat-icon>favorite</mat-icon>
+                    Accent
+                </button>
+                <button mat-fab extended color="warn">
+                    <mat-icon>favorite</mat-icon>
+                    Warn
+                </button>
+                <button mat-fab extended disabled>
+                    <mat-icon>favorite</mat-icon>
+                    Disabled
+                </button>
+                <a mat-fab extended routerLink=".">
+                    <mat-icon>favorite</mat-icon>
+                    Link
+                </a>
+                <button mat-fab extended class="gray">
+                    <mat-icon>favorite</mat-icon>
+                    Gray
+                </button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Block Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-raised-button class="d-block">Basic</button>
+                <button mat-raised-button class="tagus d-block">Tagus</button>
+                <button mat-raised-button class="d-block" color="primary">Primary</button>
+                <button mat-raised-button class="d-block" color="accent">Accent</button>
+                <button mat-raised-button class="d-block" color="warn">Warn</button>
+                <button mat-raised-button class="d-block" disabled>Disabled</button>
+                <a mat-raised-button class="d-block" routerLink=".">Link</a>
+                <button mat-raised-button class="gray d-block">Gray</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Block Flat Buttons</h5>
+            </mat-card-header>
+            <mat-card-content class="example-buttons">
+                <button mat-flat-button class="d-block">Basic</button>
+                <button mat-flat-button class="tagus d-block">Tagus</button>
+                <button mat-flat-button class="d-block" color="primary">Primary</button>
+                <button mat-flat-button class="d-block" color="accent">Accent</button>
+                <button mat-flat-button class="d-block" color="warn">Warn</button>
+                <button mat-flat-button class="d-block" disabled>Disabled</button>
+                <a mat-flat-button class="d-block" routerLink=".">Link</a>
+                <button mat-flat-button class="gray d-block">Gray</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

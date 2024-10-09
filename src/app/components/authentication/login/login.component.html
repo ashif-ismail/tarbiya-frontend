@@ -1,0 +1,38 @@
+<div class="login-background h-100vh pt-50 pb-50">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="tagus-form ms-auto me-auto">
+                <div class="title">
+                    <div class="d-flex mb-10 align-items-center">
+                        <div class="logo-container">
+                            <img src="img/logo-icon.png" alt="logo-icon" class="centered-logo">
+                        </div>
+                        <h2 style="margin: auto;"> عائلة التربية</h2>
+                    </div>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="bg-white border-radius pt-20 ps-20 pe-20">
+                        <div class="tagus-form-group without-icon">
+                            <label class="d-block mb-12 fw-semibold gray-color">Mobile Number <span>*</span></label>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter mobile number</mat-label>
+                                <input matInput formControlName="username">
+                            </mat-form-field>
+                        </div>
+                        <div class="tagus-form-group without-icon">
+                            <label class="d-block mb-12 fw-semibold gray-color">Password <span>*</span></label>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter your password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" type="button">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <button mat-flat-button class="tagus d-block fw-semibold" type="submit" [disabled]="!loginForm.valid">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+.tickets-status-box {
+    .box {
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 12px;
+        background: rgba(117, 127, 239, 0.1);
+
+        span {
+            font-size: 14px;
+
+            &.up, &.down {
+                position: relative;
+                padding-left: 30px;
+
+                i {
+                    transform: translateY(-50%);
+                    position: absolute;
+                    margin-top: 2px;
+                    line-height: 1;
+                    top: 50%;
+                    left: 0;
+                    font: {
+                        size: 23px;
+                        weight: 700;
+                    };
+                }
+            }
+            &.up {
+                i {
+                    color: #00b69b;
+                }
+            }
+            &.down {
+                i {
+                    color: #ee368c;
+                }
+            }
+        }
+        h4 {
+            margin: {
+                bottom: 20px;
+                top: 5px;
+            };
+            font: {
+                size: 18px;
+                family: var(--fontFamily) !important;
+            };
+        }
+        .mat-mdc-progress-bar {
+            border-radius: 5px;
+        }
+        &:last-child {
+            background: rgba(45, 182, 245, 0.1);
+            margin-bottom: 0;
+
+            .mat-mdc-progress-bar {
+                .mdc-linear-progress__bar-inner {
+                    border-color: #2db6f5;
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .box {
+            span {
+                &.up, &.down {
+                    padding: {
+                        left: 0;
+                        right: 30px;
+                    };
+                    i {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+:host ::ng-deep {
+    .tickets-status-box {
+        .box {
+            &:last-child {
+                .mat-mdc-progress-bar {
+                    .mdc-linear-progress__bar-inner {
+                        border-color: #2db6f5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .tickets-status-box {
+        .box {
+            margin-top: 15px;
+        }
+    }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .tickets-status-box {
+        .box {
+            margin-top: 15px;
+        }
+    }
+
+}

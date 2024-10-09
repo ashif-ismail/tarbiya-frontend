@@ -1,0 +1,101 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Chartjs</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Apexcharts</li>
+        <li class="breadcrumb-item fw-semibold">Chartjs</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Line Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <canvas
+                    baseChart
+                    [data]="lineChartData"
+                    [options]="lineChartOptions"
+                    [type]="lineChartType"
+                ></canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Bar Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-bar-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Doughnut Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-doughnut-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Radar Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-radar-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Pie Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-pie-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Polar Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-polar-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Bubble Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-bubble-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6">
+        <mat-card class="mb-25 tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Scatter Chart</h5>
+            </mat-card-header>
+            <mat-card-content>
+                <app-scatter-chartjs />
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

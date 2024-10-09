@@ -1,0 +1,37 @@
+<mat-card
+    class="mb-25 file-manager-box tagus-card"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">My Drive</h5>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="search-box position-relative">
+            <input type="text" class="input-search d-block" placeholder="Search here..">
+            <button type="submit"><i class="ri-search-line"></i></button>
+        </form>
+        <ul class="file-manager-sidebar ps-0 mb-0">
+            <li>
+                <a routerLink="/file-manager" class="fw-semibold position-relative" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="ri-folder-4-line"></i> My Drive</a>
+                <ul class="mb-0">
+                    <li class="position-relative"><a routerLink="/file-manager/assets" class="fw-medium" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Assets</a></li>
+                    <li class="position-relative"><a routerLink="/file-manager/projects" class="fw-medium" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Projects</a></li>
+                    <li class="position-relative"><a routerLink="/file-manager/personal" class="fw-medium" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Personal</a></li>
+                    <li class="position-relative"><a routerLink="/file-manager/templates" class="fw-medium" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Templates</a></li>
+                </ul>
+            </li>
+            <li><a routerLink="/file-manager/documents" class="fw-semibold position-relative" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="ri-file-text-line"></i> Documents</a></li>
+            <li><a routerLink="/file-manager/media" class="fw-semibold position-relative" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="ri-gallery-line"></i> Media</a></li>
+            <li><a routerLink="/file-manager/recent-files" class="fw-semibold position-relative" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="ri-time-line"></i> Recent Files</a></li>
+            <li><a href="javascript:void(0); " class="fw-semibold position-relative"><i class="ri-star-line"></i> Important</a></li>
+            <li><a href="javascript:void(0); " class="fw-semibold position-relative"><i class="ri-information-line"></i> Spam</a></li>
+            <li><a href="javascript:void(0); " class="fw-semibold position-relative"><i class="ri-delete-bin-line"></i> Trash</a></li>
+        </ul>
+        <div class="storage-status">
+            <span class="gray-color d-block fw-semibold">Storage Status</span>
+            <mat-progress-bar mode="determinate" value="85"></mat-progress-bar>
+            <span class="muted-color d-block">86.5 GB Used of 120 GB</span>
+        </div>
+    </mat-card-content>
+</mat-card>

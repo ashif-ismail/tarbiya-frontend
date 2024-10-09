@@ -1,0 +1,252 @@
+.card-box {
+    .fm-checkbox {
+        margin: -10px 0 -10px -10px;
+    }
+}
+.recent-files-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    table, .table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                th {
+                    background-color: #f7faff;
+                    vertical-align: middle;
+                    white-space: nowrap;
+                    text-align: center;
+                    position: relative;
+                    padding: 15px 20px;
+
+                    &::after {
+                        top: 50%;
+                        right: 0;
+                        width: 1px;
+                        content: '';
+                        height: 17px;
+                        position: absolute;
+                        background-color: #e7ebf5;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &:first-child {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 18px 20px;
+                    text-align: center;
+                    white-space: nowrap;
+                    border-bottom-color: #f7faff;
+                    border-bottom: 1px solid #F7FAFF;
+
+                    .name-info {
+                        img {
+                            width: 20px;
+                        }
+                        h5 {
+                            font-size: 15px;
+                            margin-left: 10px;
+                        }
+                    }
+                    .dot-btn {
+                        width: 30px;
+                        line-height: 30px;
+                        padding: 0 !important;
+                        height: 30px !important;
+                        color: var(--blackColor);
+                        font-size: 18px !important;
+                        min-width: unset !important;
+                        border-radius: 4px !important;
+                        display: inline-block !important;
+                        background-color: #F3F6F9 !important;
+                    }
+                    &:first-child {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    &::-webkit-scrollbar:vertical {
+        width: 10px;
+    }
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        border: 2px solid var(--whiteColor);
+        background-color: rgba(0, 0, 0, .2);
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;  
+        background-color: var(--whiteColor);
+    }
+}
+.files-list {
+    margin: {
+        top: -15px;
+        left: -7.5px;
+        right: -7.5px;
+    };
+    .file-item {
+        flex: 0 0 auto;
+        width: 25%;
+        padding: {
+            left: 7.5px;
+            right: 7.5px;
+        };
+    }
+}
+.component-dark-theme {
+    .recent-files-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        background-color: #1d2024;
+    
+                        &::after {
+                            background-color: #363636;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        border-bottom-color: #1f2226;
+    
+                        .dot-btn {
+                            color: var(--whiteColor);
+                            background-color: #1d2024 !important;
+                        }
+                    }
+                }
+            }
+        }
+        &::-webkit-scrollbar-thumb {
+            border-color: #1f2226;
+            background-color: rgba(255, 255, 255, .2);
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #1f2226;
+        }
+    }
+}
+.component-rtl-enabled {
+    .card-box {
+        .fm-checkbox {
+            margin: {
+                left: 0;
+                right: -10px;
+            };
+        }
+    }
+    .recent-files-table {
+        table, .table {
+            thead {
+                tr {
+                    th {
+                        &::after {
+                            right: auto;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        .name-info {
+                            h5 {
+                                margin: {
+                                    left: 0;
+                                    right: 10px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .files-list {
+        .file-item {
+            width: 100%;
+        }
+    }
+    .recent-files-table {
+        table, .table {
+            tbody {
+                tr {
+                    td {
+                        padding: 15px 20px;
+    
+                        .name-info {
+                            h5 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .files-list {
+        .file-item {
+            width: 50%;
+        }
+    }
+
+}
+
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .card-box {
+        padding: {
+            left: 15px;
+            right: 15px;
+        };
+    }
+    .files-list {
+        .file-item {
+            width: 33.333333%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .files-list {
+        .file-item {
+            width: 16.6666666667%;
+        }
+    }
+
+}

@@ -1,0 +1,114 @@
+<mat-card
+    class="mb-25 tagus-card messages-box"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <h5 class="mb-0">Messages</h5>
+        <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+            <i class="ri-more-fill"></i>
+        </button>
+        <mat-menu #monthMenu="matMenu" class="monthMenu" xPosition="before">
+            <button mat-menu-item type="button" class="bg-transparent border-none">Today</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Month</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">Last Year</button>
+            <button mat-menu-item type="button" class="bg-transparent border-none">All Time</button>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="messages-list">
+            <div class="single-message position-relative d-flex align-items-center justify-content-space-between">
+                <div class="content d-flex align-items-center">
+                    <div class="img position-relative">
+                        <img src="img/user/user19.jpg" alt="user">
+                        <span class="active-status"></span>
+                    </div>
+                    <div class="title">
+                        <h5>Johen Warner</h5>
+                        <p>Hi, I want enquiries about you...</p>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="badge">New</span>
+                        <span class="badge rounded-circle">2</span>
+                    </div>
+                    <span class="time muted-color d-block">12:55 AM</span>
+                </div>
+            </div>
+            <div class="single-message position-relative d-flex align-items-center justify-content-space-between">
+                <div class="content d-flex align-items-center">
+                    <div class="img position-relative">
+                        <img src="img/user/user20.jpg" alt="user">
+                        <span class="active-status off"></span>
+                    </div>
+                    <div class="title">
+                        <h5>Thomas Albart</h5>
+                        <p>Hi, I want enquiries about you...</p>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="badge">New</span>
+                        <span class="badge rounded-circle">1</span>
+                    </div>
+                    <span class="time muted-color d-block">Today</span>
+                </div>
+            </div>
+            <div class="single-message position-relative d-flex align-items-center justify-content-space-between">
+                <div class="content d-flex align-items-center">
+                    <div class="img position-relative">
+                        <img src="img/user/user21.jpg" alt="user">
+                        <span class="active-status"></span>
+                    </div>
+                    <div class="title">
+                        <h5>Maical Doe</h5>
+                        <p>Hi, I want enquiries about you...</p>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="badge rounded-circle">3</span>
+                    </div>
+                    <span class="time muted-color d-block">Yesterday</span>
+                </div>
+            </div>
+            <div class="single-message position-relative d-flex align-items-center justify-content-space-between">
+                <div class="content d-flex align-items-center">
+                    <div class="img position-relative">
+                        <img src="img/user/user4.jpg" alt="user">
+                        <span class="active-status"></span>
+                    </div>
+                    <div class="title">
+                        <h5>James Andy</h5>
+                        <p>Hi, I want enquiries about you...</p>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="badge rounded-circle">2</span>
+                    </div>
+                    <span class="time muted-color d-block">08 June</span>
+                </div>
+            </div>
+            <div class="single-message position-relative d-flex align-items-center justify-content-space-between">
+                <div class="content d-flex align-items-center">
+                    <div class="img position-relative">
+                        <img src="img/user/user6.jpg" alt="user">
+                        <span class="active-status off"></span>
+                    </div>
+                    <div class="title">
+                        <h5>Alina Smith</h5>
+                        <p>Hi, I want enquiries about you...</p>
+                    </div>
+                </div>
+                <div class="info text-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="badge rounded-circle">1</span>
+                    </div>
+                    <span class="time muted-color d-block">07 June</span>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

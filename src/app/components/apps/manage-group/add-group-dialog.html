@@ -1,0 +1,40 @@
+<div class="create-dialog-box scrollable-dialog">
+    <div class="title d-flex align-items-center justify-content-space-between">
+        <h4 class="mb-0">{{ isEditMode ? 'Update Group' : 'Add New Group' }}</h4>
+        <button class="close-btn bg-transparent p-0 border-none" (click)="close()"><i class="flaticon-close"></i></button>
+    </div>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Group Name</label>
+                    <input type="text" class="input-control" placeholder="Group name *" [(ngModel)]="newGroup.groupName" name="groupname" required #groupname="ngModel">
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label class="d-block fw-semibold">Leader Name</label>
+                    <input type="text" class="input-control" 
+                           placeholder="Leader Name *" 
+                           [(ngModel)]="leaderSearch" 
+                           (input)="onLeaderSearch()"
+                           [matAutocomplete]="auto"
+                           name="leaderName" 
+                           required 
+                           #leaderName="ngModel">
+                    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onLeaderSelected($event)">
+                        <mat-option *ngFor="let user of filteredUsers" [value]="user.username">
+                            {{user.username}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </div>
+            </div>
+        </div>
+        <div class="text-end">
+            <button type="button" class="gray" (click)="close()"><i class="ri-close-fill"></i> Cancel</button>
+            <button type="submit" [disabled]="userForm.form.invalid">
+                <i class="ri-add-fill"></i> {{ isEditMode ? 'Update Group' : 'Add New Group' }}
+            </button>
+        </div>
+    </form>
+</div>

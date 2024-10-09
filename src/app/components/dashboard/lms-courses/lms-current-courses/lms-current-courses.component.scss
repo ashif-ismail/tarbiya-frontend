@@ -1,0 +1,94 @@
+.current-courses-box {
+    .current-courses-list {
+        margin: {
+            top: -12px;
+            left: -6px;
+            right: -6px;
+        };
+        .course-item {
+            flex: 0 0 auto;
+            width: 33.3333333333%;
+            padding: {
+                left: 6px;
+                right: 6px;
+            };
+            .box {
+                padding: 18px;
+                margin-top: 12px;
+
+                .title {
+                    h3 {
+                        margin-bottom: 7px;
+                        font-size: 20px;
+                    }
+                    span {
+                        font: {
+                            size: 13px;
+                            weight: 600;
+                        };
+                    }
+                }
+                .info {
+                    margin-top: 25px;
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .current-courses-box {
+        .mat-mdc-card-header {
+            padding-bottom: 15px;
+        }
+        .current-courses-list {
+            .course-item {
+                width: 100%;
+                
+                .box {
+                    .title {
+                        h3 {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .current-courses-box {
+        .current-courses-list {
+            .course-item {
+                .box {
+                    padding: 25px;
+    
+                    .title {
+                        h3 {
+                            font-size: 24px;
+                        }
+                        span {
+                            font: {
+                                size: 14px;
+                            };
+                        }
+                    }
+                    .info {
+                        span {
+                            font-size: var(--fontSize);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

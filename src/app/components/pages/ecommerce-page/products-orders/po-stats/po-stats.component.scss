@@ -1,0 +1,55 @@
+.icon {
+    background: var(--heraBlueColor);
+    transition: var(--transition);
+    color: var(--whiteColor);
+    position: relative;
+    font-size: 20px;
+    height: 42px;
+    width: 42px;
+
+    i {
+        left: 0;
+        right: 0;
+        top: 50%;
+        line-height: 1;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+}
+h5 {
+    span {
+        color: #00B69B;
+
+        &.down {
+            color: red;
+        }
+    }
+}
+.list {
+    list-style-type: none;
+    margin-top: 15px;
+    
+    li {
+        span {
+            &:nth-child(2) {
+                margin-top: 5px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .list {
+        li {
+            span {
+                &:nth-child(2) {
+                    font-size: 17px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+}

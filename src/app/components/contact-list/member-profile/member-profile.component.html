@@ -1,0 +1,45 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Member Profile</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item fw-semibold">Member Profile</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-xxl-4">
+
+        <div
+            class="profile-card-box border-radius bg-white box-shadow mb-25"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.card-borderd-theme]="themeService.isCardBorder()"
+            [class.card-border-radius]="themeService.isCardBorderRadius()"
+            [class.component-rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <div class="top border-radius position-relative">
+                <img src="img/shape.png" alt="welcome">
+                <h4>Welcome to Tagus Dashboard !</h4>
+                <p>You have done 68% 😎 more sales today. Check your new badge in your profile.</p>
+            </div>
+        </div>
+
+        <app-mp-personal-info />
+
+        <app-mp-activity-timeline />
+
+    </div>
+    <div class="col-xxl-8">
+
+        <app-mp-stats />
+
+        <app-mp-overview />
+
+        <app-mp-my-tasks />
+
+    </div>
+</div>

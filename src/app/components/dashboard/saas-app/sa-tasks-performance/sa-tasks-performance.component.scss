@@ -1,0 +1,108 @@
+.tasks-performance-box {
+    .chart {
+        margin: -20px 0 -30px;
+    }
+    .list {
+        list-style-type: none;
+        margin-top: 25px;
+        padding: {
+            left: 40px;
+            right: 40px;
+        };
+        li {
+            display: inline-block;
+            font-size: 14px;
+            
+            span {
+                &:nth-child(2) {
+                    padding-left: 16px;
+                    margin-top: 8px;
+                    font-size: 20px;
+
+                    i {
+                        top: 50%;
+                        left: -8px;
+                        line-height: 1;
+                        margin-top: 1px;
+                        color: #00B69B;
+                        position: absolute;
+                        transform: translateY(-50%) rotate(-90deg);
+                        font: {
+                            size: 17px;
+                            weight: 700;
+                        };
+                    }
+                }
+            }
+            &.down {
+                span {
+                    i {
+                        color: #EE368C;
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+    &.component-rtl-enabled {
+        .list {
+            li {
+                span {
+                    &:nth-child(2) {
+                        padding: {
+                            left: 0;
+                            right: 16px;
+                        };
+                        i {
+                            right: -8px;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    .tasks-performance-box {
+        .list {
+            margin-top: 15px;
+            padding: {
+                left: 0;
+                right: 0;
+            };
+            li {
+                span {
+                    &:nth-child(2) {
+                        padding-left: 12px;
+                        font-size: 17px;
+                        margin-top: 5px;
+    
+                        i {
+                            font: {
+                                size: 15px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+        &.component-rtl-enabled {
+            .list {
+                li {
+                    span {
+                        &:nth-child(2) {
+                            padding: {
+                                left: 0;
+                                right: 12px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

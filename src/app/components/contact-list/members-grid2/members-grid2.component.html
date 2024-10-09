@@ -1,0 +1,484 @@
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-space-between">
+    <h5 class="mb-0">Members Grid</h5>
+    <ol class="breadcrumb mb-0 ps-0">
+        <li class="breadcrumb-item">
+            <a routerLink="/">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item gray-color">Contacts</li>
+        <li class="breadcrumb-item fw-semibold">Members Grid</li>
+    </ol>
+</div>
+
+<div class="row" [class.component-rtl-enabled]="themeService.isRTLEnabled()">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Alvarado Turner</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user12.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;alvaradoturner</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:alvaradoturner&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            alvaradoturner&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Evangelina Mcclain</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user13.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;evangelinamcclain</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:evangelinamcclain&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            evangelinamcclain&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Candice Munoz</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user11.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;candicemunoz</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:candicemunoz&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            candicemunoz&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Bernard Langley</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user14.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;bernardlangley</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:bernardlangley&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            bernardlangley&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Kristie Hall</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user8.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;kristiehall</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:kristiehall&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            kristiehall&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Bolton Obrien</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user23.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;boltonobrien</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:boltonobrien&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            boltonobrien&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Dee Alvarado</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user18.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;deealvarado</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:deealvarado&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            deealvarado&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Cervantes Kramer</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user22.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;cervanteskramer</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:cervanteskramer&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            cervanteskramer&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Dejesus Michael</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user16.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;dejesusmichael</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:dejesusmichael&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            dejesusmichael&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Alissa Nelson</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user15.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;alissanelson</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:alissanelson&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            alissanelson&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">English Haney</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user9.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;englishhaney</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:englishhaney&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            englishhaney&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3">
+        <mat-card class="mb-25 text-center tagus-card">
+            <mat-card-header class="border-bottom">
+                <h5 class="mb-0">Edwards Mckenzie</h5>
+                <button type="button" mat-button class="position-relative dot-btn p-0 bg-transparent border-none" [matMenuTriggerFor]="monthMenu">
+                    <i class="ri-more-fill"></i>
+                </button>
+                <mat-menu #monthMenu="matMenu" class="dotMenu monthMenu" xPosition="before">
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-add-circle-line"></i> Add
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-delete-bin-6-line"></i> Delete
+                    </button>
+                    <button mat-menu-item type="button" class="bg-transparent border-none position-relative">
+                        <i class="ri-restart-line"></i> Refresh
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <img src="img/user/user17.jpg" class="rounded-circle mb-15" width="150" alt="user">
+                <span class="d-block gray-color fw-medium">&#64;edwardsmckenzie</span>
+                <ul class="list ps-0 mb-0">
+                    <li class="gray-color fw-medium">
+                        <a href="tel:+9003526765" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-phone-call"></i>
+                            +9003526765
+                        </a>
+                    </li>
+                    <li class="gray-color fw-medium">
+                        <a href="mailto:edwardsmckenzie&#64;tagus.com" class="gray-color d-inline-block position-relative">
+                            <i class="flaticon-envelope"></i>
+                            edwardsmckenzie&#64;tagus.com
+                        </a>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
